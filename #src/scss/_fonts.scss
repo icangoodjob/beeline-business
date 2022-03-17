@@ -1,0 +1,48 @@
+/* ШРИФТЫ */
+@font-face {
+    font-family: 'Beeline Sans';
+    src: url('../fonts/BeelineSans-Bold.eot');
+    src: url('../fonts/BeelineSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BeelineSans-Bold.woff2') format('woff2'),
+    url('../fonts/BeelineSans-Bold.woff') format('woff'),
+    url('../fonts/BeelineSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beeline Sans';
+    src: url('../fonts/BeelineSans-Medium.eot');
+    src: url('../fonts/BeelineSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BeelineSans-Medium.woff2') format('woff2'),
+    url('../fonts/BeelineSans-Medium.woff') format('woff'),
+    url('../fonts/BeelineSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beeline Sans';
+    src: url('../fonts/BeelineSans-Black.eot');
+    src: url('../fonts/BeelineSans-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BeelineSans-Black.woff2') format('woff2'),
+    url('../fonts/BeelineSans-Black.woff') format('woff'),
+    url('../fonts/BeelineSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beeline Sans';
+    src: url('../fonts/BeelineSans-Regular.eot');
+    src: url('../fonts/BeelineSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BeelineSans-Regular.woff2') format('woff2'),
+    url('../fonts/BeelineSans-Regular.woff') format('woff'),
+    url('../fonts/BeelineSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Записи раговоров</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+
+	<div class="wrapper" id="wrapper">
+
+		<!-- @import "header.kit" -->
+
+		<!-- @import "sidebar.html" -->
+
+		<main class="main main-record record" id="main">
+			<div class="main__header">
+				<h1 class="main__title">
+					Volna2.wav
+				</h1>
+				<button class="button__add-comment" data-bs-toggle="modal" data-bs-target="#comment">Добавить комментарий</button>
+				<a href="#" class="back__link"><span>Назад к отчетам</span></a>
+			</div>
+			<div class="record__comment">
+				<button class="comment__close _icon-close">
+				</button>
+				<p>
+					Комментарий ограничение символов, возможно несколько строк
+				</p>
+			</div>
+			<div class="record__audio-track audio-track-record">
+				<div class="record__dialogs">
+				</div>
+				<div class="audio-track-record__box">
+					<div class="audio-track-record__data">
+						<div class="audio-track-record__labels">
+							<div class="audio-track-record__label">Оператор</div>
+							<div class="audio-track-record__label">Клиент</div>
+						</div>
+						<div class="audio-track-record__wave">
+							<img src="img/audio-track.svg" alt="">
+							<div class="audio-track-record__message">
+								<p>Соответствие словарям</p>
+							</div>
+						</div>
+					</div>
+					<div class="audio-track-record__buttons">
+						<button class="result-synth__play">
+							<img src="img/icons/sound-black.svg" alt="">
+						</button>
+						<button class="result-synth__download">
+							<img src="img/icons/load-black.svg" alt="">
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="record__events events-record">
+				<div class="events-record__header">
+					<h2 class="events-record__title">Зафиксированы события</h2>
+				</div>
+				<div class="events-record__inner">
+					<div class="events-record__box">
+						<div class="events-record__labels">
+							<label class="events-record__label">Перебивание</label>
+							<label class="events-record__label events-record__label_glossary">Словарь Приветствие</label>
+							<label class="events-record__label events-record__label_outrage">Словарь Возмущение</label>
+							<label class="events-record__label events-record__label_emotion">Эмоция оператора: удивление</label>
+							<label class="events-record__label events-record__label_emotion">Эмоция клиента: злой</label>
+						</div>
+						<div class="events-record__graphics graphics-record">
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Скорость речи, сек</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/1.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Количество пауз, шт</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/2.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Длительность, сек</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/3.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Процент речи, %</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/4.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Одновременная речь, шт</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/5.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Пол</div>
+								<div class="graphics-record___genders genders">
+									<div class="graphics-record__gender genders__male">
+										<span class="genders__color"></span>
+										<span class="genders__text">Мужской</span>
+									</div>
+									<div class="graphics-record__gender genders__woman">
+										<span class="genders__color"></span>
+										<span class="genders__text">Женский</span>
+									</div>
+								</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/6.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Длительность, сек</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/7.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Процент речи,  %</div>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/8.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item graphics-record__item_circular">
+								<div class="graphics-record__title graph__title">Топ 10 слов клиента</div>
+								<ul class="graphics-record__word word__list">
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-light"></span>
+										<span class="word-item__text">сегмент</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-mid"></span>
+										<span class="word-item__text">сегмент</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-dark"></span>
+										<span class="word-item__text">компания</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_purple"></span>
+										<span class="word-item__text">клиента</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_green-light"></span>
+										<span class="word-item__text">иди</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_yellow"></span>
+										<span class="word-item__text">лес</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_orange"></span>
+										<span class="word-item__text">бабах</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_blue"></span>
+										<span class="word-item__text">слушания</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_pink"></span>
+										<span class="word-item__text">италия</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_azure"></span>
+										<span class="word-item__text">переписывает</span>
+									</li>
+								</ul>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/9.svg" alt="">
+								</div>
+							</div>
+							<div class="graphics-record__item graphics-record__item_circular">
+								<div class="graphics-record__title graph__title">Топ 10 слов оператора</div>
+								<ul class="graphics-record__word word__list">
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-light"></span>
+										<span class="word-item__text">але</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-mid"></span>
+										<span class="word-item__text">привет</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-dark"></span>
+										<span class="word-item__text">говори</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_green-light"></span>
+										<span class="word-item__text">договор</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_purple"></span>
+										<span class="word-item__text">компания</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_yellow"></span>
+										<span class="word-item__text">периодичность</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_orange"></span>
+										<span class="word-item__text">подожди</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_blue"></span>
+										<span class="word-item__text">сторону</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_azure"></span>
+										<span class="word-item__text">переписывает</span>
+									</li>
+								</ul>
+								<div class="graphics-record__data graph__data">
+									<img src="img/graphics/10.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="events-record__box">
+						<button class="events-record__report report-btn"><span>Отчет Excel</span></button>
+						<div class="events-record__dialog dialog-record">
+							<div class="dialog-record__header">Расшифровка разговора</div>
+							<ul class="dialog-record__list">
+								<li class="dialog-record__item item-dialog item-dialog__operator">
+									<div class="item-dialog__name">Оператор</div>
+									<label class="item-dialog__label events-record__label events-record__label_glossary">Словарь Приветствие</label>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">Здравствуйте!</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+								<li class="dialog-record__item item-dialog item-dialog__client">
+									<div class="item-dialog__name">Клиент</div>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">Здравствуйте!</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+								<li class="dialog-record__item item-dialog item-dialog__operator">
+									<div class="item-dialog__name">Оператор</div>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">Здравствуйте!</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+								<li class="dialog-record__item item-dialog item-dialog__client">
+									<div class="item-dialog__name">Клиент</div>
+									<label class="item-dialog__label events-record__label events-record__label_outrage">Словарь Возмущение</label>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">Хочу купить услугу!</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+								<li class="dialog-record__item item-dialog item-dialog__operator">
+									<div class="item-dialog__name">Оператор</div>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">Здравствуйте!</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+								<li class="dialog-record__item item-dialog item-dialog__client">
+									<div class="item-dialog__name">Клиент</div>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">да</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+								<li class="dialog-record__item item-dialog item-dialog__operator">
+									<div class="item-dialog__name">Оператор</div>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">Здравствуйте!</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+								<li class="dialog-record__item item-dialog item-dialog__client">
+									<div class="item-dialog__name">Клиент</div>
+									<div class="item-dialog__box">
+										<span class="item-dialog__message">да</span>
+										<span class="item-dialog__time">1.583 сек</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- @import "footer.kit" -->
+
+		<div class="modal modal__comment fade" id="comment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="comment" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Добавить комментарий</h2>
+						<div class="form-modal__body">
+							<div class="form-modal__box">
+								<div class="form-modal__item">
+									<textarea class="form-modal__textarea" autocomplete="off" placeholder="Комментарий" maxlength="50"></textarea>
+									<div class="form-modal__counter">
+										<span>0</span>
+										<span> / </span>
+										<span>50</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-modal__buttons">
+							<button class="form-modal__button" type="button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow" type="button">Добавить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- @import "js.kit" -->
+
+
+</body>
+</html>

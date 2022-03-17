@@ -1,0 +1,362 @@
+a:hover{
+  color: var(--main-color);
+}
+/* Убрать  стрелки у input[type="number"] */
+/* Chrome */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+/* Другие */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+// Скрыть scrollbar
+// for Chrome
+.aside::-webkit-scrollbar,
+.form-modal__body::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  background: none;
+}
+.aside::-webkit-scrollbar-track,
+.form-modal__body::-webkit-scrollbar-track{
+  width: 0;
+  height: 0;
+  background: none;
+}
+.aside::-webkit-scrollbar-thumb,
+.form-modal__body::-webkit-scrollbar-thumb{
+  width: 0;
+  height: 0;
+  background: none;
+}
+// for Mozila
+.aside,
+.form-modal__body {
+  scrollbar-width: none;
+}
+
+// Datepicker
+.datepickers-container{
+  top: -10px;
+}
+.datepicker--pointer{
+  display: none;
+}
+.datepicker{
+  width: 268px;
+  background: #FFFFFF;
+  box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.25);
+  border-radius: 12px;
+  border: none;
+  &::before,
+  &::after{
+    content: none;
+  }
+}
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
+  background: transparent !important;
+  color: rgba(0, 17, 34, 0.95);
+  &::before{
+    opacity: 1;
+  }
+}
+.datepicker--cell.datepicker--cell-day.-current-::before{
+  opacity: 0;
+}
+.datepicker--cell.-current-{
+  color: rgba(0, 17, 34, 0.95);
+  font-weight: 500;
+}
+.datepicker--cell{
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(0, 17, 34, 0.95);
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 16px;
+    height: 2px;
+    background: rgba(0, 17, 34, 0.66);
+    border-radius: 8px;
+    opacity: 0;
+    transition: all .2s ease 0s;
+  }
+}
+.datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
+  color: rgba(0, 17, 34, 0.95);
+  opacity: 0.5;
+
+}
+.datepicker--cell.datepicker--cell-day.-weekend-{
+  color: var(--red-color);
+}
+.datepicker--cell.datepicker--cell-day.-weekend-.-other-month-{
+  color: var(--red-color);
+  opacity: 0.5;
+}
+.datepicker--nav-title,
+.datepicker--nav-title i,
+.datepicker--day-name{
+  font-family: $fontFamily;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 17, 34, 0.95);
+  letter-spacing: 0.2px;
+}
+.datepicker--day-name{
+  text-transform: capitalize;
+}
+
+// Кнопка "добавить"
+.add__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 24px;
+  border: 1px solid #979797;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main-color);
+  background: transparent;
+  letter-spacing: 0px;
+  margin: 24px 0 0 0;
+  background: var(--yellow-color);
+  &::before{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    margin: 0 12px 0 0;
+    color: #000;
+  }
+}
+
+// Кнопки над таблицей 
+.actions__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 16px 0 0;
+}
+.actions__buttons-position{
+  margin: 0 0 16px;
+}
+.scripts-page .actions__buttons,
+.departments-page .actions__buttons{
+  margin: 12px 0 0;
+}
+.actions__button {
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 24px;
+  border: 1px solid #979797;
+  border-radius: 12px;
+  background: transparent;
+  font-size: 16px;
+  line-height: math.div(24, 16) * 100%;
+  color: var(--main-color);
+  letter-spacing: -0.1px;
+  & span{
+    display: inline-block;
+    margin-left: 3px;
+  }
+}
+
+// Кнопка "Отчет Excel"
+.report-btn {
+  border: 1px solid var(--gray-color-light);
+  border-radius: 12px;
+  padding: 11px 24px;
+  min-height: 48px;
+  line-height: 150%;
+  color: var(--main-color);
+  background: transparent;
+  & span{
+    position: relative;
+    padding: 0 0 0 32px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    &::before{
+      content: url('../img/icons/download.svg');
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 3px;
+    }
+  }
+}
+.actions__button.report-btn{
+  border: 1px solid #979797;
+}
+.record-talk .actions__buttons{
+  margin: -5px 0 0;
+}
+
+// Кнопка "Настройки"
+.settings-btn{
+  padding: 14px;
+  border: 1px solid #979797;
+}
+
+// Checkbox
+.checkbox-item{
+  position: relative;
+  & label{
+    cursor: pointer;
+  }
+}
+.real-checkbox {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+}
+.custom-checkbox {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #CACACA;
+  background: transparent;
+  border-radius: 4px;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+.custom-checkbox::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background: url(../img/icons/check-bold.svg);
+  background-size: 14px 14px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  z-index: 2;
+  transition: .2s ease-in;
+}
+.real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%,-50%) scale(1);
+}
+.real-checkbox:checked + .custom-checkbox {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--yellow-color);
+}
+.checkbox-item__text{
+  line-height: math.div(24, 16) * 100%;
+  color: var(--black-color);
+  margin-left: 7px;
+}
+
+// Стили для таблиц table-settings
+.table-settings__list {
+  overflow: hidden;
+  background: var(--white-color);
+  margin: 12px 0px 0 -24px;
+  min-width: 700px;
+  overflow-x: auto;
+  padding: 0 24px;
+}
+[data-table-settings="1"] .table-settings__item{
+  grid-template-columns: 55px 180px minmax(317px, 1fr) 163px 92px 106px 79px;
+}
+[data-table-settings="1"] .table-settings__list{
+  margin-right: -24px;
+}
+[data-table-settings="2"] .table-settings__item{
+  grid-template-columns: 55px 121px 180px minmax(325px, 1fr) minmax(223px, 1fr) 92px;
+}
+[data-table-settings="2"] .table-settings__list{
+  margin-right: -24px;
+}
+[data-table-settings="3"] .table-settings__item{
+  grid-template-columns: 55px 225px minmax(482px, 1fr) 144px 97px;
+}
+[data-table-settings="3"] .table-settings__list{
+  margin: 12px -24px 0 -24px;
+}
+[data-table-settings="4"] .table-settings__item{
+  grid-template-columns: 57px 249px minmax(234px, 1fr) minmax(211px, 1fr) 121px 103px;
+}
+[data-table-settings="5"] .table-settings__item{
+  grid-template-columns: 39px minmax(252px, 1fr) 163px minmax(188px, 1fr) 178px 122px 103px;
+}
+[data-table-settings="6"] .table-settings__item{
+  grid-template-columns: 55px 208px minmax(239px, 1fr) minmax(264px, 1fr) 121px 103px;
+}
+[data-table-settings="6"] .table-settings__list{
+  margin: 12px -24px 0 -25px;
+}
+[data-table-settings="6"] .table-settings__heading > * {
+  padding-top: 24px;
+  padding-left: 13px;
+}
+[data-table-settings="6"] .table-settings__item:not(.table-settings__heading) > *{
+  padding: 17px 14px 16px;
+}
+.table-settings__item {
+  display: grid;
+  grid-template-rows: auto;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.3px;
+}
+.table-settings__heading {
+  & > * {
+    padding: 22px 11px 12px 16px;
+    min-width: 60px;
+    border-bottom: 1px solid rgba(#000000, 0.1);
+  }
+  & .all-btn{
+    margin: 0 0 0 8px;
+  }
+}
+.table-settings__item:not(.table-settings__heading){
+  & > *{
+    padding: 17px 17px 16px;
+    min-height: 68px;
+  }
+}

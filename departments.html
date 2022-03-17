@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Отделы и операторы</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div class="wrapper" id="wrapper">
+
+		<!-- HEADER -->
+		<header class="header" id="header">
+			<div class="header__row">
+				<div class="header__menu menu-header">
+					<ul class="menu-header__list">
+						<li>
+							<a href="index.html" class="menu-header__link">
+								Помощь
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-header__link">
+								ООО «Светлое будущее»
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="header__user user-header">
+					<div class="user-header__icon">
+						<img src="img/icons/user.svg" alt="">
+					</div>
+					<div class="user-header__name">Иван Иванович</div>
+				</a>
+			</div>
+		</header>
+		<!-- SIDEBAR -->
+		<aside class="aside" id="sidebar">
+			<button type="button" class="aside__close" id="sidebarCollapse">
+				<img src="img/icons/plus.svg" alt="">
+			</button>
+			<a href="#" class="aside__logo logo">
+				<span class="logo__circle">
+					<img src="img/icons/logo-circle.svg" alt="">
+				</span>
+				<span class="logo__text">
+					<img src="img/icons/logo-text.svg" alt="">
+				</span>
+			</a>
+			<div class="aside__menu">
+				<nav class="menu">
+					<ul class="menu__list accordion" id="accordionPanelsStayOpenExample">
+						<li class="menu__item active">
+							<div class="menu__link collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+								<span class="menu__icon">
+									<img src="img/icons/cloud.svg" alt="">
+								</span>
+								<div class="menu__text">Речевая аналитика</div>
+								<div class="menu__arrow">
+									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
+									</svg>
+								</div>
+							</div>
+							<div class="dropdown__menu menu-dropdown collapse" id="panelsStayOpen-collapseOne" aria-labelledby="panelsStayOpen-headingOne">
+								<ul class="menu-dropdown__list">
+									<li><a href="index.html" class="menu-dropdown__link current"><span class="menu__text">Рабочая область</span> </a></li>
+									<li><a href="record.html" class="menu-dropdown__link"><span class="menu__text">Записи раговоров</span></a></li>
+									<li><a href="record.html" class="menu-dropdown__link"><span class="menu__text">Скрипты обслуживания</span></a></li>
+									<li>
+										<div class="menu__link menu__link-settings collapsed" id="panelsStayOpen-headingTwo" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+											<span class="menu__icon">
+											</span>
+											<div class="menu__text">Настройки</div>
+											<div class="menu__arrow">
+												<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
+												</svg>
+											</div>
+										</div>
+										<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse" id="panelsStayOpen-collapseTwo" aria-labelledby="panelsStayOpen-headingTwo">
+											<ul class="menu-dropdown__list">
+												<li><a href="glossary.html" class="menu-dropdown__link"><span class="menu__text">Словари</span></a></li>
+												<li><a href="scripts.html" class="menu-dropdown__link"><span class="menu__text">Скрипты</span></a></li>
+												<li><a href="department.html" class="menu-dropdown__link"><span class="menu__text">Отделы и операторы</span></a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu__item">
+							<div class="menu__link collapsed" id="panelsStayOpen-headingThree" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+								<span class="menu__icon">
+									<img src="img/icons/synth.svg" alt="">
+								</span>
+								<div class="menu__text">Синтез речи</div>
+								<div class="menu__arrow">
+									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
+									</svg>
+								</div>
+							</div>
+							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="panelsStayOpen-collapseThree" aria-labelledby="panelsStayOpen-headingThree">
+								<ul class="menu-dropdown__list">
+									<li><a href="synth.html" class="menu-dropdown__link"><span class="menu__text">Синтез речи</span></a></li>
+									<li><a href="synth-2.html" class="menu-dropdown__link"><span class="menu__text">Синтезированные записи</span></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu__item">
+							<a href="recognize.html" class="menu__link collapsed">
+								<span class="menu__icon">
+									<img src="img/icons/ab-check.svg" alt="">
+								</span>
+								<div class="menu__text">Распознавание речи</div>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="connection.html" class="menu__link">
+								<span class="menu__icon">
+									<img src="img/icons/phone.svg" alt="">
+								</span>
+								<div class="menu__text">Подключение номеров к услугам</div>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<main class="main departments-page departments settings" id="main">
+			<div class="main__header">
+				<h1 class="main__title">
+					Отделы и операторы
+				</h1>
+				<div class="main-info">
+					<button class="main-info__btn">
+						<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12.9985 24.6683C19.4418 24.6683 24.6651 19.445 24.6651 13.0016C24.6651 6.55831 19.4418 1.33496 12.9985 1.33496C6.55516 1.33496 1.33181 6.55831 1.33181 13.0016C1.33181 19.445 6.55516 24.6683 12.9985 24.6683Z" stroke="#979797" stroke-width="1.55556" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M13.0037 6.5C13.3637 6.5 13.6637 6.62 13.9037 6.86C14.157 7.08667 14.2837 7.4 14.2837 7.8C14.2837 8.2 14.157 8.52 13.9037 8.76C13.6637 9 13.3637 9.12 13.0037 9.12C12.6437 9.12 12.337 9 12.0837 8.76C11.8303 8.52 11.7037 8.2 11.7037 7.8C11.7037 7.4 11.8303 7.08667 12.0837 6.86C12.337 6.62 12.6437 6.5 13.0037 6.5ZM11.9837 10.2H14.0237V20H11.9837V10.2Z" fill="#979797"/>
+						</svg>
+					</button>
+					<div class="main-info__tooltip">
+						<p>
+							Сообщение о самой услуге, важных преимуществах и <a href="#">ссылка</a> на раздел в помощи
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="tabs">
+				<ul class="tabs__list nav nav-tabs" id="myTab" role="tablist">
+					<li class="tabs__item">
+						<button class="active" id="department-tab" data-bs-toggle="tab" data-bs-target="#department" role="tab" type="button" aria-controls="department" aria-selected="true"><span>Отделы</span></button>
+					</li>
+					<li class="tabs__item">
+						<button id="operator-tab" data-bs-toggle="tab" data-bs-target="#operator" role="tab" type="button" aria-controls="operator" aria-selected="true"><span>Операторы</span></button>
+					</li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tabs__content departments-content tab-pane fade show active" id="department" role="tabpanel" aria-labelledby="department-tab">
+						<button class="add__button _icon-plus">Добавить отдел</button>
+						<div class="actions__buttons">
+							<button class="actions__button">Удалить <span class="actions__counter">(1)</span></button>
+							<button class="actions__button">Скачать шаблон</button>
+							<button class="actions__button">Импорт</button>
+							<button class="actions__button">Экспорт</button>
+						</div>
+						<div class="settings__table table-settings" data-table-settings="4">
+							<ul class="table-settings__list">
+								<li class="table-settings__item table-settings__heading">
+									<div class="table-settings__checkbox">
+										<div class="checkbox-item">
+											<label>
+												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+												<span class="custom-checkbox"></span>
+											</label>
+										</div>
+									</div>
+									<div class="table-settings__name">
+										Отдел
+										<a href="#" class="all-btn">Все</a>
+									</div>
+									<div class="table-settings__operators">
+										Операторы
+										<a href="#" class="all-btn">Все</a>
+									</div>
+									<div class="table-settings__connect-glossary">
+										Подключенные словари
+									</div>
+									<div class="table-settings__redact">
+										Редактирование
+									</div>
+									<div class="table-settings__delete">
+										Удалить
+									</div>
+								</li>
+								<li class="table-settings__item">
+									<div class="table-settings__checkbox">
+										<div class="checkbox-item">
+											<label>
+												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+												<span class="custom-checkbox"></span>
+											</label>
+										</div>
+									</div>
+									<div class="table-settings__name">
+										Отдел 1
+									</div>
+									<div class="table-settings__operators">
+										Имена опреаторов количество операторов
+									</div>
+									<div class="table-settings__connect-glossary">
+										<span>Показ словарей и переход в добавление новых</span>
+									</div>
+									<div class="table-settings__redact">
+										<button class="redact__button _icon-pen">
+										</button>
+									</div>
+									<div class="table-settings__delete">
+										<button class="delete__button _icon-delete"></button>
+									</div>
+								</li>
+								<li class="table-settings__item">
+									<div class="table-settings__checkbox">
+										<div class="checkbox-item">
+											<label>
+												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+												<span class="custom-checkbox"></span>
+											</label>
+										</div>
+									</div>
+									<div class="table-settings__name">
+										Отдел 2
+									</div>
+									<div class="table-settings__operators">
+										Имена опреаторов количество операторов
+									</div>
+									<div class="table-settings__connect-glossary">
+									</div>
+									<div class="table-settings__redact">
+										<button class="redact__button _icon-pen">
+										</button>
+									</div>
+									<div class="table-settings__delete">
+										<button class="delete__button _icon-delete"></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabs__content departments-content tab-pane fade" id="operator" role="tabpanel" aria-labelledby="operator-tab">
+						<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#operators">Добавить оператора</button>
+						<div class="actions__buttons">
+							<button class="actions__button">Удалить <span class="actions__counter">(1)</span></button>
+							<button class="actions__button">Скачать шаблон</button>
+							<button class="actions__button">Импорт</button>
+							<button class="actions__button">Экспорт</button>
+						</div>
+						<div class="settings__table table-settings" data-table-settings="5">
+							<ul class="table-settings__list">
+								<li class="table-settings__item table-settings__heading">
+									<div class="table-settings__checkbox">
+										<div class="checkbox-item">
+											<label>
+												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+												<span class="custom-checkbox"></span>
+											</label>
+										</div>
+									</div>
+									<div class="table-settings__name">
+										Оператор
+										<a href="#" class="all-btn">Все</a>
+									</div>
+									<div class="table-settings__id">
+										ID
+										<a href="#" class="all-btn">Все</a>
+									</div>
+									<div class="table-settings__phone">
+										Телефонный номер
+										<a href="#" class="all-btn">Все</a>
+									</div>
+									<div class="table-settings__depart">
+										Отдел
+										<a href="#" class="all-btn">Все</a>
+									</div>
+									<div class="table-settings__redact">
+										Редактирование
+									</div>
+									<div class="table-settings__delete">
+										Удалить
+									</div>
+								</li>
+								<li class="table-settings__item">
+									<div class="table-settings__checkbox">
+										<div class="checkbox-item">
+											<label>
+												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+												<span class="custom-checkbox"></span>
+											</label>
+										</div>
+									</div>
+									<div class="table-settings__name">
+										Екатерина Константинопольская
+									</div>
+									<div class="table-settings__id">
+										39894028910
+									</div>
+									<div class="table-settings__phone">
+										<a href="tel:+79157777777">+7 915 7777777</a>
+									</div>
+									<div class="table-settings__depart">
+										Не назначен
+									</div>
+									<div class="table-settings__redact">
+										<button class="redact__button _icon-pen">
+										</button>
+									</div>
+									<div class="table-settings__delete">
+										<button class="delete__button _icon-delete"></button>
+									</div>
+								</li>
+								<li class="table-settings__item">
+									<div class="table-settings__checkbox">
+										<div class="checkbox-item">
+											<label>
+												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+												<span class="custom-checkbox"></span>
+											</label>
+										</div>
+									</div>
+									<div class="table-settings__name">
+										Иван Петров
+									</div>
+									<div class="table-settings__id">
+										79157777711
+									</div>
+									<div class="table-settings__phone">
+										<a href="tel:+79157777777">+7 915 7777711</a>
+									</div>
+									<div class="table-settings__depart">
+										Отдел 1
+									</div>
+									<div class="table-settings__redact">
+										<button class="redact__button _icon-pen">
+										</button>
+									</div>
+									<div class="table-settings__delete">
+										<button class="delete__button _icon-delete"></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="footer__body">
+				<div class="footer__copy">
+					2021 ПАО «ВымпелКом»
+				</div>
+				<div class="footer__support support-footer">
+					<div class="support-footer__label">Консультация со специалистом:
+						
+					</div>
+					<a href="tel:88006006262" class="support-footer__phone">8 800 600 62 62</a>
+				</div>
+			</div>
+		</footer>
+		<div class="modal modal__department fade" id="operators" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="operator" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Добавить оператора</h2>
+						<div class="form-modal__body">
+							<div class="form-modal__item">
+								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Имя и фамилия">
+							</div>
+							<div class="form-modal__item">
+								<select name="department" class="form__select">
+									<option value="department" selected>Отдел</option>
+									<option value="department-2">Отдел 2</option>
+									<option value="department-3">Отдел 3</option>
+								</select>
+							</div>
+							<div class="form-modal__item">
+								<input class="form-modal__input" type="number" autocomplete="off" placeholder="Номер телефона">
+							</div>
+							<div class="form-modal__item">
+								<input class="form-modal__input" type="number" autocomplete="off" placeholder="ID">
+							</div>
+						</div>
+						<div class="form-modal__buttons">
+							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
+							<button class="form-modal__button form-modal__button_yellow">Добавить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://kit.fontawesome.com/ed89a4511e.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/datepicker.min.js"></script>
+	<script src="js/select.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+
+</body>
+</html>
