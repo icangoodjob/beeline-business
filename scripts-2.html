@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Записи разговоров</title>
+	<title>Скрипты обслуживания</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -135,7 +135,7 @@
 		<main class="main record-talk" id="main">
 			<div class="main__header">
 				<h1 class="main__title">
-					Записи разговоров
+					Скрипты обслуживания
 				</h1>
 				<div class="main-info">
 					<button class="main-info__btn">
@@ -152,7 +152,10 @@
 				</div>
 			</div>
 			<div class="record-talk__content">
-				<button class="add__button _icon-plus" id="add-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Загрузить записи</button>
+				<div class="record-talk__content-buttons">
+					<button class="add__button _icon-plus">Загрузить скрипты</button>
+					<button class="add__button _icon-pen">Редактировать</button>
+				</div>
 				<form action="#" class="work-area__form form">
 					<div class="form-group__item">
 						<div class="work-area__group group-calendar">
@@ -175,21 +178,8 @@
 							<button class="group-calendar__button button-transparent">Выбрать</button>
 						</div>
 					</div>
-					<div class="form-group__item">
-						<div class="form-group__box">
-							<input class="form__input" type="text" placeholder="Ключевое слово">
-							<button class="form__button" type="button">Искать</button>
-						</div>
-						<div class="checkbox-item">
-							<label>
-								<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-								<span class="custom-checkbox custom-checkbox_dpl"></span>
-								<span class="checkbox-item__text">Включить синонимы</span>
-							</label>
-						</div>
-					</div>
 				</form>
-				<div class="actions__buttons">
+				<div class="actions__buttons actions__buttons_mtop">
 					<a href="#" download="" class="actions__button null">Скачать .zip <span class="actions__counter">(<span>1</span>)</span></a>
 					<button class="actions__button null">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
 					<a href="#" download="" class="actions__button report-btn"><span>Отчет Excel</span></a>
@@ -280,7 +270,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="file-table" data-file-table="1" data-table>
+				<div class="file-table" data-file-table="2" data-table>
 					<ul class="file-table__list">
 						<li class="file-table__item file-table__heading">
 							<div class="table-settings__checkbox table-checkbox">
@@ -477,51 +467,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__estimate choice-search search">
-								Оценка
-								<a href="#" class="all-btn">Все</a>
-								<div class="choice-search__box">
-									<div class="search__body">
-										<form action="#" class="search-form">
-											<button class="search__button">
-												<img src="img/icons/search.svg" alt="">
-											</button>
-											<input class="form__input" type="text" autocomplete="off">
-										</form>
-										<ul class="choice-search__list">
-											<li>
-												<div class="checkbox-item">
-													<label>
-														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Оценка</span>
-													</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox-item">
-													<label>
-														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Оценка</span>
-													</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox-item">
-													<label>
-														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Оценка</span>
-													</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 							<div class="file-table__glossary choice-search search">
-								Определен словарь/тематика
+								Определен скрипт
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
 									<div class="search__body">
@@ -537,7 +484,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 1</span>
+														<span class="checkbox-item__text">Скрипт 1</span>
 													</label>
 												</div>
 											</li>
@@ -546,7 +493,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 2</span>
+														<span class="checkbox-item__text">Скрипт 2</span>
 													</label>
 												</div>
 											</li>
@@ -555,7 +502,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 3</span>
+														<span class="checkbox-item__text">Скрипт 3</span>
 													</label>
 												</div>
 											</li>
@@ -564,7 +511,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 4</span>
+														<span class="checkbox-item__text">Скрипт 4</span>
 													</label>
 												</div>
 											</li>
@@ -573,7 +520,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 5</span>
+														<span class="checkbox-item__text">Скрипт 5</span>
 													</label>
 												</div>
 											</li>
@@ -582,7 +529,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 6</span>
+														<span class="checkbox-item__text">Скрипт 6</span>
 													</label>
 												</div>
 											</li>
@@ -591,7 +538,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 7</span>
+														<span class="checkbox-item__text">Скрипт 7</span>
 													</label>
 												</div>
 											</li>
@@ -641,9 +588,6 @@
 										</ul>
 									</div>
 								</div>
-							</div>
-							<div class="file-table__comment">
-								Комментарии
 							</div>
 							<div class="file-table__sound">Прослушать</div>
 							<div class="file-table__download">
@@ -695,30 +639,15 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_4">
-									4
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
-									<span class="glossary-theme__label">Приветствия x2</span>
+									<span class="glossary-theme__label">Доктор</span>
+									<span class="glossary-theme__label">Приветствие</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">
@@ -788,29 +717,15 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_4">
-									4
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
+									<span class="glossary-theme__label">Доктор</span>
+									<span class="glossary-theme__label">Приветствие</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">
@@ -880,29 +795,15 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_1">
-									1
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
+									<span class="glossary-theme__label">Доктор</span>
+									<span class="glossary-theme__label">Приветствие</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">
@@ -972,29 +873,14 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_5">
-									5
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
+									<span class="glossary-theme__label">Доктор 2</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">

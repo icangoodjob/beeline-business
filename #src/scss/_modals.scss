@@ -155,7 +155,7 @@
 
 // Offcanvas
 .offcanvas-backdrop {
-	background: rgba(196, 196, 196, 0.6);
+	background: rgba(196, 196, 196, 0.5);
 }
 .offcanvas-backdrop.show{
 	opacity: 1;
@@ -277,4 +277,20 @@
 }
 .load-file__delete .delete__button{
 	margin: 0 0 0 0;
+}
+.overlay-offcanvas{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(196, 196, 196, 0.5);
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s ease-in 0s, visibility .2s ease-in 0s;
+}
+.overlay-offcanvas.show{
+	opacity: 1;
+	visibility: visible;
 }

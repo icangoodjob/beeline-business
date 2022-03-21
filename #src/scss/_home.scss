@@ -19,6 +19,7 @@
 	&:hover .main-info__tooltip{
 		opacity: 1;
 		visibility: visible;
+		transform: scale(1);
 	}
 }
 .main-info__btn {
@@ -34,6 +35,8 @@
 	left: 0;
 	opacity: 0;
 	visibility: hidden;
+	transform: scale(0);
+	transform-origin: 0 0;
 	transition: all .3s ease 0s;
 	top: 100%;
 	padding: 7px 0 0;
@@ -258,6 +261,7 @@
 }
 .table-area__estimate{
 	letter-spacing: 0.2px;
+	justify-content: center;
 }
 .table-area__item-head .table-area__name,
 .table-area__item-head .table-area__estimate {
@@ -488,7 +492,6 @@
 	max-width: 535px;
 	padding: 23px 51px 23px 32px;
 	margin-bottom: 18px;
-	display: none;
 	& p{
 		margin: 0;
 	}
@@ -504,7 +507,7 @@
 	right: 17px;
 	background: none;
 	&::before{
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 .audio-track-record {
@@ -623,13 +626,13 @@
 	letter-spacing: -0.2px;
 	margin: 0;
 }
-.events-record__labels{
+.events-record__badges{
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
 	margin: 0 0 24px;
 }
-.events-record__label {
+.events-record__badge {
 	background: var(--volcano-color);
 	border-radius: 6px;
 	padding: 8px 16px;
@@ -642,13 +645,13 @@
 	font-size: 14px;
 	line-height: math.div(16, 14) * 100%;
 }
-.events-record__label_glossary {
+.events-record__badge_glossary {
 	background: #2F54EB;
 }
-.events-record__label_outrage{
+.events-record__badge_outrage{
 	background: #F759AB;
 }
-.events-record__label_emotion{
+.events-record__badge_emotion{
 	background: #85A5FF;
 }
 .events-record__inner {
@@ -872,6 +875,10 @@
 .record-talk__content .add__button{
 	margin: 0px 0 24px;
 }
+.record-talk__content-buttons{
+	display: flex;
+	column-gap: 20px;
+}
 .record-talk__content .main__header{
 	margin: 0 0 24px;
 }
@@ -926,15 +933,31 @@
 }
 
 .record-talk .file-table{
-	overflow-x: auto;
+	// overflow: hidden;
+	position: relative;
+	&::after{
+		content: '.';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
 }
-[data-file-table="1"] .file-table__list{
-	overflow: initial;
+[data-file-table="1"] .file-table__list,
+[data-file-table="2"] .file-table__list{
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 [data-file-table="1"] .file-table__item{
 	grid-template-columns: 55px 196px 139px 180px 225px 179px 124px 264px 180px 111px 103px 111px 98px 98px;
 }
+[data-file-table="2"] .file-table__item{
+	grid-template-columns: 55px 196px 139px 180px 225px 179px 264px 180px 103px 111px 98px 98px;
+}
 [data-file-table="1"] .file-table__item > *{
+	padding: 13px 11px 13px 17px;
+}
+[data-file-table="2"] .file-table__item > *{
 	padding: 13px 11px 13px 17px;
 }
 .file-table__list{
@@ -945,16 +968,19 @@
 }
 .comment-box{
 	position: relative;
+	width: max-content;
+	margin: 0 auto;
 }
 .comment-box:hover .comment-box__message{
 	opacity: 1;
 	visibility: visible;
+	transform: scale(1);
 	pointer-events: all;
 }
 .comment-box__message{
 	position: absolute;
 	top: -85px;
-	left: 55px;
+	left: 25px;
 	background: #25282A;
 	border-radius: 25px 25px 25px 6px;
 	color: var(--gray-color-blond);
@@ -963,6 +989,8 @@
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	transform: scale(0);
+	transform-origin: 0 100%;
 	transition: all .3s ease 0s;
 }
 .record-talk .file-table{
@@ -1036,7 +1064,9 @@
 	padding: 11px 0 0;
 }
 [data-file-table="1"] .file-table__item:not(.file-table__heading) .file-table__sound .file-table__icon, 
-[data-file-table="1"] .file-table__item:not(.file-table__heading) .file-table__download .file-table__icon {
+[data-file-table="1"] .file-table__item:not(.file-table__heading) .file-table__download .file-table__icon,
+[data-file-table="2"] .file-table__item:not(.file-table__heading) .file-table__sound .file-table__icon, 
+[data-file-table="2"] .file-table__item:not(.file-table__heading) .file-table__download .file-table__icon {
 	margin: 0px 14px 0 0;
 }
 
@@ -1062,12 +1092,45 @@
 	& li:not(:last-child){
 		margin: 0 0 4px;
 	}
-	&.show{
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0px);
-	}
 }
+.settings-box.show .dropmenu{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0px);
+}
+
+.file-name__box.hide{
+	display: none;
+}
+
+.file-name__text {
+	cursor: pointer;
+}
+.file-name.show .file-name__form{
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+.file-name__form {
+	position: absolute;
+	top: 15px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: all .1s ease-in 0s;
+}
+.file-name__input {
+	background: var(--white-color);
+	border: 1px solid #DBDBDB;
+	border-radius: 3px;
+	width: 147px;
+	min-height: 20px;
+	padding: 2px 5px;
+	font-size: 14px;
+	line-height: math.div(16, 14) * 100%;
+	letter-spacing: 0.2px;
+}
+
 
 /* ============================= RECORD TALK ========================== */
 
@@ -1377,21 +1440,19 @@ input[type="radio"]:checked + label {
 		align-items: center;
 	}
 }
-[data-file-table="1"] .arrow-down{
+[data-file-table="1"] .arrow-down,
+[data-file-table="2"] .arrow-down{
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	top: 12px;
-	left: 20px;
+	top: 9px;
+	left: 15px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	&::before{
 		content: url('../img/icons/arrow-down.svg');
 		position: absolute;
-		width: 20px;
-		height: 20px;
-
 	}
 }
 
@@ -1615,7 +1676,7 @@ input[type="radio"]:checked + label {
 	margin: 9px 0 0 35px;
 }
 .words__list {
-	max-width: 270px;
+	max-width: 100%;
 	display: flex;
 	align-content: inherit;
 	flex-wrap: wrap;

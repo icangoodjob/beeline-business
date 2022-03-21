@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Записи разговоров</title>
+	<title>Скрипты обслуживания</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -13,129 +13,14 @@
 
 	<div class="wrapper" id="wrapper">
 
-		<!-- HEADER -->
-		<header class="header" id="header">
-			<div class="header__row">
-				<div class="header__menu menu-header">
-					<ul class="menu-header__list">
-						<li>
-							<a href="index.html" class="menu-header__link">
-								Помощь
-							</a>
-						</li>
-						<li>
-							<a href="#" class="menu-header__link">
-								ООО «Светлое будущее»
-							</a>
-						</li>
-					</ul>
-				</div>
-				<a href="#" class="header__user user-header">
-					<div class="user-header__icon">
-						<img src="img/icons/user.svg" alt="">
-					</div>
-					<div class="user-header__name">Иван Иванович</div>
-				</a>
-			</div>
-		</header>
-		<!-- SIDEBAR -->
-		<aside class="aside" id="sidebar">
-			<button type="button" class="aside__close" id="sidebarCollapse">
-				<img src="img/icons/plus.svg" alt="">
-			</button>
-			<a href="#" class="aside__logo logo">
-				<span class="logo__circle">
-					<img src="img/icons/logo-circle.svg" alt="">
-				</span>
-				<span class="logo__text">
-					<img src="img/icons/logo-text.svg" alt="">
-				</span>
-			</a>
-			<div class="aside__menu">
-				<nav class="menu">
-					<ul class="menu__list accordion" id="accordionPanelsStayOpenExample">
-						<li class="menu__item active">
-							<div class="menu__link menu__link-current collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-								<span class="menu__icon">
-									<img src="img/icons/cloud.svg" alt="">
-								</span>
-								<div class="menu__text">Речевая аналитика</div>
-								<div class="menu__arrow">
-									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-									</svg>
-								</div>
-							</div>
-							<div class="dropdown__menu menu-dropdown collapse" id="panelsStayOpen-collapseOne" aria-labelledby="panelsStayOpen-headingOne">
-								<ul class="menu-dropdown__list">
-									<li><a href="index.html" class="menu-dropdown__link current"><span class="menu__text">Рабочая область</span> </a></li>
-									<li><a href="record-talk.html" class="menu-dropdown__link"><span class="menu__text">Записи раговоров</span></a></li>
-									<li><a href="scripts-2.html" class="menu-dropdown__link"><span class="menu__text">Скрипты обслуживания</span></a></li>
-									<li>
-										<div class="menu__link menu__link-settings collapsed" id="panelsStayOpen-headingTwo" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-											<span class="menu__icon">
-											</span>
-											<div class="menu__text">Настройки</div>
-											<div class="menu__arrow">
-												<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-												</svg>
-											</div>
-										</div>
-										<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse" id="panelsStayOpen-collapseTwo" aria-labelledby="panelsStayOpen-headingTwo">
-											<ul class="menu-dropdown__list">
-												<li><a href="glossary.html" class="menu-dropdown__link"><span class="menu__text">Словари</span></a></li>
-												<li><a href="scripts.html" class="menu-dropdown__link"><span class="menu__text">Скрипты</span></a></li>
-												<li><a href="department.html" class="menu-dropdown__link"><span class="menu__text">Отделы и операторы</span></a></li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="menu__item">
-							<div class="menu__link collapsed" id="panelsStayOpen-headingThree" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-								<span class="menu__icon">
-									<img src="img/icons/synth.svg" alt="">
-								</span>
-								<div class="menu__text">Синтез речи</div>
-								<div class="menu__arrow">
-									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-									</svg>
-								</div>
-							</div>
-							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="panelsStayOpen-collapseThree" aria-labelledby="panelsStayOpen-headingThree">
-								<ul class="menu-dropdown__list">
-									<li><a href="synth.html" class="menu-dropdown__link"><span class="menu__text">Синтез речи</span></a></li>
-									<li><a href="synth-2.html" class="menu-dropdown__link"><span class="menu__text">Синтезированные записи</span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="menu__item">
-							<a href="recognize.html" class="menu__link collapsed">
-								<span class="menu__icon">
-									<img src="img/icons/ab-check.svg" alt="">
-								</span>
-								<div class="menu__text">Распознавание речи</div>
-							</a>
-						</li>
-						<li class="menu__item">
-							<a href="connection.html" class="menu__link">
-								<span class="menu__icon">
-									<img src="img/icons/phone.svg" alt="">
-								</span>
-								<div class="menu__text">Подключение номеров к услугам</div>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</aside>
+		<!-- @import "header.kit" -->
+
+		<!-- @import "sidebar.html" -->
+
 		<main class="main record-talk" id="main">
 			<div class="main__header">
 				<h1 class="main__title">
-					Записи разговоров
+					Скрипты обслуживания
 				</h1>
 				<div class="main-info">
 					<button class="main-info__btn">
@@ -152,7 +37,10 @@
 				</div>
 			</div>
 			<div class="record-talk__content">
-				<button class="add__button _icon-plus" id="add-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Загрузить записи</button>
+				<div class="record-talk__content-buttons">
+					<button class="add__button _icon-plus">Загрузить скрипты</button>
+					<button class="add__button _icon-pen">Редактировать</button>
+				</div>
 				<form action="#" class="work-area__form form">
 					<div class="form-group__item">
 						<div class="work-area__group group-calendar">
@@ -175,21 +63,8 @@
 							<button class="group-calendar__button button-transparent">Выбрать</button>
 						</div>
 					</div>
-					<div class="form-group__item">
-						<div class="form-group__box">
-							<input class="form__input" type="text" placeholder="Ключевое слово">
-							<button class="form__button" type="button">Искать</button>
-						</div>
-						<div class="checkbox-item">
-							<label>
-								<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-								<span class="custom-checkbox custom-checkbox_dpl"></span>
-								<span class="checkbox-item__text">Включить синонимы</span>
-							</label>
-						</div>
-					</div>
 				</form>
-				<div class="actions__buttons">
+				<div class="actions__buttons actions__buttons_mtop">
 					<a href="#" download="" class="actions__button null">Скачать .zip <span class="actions__counter">(<span>1</span>)</span></a>
 					<button class="actions__button null">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
 					<a href="#" download="" class="actions__button report-btn"><span>Отчет Excel</span></a>
@@ -280,7 +155,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="file-table" data-file-table="1" data-table>
+				<div class="file-table" data-file-table="2" data-table>
 					<ul class="file-table__list">
 						<li class="file-table__item file-table__heading">
 							<div class="table-settings__checkbox table-checkbox">
@@ -477,51 +352,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__estimate choice-search search">
-								Оценка
-								<a href="#" class="all-btn">Все</a>
-								<div class="choice-search__box">
-									<div class="search__body">
-										<form action="#" class="search-form">
-											<button class="search__button">
-												<img src="img/icons/search.svg" alt="">
-											</button>
-											<input class="form__input" type="text" autocomplete="off">
-										</form>
-										<ul class="choice-search__list">
-											<li>
-												<div class="checkbox-item">
-													<label>
-														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Оценка</span>
-													</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox-item">
-													<label>
-														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Оценка</span>
-													</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox-item">
-													<label>
-														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Оценка</span>
-													</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 							<div class="file-table__glossary choice-search search">
-								Определен словарь/тематика
+								Определен скрипт
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
 									<div class="search__body">
@@ -537,7 +369,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 1</span>
+														<span class="checkbox-item__text">Скрипт 1</span>
 													</label>
 												</div>
 											</li>
@@ -546,7 +378,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 2</span>
+														<span class="checkbox-item__text">Скрипт 2</span>
 													</label>
 												</div>
 											</li>
@@ -555,7 +387,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 3</span>
+														<span class="checkbox-item__text">Скрипт 3</span>
 													</label>
 												</div>
 											</li>
@@ -564,7 +396,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 4</span>
+														<span class="checkbox-item__text">Скрипт 4</span>
 													</label>
 												</div>
 											</li>
@@ -573,7 +405,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 5</span>
+														<span class="checkbox-item__text">Скрипт 5</span>
 													</label>
 												</div>
 											</li>
@@ -582,7 +414,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 6</span>
+														<span class="checkbox-item__text">Скрипт 6</span>
 													</label>
 												</div>
 											</li>
@@ -591,7 +423,7 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Словарь 7</span>
+														<span class="checkbox-item__text">Скрипт 7</span>
 													</label>
 												</div>
 											</li>
@@ -641,9 +473,6 @@
 										</ul>
 									</div>
 								</div>
-							</div>
-							<div class="file-table__comment">
-								Комментарии
 							</div>
 							<div class="file-table__sound">Прослушать</div>
 							<div class="file-table__download">
@@ -695,30 +524,15 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_4">
-									4
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
-									<span class="glossary-theme__label">Приветствия x2</span>
+									<span class="glossary-theme__label">Доктор</span>
+									<span class="glossary-theme__label">Приветствие</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">
@@ -788,29 +602,15 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_4">
-									4
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
+									<span class="glossary-theme__label">Доктор</span>
+									<span class="glossary-theme__label">Приветствие</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">
@@ -880,29 +680,15 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_1">
-									1
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
+									<span class="glossary-theme__label">Доктор</span>
+									<span class="glossary-theme__label">Приветствие</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">
@@ -972,29 +758,14 @@
 							<div class="file-table__client file-table__phone">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_5">
-									5
-								</div>
-							</div>
 							<div class="file-table__glossary glossary-theme">
 								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
+									<span class="glossary-theme__label">Доктор 2</span>
 								</div>
 							</div>
 							<div class="file-table__period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
 							</div>
 							<div class="file-table__sound">
 								<div class="sound-box">
@@ -1074,20 +845,8 @@
 
 		</main>
 
-		<!-- FOOTER -->
-		<footer class="footer">
-			<div class="footer__body">
-				<div class="footer__copy">
-					2021 ПАО «ВымпелКом»
-				</div>
-				<div class="footer__support support-footer">
-					<div class="support-footer__label">Консультация со специалистом:
-						
-					</div>
-					<a href="tel:88006006262" class="support-footer__phone">8 800 600 62 62</a>
-				</div>
-			</div>
-		</footer>
+		<!-- @import "footer.kit" -->
+
 		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" data-bs-backdrop="false" aria-labelledby="offcanvasRightLabel">
 			<button type="button" class="modal__close _icon-close" data-modal-close data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			<form action="#" class="modal__form form-modal">
@@ -1202,13 +961,7 @@
 
 	</div>
 
-	<script src="https://kit.fontawesome.com/ed89a4511e.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/datepicker.min.js"></script>
-	<script src="js/select.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/main.js"></script>
+	<!-- @import "js.kit" -->
 
 
 

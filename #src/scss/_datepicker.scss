@@ -1,0 +1,81 @@
+// Datepicker
+.datepickers-container{
+  top: -10px;
+}
+.datepicker--pointer{
+  display: none;
+}
+.datepicker{
+  width: 268px;
+  background: #FFFFFF;
+  box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.25);
+  border-radius: 12px;
+  border: none;
+  font-family: 'Beeline Sans', sans-serif;
+  &::before,
+  &::after{
+    content: none;
+  }
+}
+.datepicker--nav {
+  border-bottom: none;
+}
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
+  background: transparent !important;
+  color: rgba(0, 17, 34, 0.95);
+  &::before{
+    opacity: 1;
+  }
+}
+.datepicker--cell.datepicker--cell-day.-current-::before{
+  opacity: 0;
+}
+.datepicker--cell.-current-{
+  color: rgba(0, 17, 34, 0.95);
+  font-weight: 400;
+}
+.datepicker--cell{
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(0, 17, 34, 0.95);
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 16px;
+    height: 2px;
+    background: rgba(0, 17, 34, 0.66);
+    border-radius: 8px;
+    opacity: 0;
+    transition: all .2s ease 0s;
+  }
+}
+.datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
+  color: rgba(0, 17, 34, 0.95);
+  opacity: 0.5;
+
+}
+.datepicker--cell.datepicker--cell-day.-weekend-{
+  color: var(--red-color);
+}
+.datepicker--cell.datepicker--cell-day.-weekend-.-other-month-{
+  color: var(--red-color);
+  opacity: 0.5;
+}
+
+.datepicker--nav-title,
+.datepicker--nav-title i,
+.datepicker--day-name{
+  font-family: $fontFamily;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 17, 34, 0.95);
+  letter-spacing: 0.2px;
+}
+.datepicker--day-name{
+  text-transform: capitalize;
+}
