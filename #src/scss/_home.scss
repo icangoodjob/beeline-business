@@ -158,7 +158,7 @@
 		display: none;
 	}
 	&.active:nth-child(n+4){
-		display: block;
+		display: flex;
 	}
 }
 
@@ -171,10 +171,6 @@
 }
 .graph__data {
 	margin-top: auto;
-	& svg{
-		width: 100%;
-		max-width: 100%;
-	}
 }
 .work-area__watching{
 	display: flex;
@@ -674,13 +670,14 @@
 	border-radius: 22px;
 	min-height: 343px;
 	padding: 19px;
+	overflow: hidden;
+	position: relative;
 }
 .graphics-record__item_circular{
 	padding-right: 21px;
 	padding-bottom: 29px;
 }
 .graphics-record__item_circular .graphics-record__data{
-	height: 210px;
 	margin: 0 auto;
 	& img{
 		width: 100%;
@@ -688,7 +685,6 @@
 	}
 }
 .graphics-record__data {
-	height: 239px;
 	& img{
 		max-width: 100%;
 	}
@@ -729,7 +725,6 @@
 .word__list {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 225px;
 	margin: 0 0 9px;
 }
 .word__list-item {
@@ -933,7 +928,6 @@
 }
 
 .record-talk .file-table{
-	// overflow: hidden;
 	position: relative;
 	&::after{
 		content: '.';
@@ -949,10 +943,10 @@
 	overflow-y: hidden;
 }
 [data-file-table="1"] .file-table__item{
-	grid-template-columns: 55px 196px 139px 180px 225px 179px 124px 264px 180px 111px 103px 111px 98px 98px;
+	grid-template-columns: 55px 196px 139px 180px 225px 179px 124px minmax(264px, 1fr) 180px 111px 103px 111px 98px 98px;
 }
 [data-file-table="2"] .file-table__item{
-	grid-template-columns: 55px 196px 139px 180px 225px 179px 264px 180px 103px 111px 98px 98px;
+	grid-template-columns: 55px 196px 139px 180px 225px 179px minmax(264px, 1fr) 180px 103px 111px 98px 98px;
 }
 [data-file-table="1"] .file-table__item > *{
 	padding: 13px 11px 13px 17px;
@@ -1105,6 +1099,12 @@
 
 .file-name__text {
 	cursor: pointer;
+	&.hidden{
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
 }
 .file-name.show .file-name__form{
 	opacity: 1;
@@ -1453,7 +1453,11 @@ input[type="radio"]:checked + label {
 	&::before{
 		content: url('../img/icons/arrow-down.svg');
 		position: absolute;
+		transition: transform .2s ease 0s;
 	}
+}
+.arrow-down.active::before{
+	transform: rotate(180deg);
 }
 
 

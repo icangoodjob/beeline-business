@@ -33,10 +33,8 @@ if (btnMore != null) {
 	hideBtn();
 }
 
-// Календари
-// Сделаем неактивными воскресенье и субботу
+// Календари (+ неактивные воскресенье и суббота)
 var disabledDays = [0, 6];
-
 $('#datepickerOne').each(function() {
 	$(this).datepicker({
 		navTitles: {
@@ -132,17 +130,53 @@ $('#select-all').on('click', function(){
 	}
 	return false;
 });
+
+$('[data-actions-button="delete"]').on('click', function(){
+	$('.table-checkbox input').each(function(){
+		$(this).prop('checked', false);
+	});
+	$(this).hide();
+	$('[data-actions-button="upload"]').hide();
+	$('#select-all').removeClass('checked');
+})
 /*================== checkbox ====================*/
 
 
-/*================== action button (show / hide) ====================*/
-// $('.table-checkbox input:checkbox').click(function(){
-// 	if ($('.table-checkbox input:checkbox') || $('#select-all')) {
-// 		$('.actions__button').removeAttr('disabled');
-// 		$('.actions__counter span').html($('.table-checkbox input:checkbox:checked').length);
-// 	}
-// });
-/*================== action button (show / hide) ====================*/
+/*================== action button (show / hide) & counter ====================*/
+function myCount() {
+	let counterLength = $('.actions__counter span').html($('.table-checkbox input:checked').not($('#select-all input')).length);
+	if ($('.actions__counter span').html() == 0) {
+		$('[data-actions-button]').hide();
+	} else {
+		$('[data-actions-button]').show();
+	}
+};
+myCount();
+
+$('.table-checkbox input').each(function(){
+	$(this).on('click', myCount);
+});
+$('#select-all').on('click', myCount);
+/*================== action button (show / hide) & counter ====================*/
+
+
+/*================== file-name text (show / hide) ====================*/
+$('.arrow-down').each(function(){
+	$('.file-name__text').addClass('hidden');
+	$(this).on('click',function(){
+		$(this).toggleClass('active');
+		$(this).parent().find($('.file-name__text')).toggleClass('hidden');
+	})
+	const textHeight = $(this).parent().find($('.file-name__text')).height();
+	console.log(textHeight);
+	if (textHeight >= 15) {
+		$(this).show();
+	} else {
+		$(this).hide();
+	}
+})
+
+/*================== file-name text (show / hide) ====================*/
 
 
 
@@ -177,7 +211,6 @@ if (filesItem) {
 /*================== Offcanvas load files====================*/
 
 /*================== Offcanvas overlay====================*/
-
 $('#add-btn').on('click', function(){
 	$('.overlay-offcanvas').toggleClass('show');
 });
@@ -220,72 +253,7 @@ if (rangeSliderSpeed){
 		}
 	});
 }
+/*================== RANGE-SLIDER ====================*/
 
-// Графики
-const ctx = document.querySelectorAll('.chartBar');
-for (let chartItem of ctx) {
-	const myChart = new Chart(chartItem, {
-		type:'bar',
-		data: {
-			labels: [`Одновр. речь`, 'Одновр. тишина', 'Макс. длит. речи оператора'],
-			datasets: [{
-				label: 'First dataset',
-				data: [1, 4.7, 4],
-				backgroundColor: [
-				'#A0D911',
-				'#FFA940',
-				'#69C0FF',
-				],
-				borderColor: [
-				'#A0D911',
-				'#FFA940',
-				'#69C0FF',
-				],
-				borderWidth: 1,
-				borderRadius: 4,
-			}],
-		},
-		options: {
-			animation: true,
-			indexAxis: 'y',
-			tooltips: {
-				enabled: false
-			},
-			plugins: {
-				legend: {
-					display: false,
-					title: {
-						display: false,
-						text: '',
-					}
-				},
-				datalabels: {
-					color: '#000',
-					textAlign: 'center',
-					font: {
-						lineHeight: 1.6,
-					},
-					formatter: function(value) {
-						return value + '%';
-					},
-				}
-			},
-			scales: {
-				y: {
-					beginAtZero: true
-				}
-			// yAxes: [{
-			// 	ticks: {
-			// 		beginAtZero: true,
-			// 		fontFamily: "'Beeline Sans Bold', sans-serif",
-			// 		fontSize: 8,
-			// 	}
-			// }]
-		},
-		responsive: true, 
-		maintainAspectRatio: false,
-	},
-});
-}
 
 

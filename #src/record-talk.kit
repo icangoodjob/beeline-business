@@ -75,8 +75,8 @@
 					</div>
 				</form>
 				<div class="actions__buttons">
-					<a href="#" download="" class="actions__button null">Скачать .zip <span class="actions__counter">(<span>1</span>)</span></a>
-					<button class="actions__button null">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
+					<a href="#" download="" class="actions__button" data-actions-button="upload">Скачать .zip <span class="actions__counter">(<span>1</span>)</span></a>
+					<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
 					<a href="#" download="" class="actions__button report-btn"><span>Отчет Excel</span></a>
 					<div class="settings-box">
 						<button class="actions__button settings-btn" id="settings-btn"><img src="img/icons/settings.svg" alt=""></button>
@@ -167,7 +167,7 @@
 				</div>
 				<div class="file-table" data-file-table="1" data-table>
 					<ul class="file-table__list">
-						<li class="file-table__item file-table__heading">
+						<li class="file-table__item file-table__heading" data-tr>
 							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item" id="select-all">
 									<label>
@@ -308,13 +308,51 @@
 											<input class="form__input" type="text" autocomplete="off">
 										</form>
 										<ul class="choice-search__list">
-											<li>Екатерина Константинопольская</li>
-											<li>Екатерина Константинопольская</li>
-											<li>Екатерина Константинопольская</li>
-											<li>Екатерина Константинопольская</li>
-											<li>Екатерина Константинопольская</li>
-											<li>Екатерина Константинопольская</li>
-											<li>Екатерина Константинопольская</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+													</label>
+												</div>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -541,7 +579,7 @@
 								Удалить
 							</div>
 						</li>
-						<li class="file-table__item">
+						<li class="file-table__item" data-tr>
 							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
@@ -553,7 +591,7 @@
 							<div class="file-table__name file-name">
 								<div class="file-name__box">
 									<span class="arrow-down"></span>
-									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202</span>
+									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202Mix_13001_17005_202</span>
 								</div>
 								<form class="file-name__form">
 									<input class="form__input file-name__input" type="text">
@@ -634,7 +672,7 @@
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
-						<li class="file-table__item">
+						<li class="file-table__item" data-tr>
 							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
@@ -646,7 +684,7 @@
 							<div class="file-table__name file-name">
 								<div class="file-name__box">
 									<span class="arrow-down"></span>
-									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202</span>
+									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202 Mix_13001_17005_202</span>
 								</div>
 								<form class="file-name__form">
 									<input class="form__input file-name__input" type="text">
@@ -726,7 +764,7 @@
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
-						<li class="file-table__item">
+						<li class="file-table__item" data-tr>
 							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
@@ -818,7 +856,7 @@
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
-						<li class="file-table__item">
+						<li class="file-table__item" data-tr>
 							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
@@ -917,8 +955,13 @@
 						<div class="rows__label">
 							Рядов на странице:
 						</div>
-						<div class="rows__choice">
-							10
+						<div class="rows__item">
+							<select name="rows" class="form__select">
+								<option value="rows" selected>10</option>
+								<option value="rows-2">15</option>
+								<option value="rows-3">20</option>
+								<option value="rows-4">25</option>
+							</select>
 						</div>
 					</div>
 					<div class="work-area__pagination">

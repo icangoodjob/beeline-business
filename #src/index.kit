@@ -85,7 +85,7 @@
 						<div class="graph__title">Количество вызовов по операторам, шт</div>
 						<div class="graph__data">
 							<div>
-								<canvas id="myChart" class="chartBar" height="250"></canvas>
+								<div class="chart chartBar" data-id="chartBar"></div>
 							</div>
 						</div>
 					</div>
@@ -93,17 +93,25 @@
 						<div class="graph__title">Одновременная речь, шт</div>
 						<div class="graph__data">
 							<div>
-								<canvas class="chartBar" height="250"></canvas>
+								<div class="chart chartBar" data-id="chartBar"></div>
 							</div>
 						</div>
 					</div>
 					<div class="graph__item">
 						<div class="graph__title">Одновременная речь, шт</div>
-						<div class="graph__data"></div>
+						<div class="graph__data">
+							<div>
+								<div class="chart chartBar" data-id="chartBar"></div>
+							</div>
+						</div>
 					</div>
 					<div class="graph__item">
 						<div class="graph__title">Одновременная речь, шт</div>
-						<div class="graph__data"></div>
+						<div class="graph__data">
+							<div>
+								<div class="chart chartBar" data-id="chartBar"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<button class="work-area__watching" id="btn-more">
@@ -319,8 +327,14 @@
 
 	</div>
 
-	<!-- <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/stock/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="js/charts.js"></script>
+	
 	<!-- @import "js.kit" -->
 
 

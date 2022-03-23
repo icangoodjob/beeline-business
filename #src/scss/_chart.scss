@@ -1,5 +1,158 @@
-canvas{
-	width: 100% !important;
-	max-width: 100%;
-	height: 257px !important;
+.chartBar{
+	height: 250px !important;
+  & .highcharts-container {
+    min-height: 250px !important;
+  }
+}
+.chartPie {
+  min-height: 211px !important;
+  width: 192px;
+  border-left: 0.5px solid #CACACA;
+  border-bottom: 0.5px solid #CACACA;
+  overflow: visible !important;
+  & .highcharts-container {
+    min-height: 192px !important;
+    overflow: visible !important;
+  }
+}
+.highcharts-root{
+  width: 100%;
+}
+.chartPie .highcharts-root{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.highcharts-container {
+  width: 100% !important;
+}
+.chartPie .highcharts-color-0{
+  fill: var(--circle-gray-mid);
+}
+.chartPie .highcharts-color-1{
+  fill: var(--circle-gray-dark);
+}
+.chartPie .highcharts-color-2{
+  fill: var(--circle-azure);
+}
+.chartPie .highcharts-color-3{
+  fill: var(--circle-pink);
+}
+[data-id="chartPie-2"] .highcharts-color-3{
+  fill: var(--circle-blue);
+}
+.chartPie .highcharts-color-4{
+  fill: var(--circle-blue);
+}
+[data-id="chartPie-2"] .highcharts-color-4{
+  fill: var(--circle-orange);
+}
+.chartPie .highcharts-color-5{
+  fill: var(--circle-orange);
+}
+[data-id="chartPie-2"] .highcharts-color-5{
+  fill: var(--circle-yellow);
+}
+.chartPie .highcharts-color-6{
+  fill: var(--circle-yellow);
+}
+[data-id="chartPie-2"] .highcharts-color-6{
+  fill: var(--circle-green-light);
+}
+.chartPie .highcharts-color-7{
+  fill: var(--circle-green-light);
+}
+[data-id="chartPie-2"] .highcharts-color-7{
+  fill: var(--circle-purple);
+}
+.chartPie .highcharts-color-8{
+  fill: var(--circle-purple);
+}
+[data-id="chartPie-2"] .highcharts-color-8{
+  fill: var(--circle-purple-light);
+}
+.chartPie .highcharts-color-9{
+  fill: var(--circle-gray-light);
+}
+
+.highcharts-axis.highcharts-yaxis{
+	display: none;
+}
+.chartBar .highcharts-legend{
+	display: none;
+}
+.highcharts-exporting-group{
+	display: none;
+}
+.highcharts-label.highcharts-data-label > *{
+  font-weight: var(--font-weight) !important;
+}
+.highcharts-series-inactive {
+  opacity: 1 !important;
+}
+.highcharts-point {
+  stroke-width: 0 !important;
+}
+.highcharts-axis-labels text{
+  color: var(--main-color);
+  font-family: var(--font-family);
+  font-size: 12px !important;
+  font-weight: 500;
+}
+.chartBar .highcharts-color-0 {
+  fill: #A0D911;
+}
+.chartBar .highcharts-color-1 {
+  fill: #FFA940;
+}
+.chartBar .highcharts-color-2 {
+  fill: #69C0FF;
+}
+[data-id="chartBarPercent"] .highcharts-color-1,
+[data-id="chartBarDuration"] .highcharts-color-1 {
+  fill: #69C0FF;
+}
+[data-id="chartBarPercent"] .highcharts-color-2,
+[data-id="chartBarDuration"] .highcharts-color-2 {
+  fill: #FFA940;
+}
+[data-id="chartBarGender"] .highcharts-color-0{
+  fill: #69C0FF;
+}
+[data-id="chartBarGender"] .highcharts-color-2{
+ fill: #A0D911;
+}
+
+
+.highcharts-data-table table {
+  font-family: 'Beeline Sans', sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
 }

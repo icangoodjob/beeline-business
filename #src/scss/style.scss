@@ -30,7 +30,6 @@ $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
-
 $fontSize: 16px;
 
 :root{
@@ -40,6 +39,7 @@ $fontSize: 16px;
 	--z-fixed: 100;
 	--header-height: 80px;
 	--font-weight: 400;
+	--font-family: "Beeline Sans", sans-serif;
 
 	/* COLORS */
 	--common-bgcolor: #F3F3F3;
@@ -67,6 +67,7 @@ $fontSize: 16px;
 	--circle-gray-mid: #C5C5C5;
 	--circle-gray-dark: #8E8E8E;
 	--circle-purple: #7A81B0;
+	--circle-purple-light: #9CA3CE;
 	--circle-green-light: #BAE637;
 	--circle-yellow: #FADB14;
 	--circle-orange: #FF7A45;
@@ -91,7 +92,7 @@ body {
 	font-size: var(--font-size);
 	color: var(--main-color);
 	font-weight: var(--font-weight);
-	font-family: $fontFamily;
+	font-family: var(--font-family);
 	background: var(--common-bgcolor);
 	&.lock {
 		overflow: hidden;
