@@ -783,6 +783,10 @@
 	margin-bottom: 24px;
 	margin-left: auto;
 }
+.events-record__report.report-btn {
+	max-width: 160px;
+	padding: 11px 23px;
+}
 .item-dialog__label{
 	width: max-content;
 	margin: 0 0 8px;
@@ -870,7 +874,7 @@
 .record-talk__content .add__button{
 	margin: 0px 0 24px;
 }
-.record-talk__content-buttons{
+.block__buttons{
 	display: flex;
 	column-gap: 20px;
 }
@@ -1092,13 +1096,13 @@
 	visibility: visible;
 	transform: translateY(0px);
 }
-
 .file-name__box.hide{
 	display: none;
 }
 
 .file-name__text {
 	cursor: pointer;
+	font-size: 14px;
 	&.hidden{
 		overflow: hidden;
 		display: -webkit-box;
@@ -1370,11 +1374,7 @@ input[type="radio"]:checked + label {
 	background: var(--white-color);
 	position: relative;
 }
-.file-table .report-btn{
-	position: absolute;
-	top: -61px;
-	right: 24px;
-}
+
 .file-table__list {
 	min-width: 700px;
 	overflow-x: auto;
@@ -1424,24 +1424,8 @@ input[type="radio"]:checked + label {
 	word-wrap: break-word;
 	position: relative;
 }
-.file-table__item .file-table__name.arrow-down{
-	word-wrap: break-word;
-	position: relative;
-	display: inline-block;
-	&::before{
-		content: url('../img/icons/arrow-down.svg');
-		position: absolute;
-		top: 10px;
-		left: 15px;
-		width: 20px;
-		height: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-}
-[data-file-table="1"] .arrow-down,
-[data-file-table="2"] .arrow-down{
+
+.arrow-down{
 	position: absolute;
 	width: 20px;
 	height: 20px;
@@ -1450,17 +1434,19 @@ input[type="radio"]:checked + label {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 	&::before{
 		content: url('../img/icons/arrow-down.svg');
 		position: absolute;
 		transition: transform .2s ease 0s;
 	}
+	&.hidden{
+		display: none;
+	}
 }
 .arrow-down.active::before{
 	transform: rotate(180deg);
 }
-
-
 
 .file-table__item:not(.file-table__heading) .file-table__sound .file-table__icon,
 .file-table__item:not(.file-table__heading) .file-table__download .file-table__icon,
@@ -1487,7 +1473,7 @@ input[type="radio"]:checked + label {
 	grid-template-columns: 55px 152px 213px 134px minmax(356px, 1fr) 180px 93px 103px;
 }
 [data-file-table="4"] .file-table__item:not(.file-table__heading) .file-table__name{
-	padding: 15px 17px 15px 26px;
+	padding: 13px 17px 15px 43px;
 }
 [data-file-table="4"] .file-table__item.file-table__heading{
 	& > * {
@@ -1526,6 +1512,7 @@ input[type="radio"]:checked + label {
 	opacity: 0;
 	font-size: 0;
 	cursor: pointer;
+	border-radius: 12px;
 }
 .file-upload__button {
 	display: inline-flex;
@@ -1535,7 +1522,7 @@ input[type="radio"]:checked + label {
 	justify-content: center;
 	align-items: center;
 	background-color: transparent;
-	padding: 12px 22px;
+	padding: 11px 22px;
 	font-size: 16px;
 	line-height: 150%;
 	letter-spacing: 0.2px;
@@ -1554,7 +1541,7 @@ input[type="radio"]:checked + label {
 	padding: 30px;
 	font-size: 16px;
 	line-height: 150%;
-	color: var(-main-color);
+	color: var(--main-color);
 }
 .file-upload__item_press .file-upload__input{
 	width: 100px;

@@ -36,31 +36,147 @@
 				</div>
 			</div>
 			<div class="scripts__content">
-				<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#script">Добавить скрипт</button>
+				<div class="block__buttons">
+					<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#script-modal">Добавить скрипт</button>
+				</div>
 				<div class="actions__buttons">
-					<button class="actions__button">Удалить <span class="actions__counter">(1)</span></button>
-					<button class="actions__button">Скачать шаблон</button>
+					<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
+					<a href="#" download="" class="actions__button">Скачать шаблон</a>
 					<button class="actions__button">Импорт</button>
 					<button class="actions__button">Экспорт</button>
 				</div>
 				<div class="settings__table table-settings" data-table-settings="3">
 					<ul class="table-settings__list">
 						<li class="table-settings__item table-settings__heading">
-							<div class="table-settings__checkbox">
-								<div class="checkbox-item">
+							<div class="table-settings__checkbox table-checkbox">
+								<div class="checkbox-item" id="select-all">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox"></span>
 									</label>
 								</div>
 							</div>
-							<div class="table-settings__name">
+							<div class="table-settings__name choice-search search">
 								Название
 								<a href="#" class="all-btn">Все</a>
+								<div class="choice-search__box">
+									<div class="search__body">
+										<form action="#" class="search-form">
+											<button class="search__button">
+												<img src="img/icons/search.svg" alt="">
+											</button>
+											<input class="form__input" type="text" autocomplete="off">
+										</form>
+										<ul class="choice-search__list">
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Банк</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Извинения</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Прощания</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Негативная лексика</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Приветствия</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<div class="table-settings__description">
+							<div class="table-settings__description choice-search search">
 								Описание
 								<a href="#" class="all-btn">Все</a>
+								<div class="choice-search__box">
+									<div class="search__body">
+										<form action="#" class="search-form">
+											<button class="search__button">
+												<img src="img/icons/search.svg" alt="">
+											</button>
+											<input class="form__input" type="text" autocomplete="off">
+										</form>
+										<ul class="choice-search__list">
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Банк</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Извинения</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Прощания</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Негативная лексика</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Приветствия</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="table-settings__redact">
 								Редактировать
@@ -70,7 +186,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -85,7 +201,7 @@
 								Банк
 							</div>
 							<div class="table-settings__redact">
-								<button class="redact__button _icon-pen">
+								<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#script-redact-modal">
 								</button>
 							</div>
 							<div class="table-settings__delete">
@@ -93,7 +209,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -108,7 +224,7 @@
 								Извинения
 							</div>
 							<div class="table-settings__redact">
-								<button class="redact__button _icon-pen">
+								<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#script-redact-modal">
 								</button>
 							</div>
 							<div class="table-settings__delete">
@@ -116,7 +232,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -131,7 +247,7 @@
 								Прощания
 							</div>
 							<div class="table-settings__redact">
-								<button class="redact__button _icon-pen">
+								<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#script-redact-modal">
 								</button>
 							</div>
 							<div class="table-settings__delete">
@@ -139,7 +255,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -154,7 +270,7 @@
 								Извинения
 							</div>
 							<div class="table-settings__redact">
-								<button class="redact__button _icon-pen">
+								<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#script-redact-modal">
 								</button>
 							</div>
 							<div class="table-settings__delete">
@@ -162,7 +278,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -177,7 +293,7 @@
 								Негативная лексика
 							</div>
 							<div class="table-settings__redact">
-								<button class="redact__button _icon-pen">
+								<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#script-redact-modal">
 								</button>
 							</div>
 							<div class="table-settings__delete">
@@ -185,7 +301,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -200,7 +316,7 @@
 								Приветствия
 							</div>
 							<div class="table-settings__redact">
-								<button class="redact__button _icon-pen">
+								<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#script-redact-modal">
 								</button>
 							</div>
 							<div class="table-settings__delete">
@@ -216,7 +332,7 @@
 
 		<!-- @import "footer.kit" -->
 
-		<div class="modal modal__script fade" id="script" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="script" aria-hidden="true">
+		<div class="modal modal__script fade" id="script-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="script-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
@@ -251,6 +367,67 @@
 						<div class="form-modal__buttons">
 							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
 							<button class="form-modal__button form-modal__button_yellow">Добавить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal__script-redact fade" id="script-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="script-redact-modal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Редактировать скрипт</h2>
+						<div class="form-modal__body">
+							<div class="form-modal__item">
+								<input class="form-modal__input" type="text" autocomplete="off" value="Банк">
+							</div>
+							<div class="form-modal__item">
+								<input class="form-modal__input" type="text" autocomplete="off" value="Продажи">
+							</div>
+							<div class="form-modal__item">
+								<div class="form-modal-count form-modal-count__percent">
+									<input class="form-modal__input" type="number" autocomplete="off" value="60">
+									<span class="form-modal-count__label">Процент совпадения</span>
+								</div>
+							</div>
+							<div class="file-upload__body" id="fileUpload">
+								<div class="file-upload__content">
+									Выберите файлы для загрузки
+									<div class="file-upload__item file-upload__item_press">
+										<input accept=".jpg, .png, .gif" type="file" class="file-upload__input">
+										<a href="#" class="file-upload__button_press">Нажмите сюда</a>
+										или перетащите файлы
+									</div>
+									<div class="file-upload__item">
+										<input accept=".jpg, .png, .gif" type="file" class="file-upload__input">
+										<button class="file-upload__button">Загрузить файл</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-modal__files load-file">
+								<div class="load-file__item">
+									<div class="load-file__row">
+										<span class="load-file__icon">
+											<img src="img/icons/file.svg" alt="">
+										</span>
+										<div class="load-file__body">
+											<div class="load-file__name">
+												Скрипт_1. xls
+											</div>
+										</div>
+										<div class="load-file__delete">
+											<button class="delete__button _icon-delete"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-modal__buttons">
+							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow">Сохранить</button>
 						</div>
 					</form>
 				</div>

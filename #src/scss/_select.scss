@@ -74,6 +74,24 @@
 	border: 1px solid #d9d9d9;
 	font-size: 16px;
 	padding: 0px 0px 5px 0px;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.select__options::-webkit-scrollbar{
+	width: 4px;
+	background: var(--scrollbar-color);
+	border-radius: 8px;
+}
+.select__options::-webkit-scrollbar-thumb{
+	width: 4px;
+	border-radius: 22px;
+	background: #BABABA;
+}
+.form-modal__choice .select__options{
+	background: var(--white-color);
+	max-height: 218px;
+	overflow-y: auto;
 }
 .select__option {
 	cursor: pointer;

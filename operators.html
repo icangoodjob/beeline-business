@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Настройка словарей</title>
+	<title>Отделы и операторы</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -131,10 +131,10 @@
 				</nav>
 			</div>
 		</aside>
-		<main class="main glossary-page glossary settings" id="main">
+		<main class="main departments-page departments settings" id="main">
 			<div class="main__header">
 				<h1 class="main__title">
-					Настройка словарей
+					Отделы и операторы
 				</h1>
 				<div class="main-info">
 					<button class="main-info__btn">
@@ -152,12 +152,12 @@
 			</div>
 			<div class="tabs">
 				<ul class="tabs__list nav nav-tabs" id="myTab" role="tablist">
-					<li class="tabs__item"><a class="tabs__link active" href="glossary.html"><span>Словари</span></a></li>
-					<li class="tabs__item"><a class="tabs__link" href="glossary-2.html"><span>Добавить словари отделам</span></a></li>
+					<li class="tabs__item"><a class="tabs__link" href="departments.html"><span>Отделы</span></a></li>
+					<li class="tabs__item"><a class="tabs__link active" href="operators.html"><span>Операторы</span></a></li>
 				</ul>
-				<div class="tabs__content glossary-content">
+				<div class="tabs__content departments-content">
 					<div class="block__buttons">
-						<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#glossary-modal">Добавить словарь</button>
+						<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#operators-modal">Добавить оператора</button>
 					</div>
 					<div class="actions__buttons">
 						<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
@@ -165,19 +165,19 @@
 						<button class="actions__button">Импорт</button>
 						<button class="actions__button">Экспорт</button>
 					</div>
-					<div class="settings__table table-settings" data-table-settings="1">
+					<div class="settings__table table-settings" data-table-settings="5">
 						<ul class="table-settings__list">
 							<li class="table-settings__item table-settings__heading">
 								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item" id="select-all">
 										<label>
-											<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 											<span class="custom-checkbox"></span>
 										</label>
 									</div>
 								</div>
 								<div class="table-settings__name choice-search search">
-									Название
+									Оператор
 									<a href="#" class="all-btn">Все</a>
 									<div class="choice-search__box">
 										<div class="search__body">
@@ -191,36 +191,27 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Банк</span>
+															<span class="checkbox-item__text">Оператор 1</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Прощание</span>
+															<span class="checkbox-item__text">Оператор 2</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Извенения</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Негативная лексика</span>
+															<span class="checkbox-item__text">Оператор 3</span>
 														</label>
 													</div>
 												</li>
@@ -228,8 +219,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="table-settings__words choice-search search">
-									Слова
+								<div class="table-settings__id choice-search search">
+									ID
 									<a href="#" class="all-btn">Все</a>
 									<div class="choice-search__box">
 										<div class="search__body">
@@ -243,36 +234,27 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Слова</span>
+															<span class="checkbox-item__text">39894028910</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Слова</span>
+															<span class="checkbox-item__text">39894028910</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Слова</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Слова</span>
+															<span class="checkbox-item__text">39894028910</span>
 														</label>
 													</div>
 												</li>
@@ -280,8 +262,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="table-settings__description choice-search search">
-									Описание
+								<div class="table-settings__phone choice-search search">
+									Телефонный номер
 									<a href="#" class="all-btn">Все</a>
 									<div class="choice-search__box">
 										<div class="search__body">
@@ -295,36 +277,27 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Банк</span>
+															<span class="checkbox-item__text">+7 915 7777777</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Прощание</span>
+															<span class="checkbox-item__text">+7 915 7777777</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Извенения</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Негативная лексика</span>
+															<span class="checkbox-item__text">+7 915 7777777</span>
 														</label>
 													</div>
 												</li>
@@ -332,8 +305,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="table-settings__weight choice-search search">
-									Вес
+								<div class="table-settings__depart choice-search search">
+									Отдел
 									<a href="#" class="all-btn">Все</a>
 									<div class="choice-search__box">
 										<div class="search__body">
@@ -347,45 +320,27 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">0</span>
+															<span class="checkbox-item__text">Отдел 1</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">3</span>
+															<span class="checkbox-item__text">Отдел 2</span>
 														</label>
 													</div>
 												</li>
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">6</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">9</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">10</span>
+															<span class="checkbox-item__text">Отдел 3</span>
 														</label>
 													</div>
 												</li>
@@ -394,7 +349,7 @@
 									</div>
 								</div>
 								<div class="table-settings__redact">
-									Редактировать
+									Редактирование
 								</div>
 								<div class="table-settings__delete">
 									Удалить
@@ -404,37 +359,25 @@
 								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
-											<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 											<span class="custom-checkbox"></span>
 										</label>
 									</div>
 								</div>
 								<div class="table-settings__name">
-									Банк
+									Екатерина Константинопольская
 								</div>
-								<div class="table-settings__words">
-									<ul class="words__list">
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
-												Все слова
-											</a>
-										</li>
-									</ul>
+								<div class="table-settings__id">
+									39894028910
 								</div>
-								<div class="table-settings__description">
-									Банк
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777777</a>
 								</div>
-								<div class="table-settings__weight">
-									10
+								<div class="table-settings__depart">
+									Не назначен
 								</div>
 								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#glossary-redact-modal">
+									<button class="redact__button _icon-pen"  data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
 									</button>
 								</div>
 								<div class="table-settings__delete">
@@ -451,31 +394,19 @@
 									</div>
 								</div>
 								<div class="table-settings__name">
-									Извинения
+									Иван Петров
 								</div>
-								<div class="table-settings__words">
-									<ul class="words__list">
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
-												Все слова
-											</a>
-										</li>
-									</ul>
+								<div class="table-settings__id">
+									79157777711
 								</div>
-								<div class="table-settings__description">
-									Извинения
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777711</a>
 								</div>
-								<div class="table-settings__weight">
-									0
+								<div class="table-settings__depart">
+									Отдел 1
 								</div>
 								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#glossary-redact-modal">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
 									</button>
 								</div>
 								<div class="table-settings__delete">
@@ -492,31 +423,19 @@
 									</div>
 								</div>
 								<div class="table-settings__name">
-									Прощания
+									Екатерина Константинопольская
 								</div>
-								<div class="table-settings__words">
-									<ul class="words__list">
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
-												Все слова
-											</a>
-										</li>
-									</ul>
+								<div class="table-settings__id">
+									39894028910
 								</div>
-								<div class="table-settings__description">
-									Прощания
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777777</a>
 								</div>
-								<div class="table-settings__weight">
-									9
+								<div class="table-settings__depart">
+									Не назначен
 								</div>
 								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#glossary-redact-modal">
+									<button class="redact__button _icon-pen"  data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
 									</button>
 								</div>
 								<div class="table-settings__delete">
@@ -533,98 +452,19 @@
 									</div>
 								</div>
 								<div class="table-settings__name">
-									Извинения
+									Иван Петров
 								</div>
-								<div class="table-settings__words">
-									<ul class="words__list">
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Терапевт</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
-												Все слова
-											</a>
-										</li>
-									</ul>
+								<div class="table-settings__id">
+									79157777711
 								</div>
-								<div class="table-settings__description">
-									Извинения
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777711</a>
 								</div>
-								<div class="table-settings__weight">
-									0
+								<div class="table-settings__depart">
+									Отдел 1
 								</div>
 								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#glossary-redact-modal">
-									</button>
-								</div>
-								<div class="table-settings__delete">
-									<button class="delete__button _icon-delete"></button>
-								</div>
-							</li>
-							<li class="table-settings__item">
-								<div class="table-settings__checkbox table-checkbox">
-									<div class="checkbox-item">
-										<label>
-											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-											<span class="custom-checkbox"></span>
-										</label>
-									</div>
-								</div>
-								<div class="table-settings__name">
-									Негативная лексика
-								</div>
-								<div class="table-settings__words">
-									<ul class="words__list">
-										<li class="words__item">Терапевт</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
-												Все слова
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="table-settings__description">
-									Негативная лексика
-								</div>
-								<div class="table-settings__weight">
-									0
-								</div>
-								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#glossary-redact-modal">
-									</button>
-								</div>
-								<div class="table-settings__delete">
-									<button class="delete__button _icon-delete"></button>
-								</div>
-							</li>
-							<li class="table-settings__item">
-								<div class="table-settings__checkbox table-checkbox">
-									<div class="checkbox-item">
-										<label>
-											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-											<span class="custom-checkbox"></span>
-										</label>
-									</div>
-								</div>
-								<div class="table-settings__name">
-									Приветствия
-								</div>
-								<div class="table-settings__words">
-									<ul class="words__list">
-										<li class="words__item">Терапевт</li>
-									</ul>
-								</div>
-								<div class="table-settings__description">
-									Приветствия
-								</div>
-								<div class="table-settings__weight">
-									0
-								</div>
-								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#glossary-redact-modal">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
 									</button>
 								</div>
 								<div class="table-settings__delete">
@@ -652,63 +492,37 @@
 				</div>
 			</div>
 		</footer>
-		<div class="modal fade modal__glossary" id="glossary-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="glossary-modal" aria-hidden="true">
+		<div class="modal modal__department fade" id="operators-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="operator-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
 					</button>
-					<form action="#" class="modal__form form-modal">
-						<h2 class="form-modal__title">Добавить словарь</h2>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Добавить оператора</h2>
 						<div class="form-modal__body">
 							<div class="form-modal__item">
-								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Название">
+								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Имя и фамилия">
 							</div>
 							<div class="form-modal__item">
-								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Описание">
+								<select name="department" class="form__select">
+									<option value="department" selected>Отдел</option>
+									<option value="department-2">Отдел 2</option>
+									<option value="department-3">Отдел 3</option>
+								</select>
 							</div>
 							<div class="form-modal__item">
-								<div class="form-modal-words">
-									<label class="form-modal-words__label">Слова</label>
-									<div class="form-modal__item">
-										<div class="file-upload__item file-upload__item-xls">
-											<input accept=".jpg, .png, .gif" type="file" class="file-upload__input" disabled>
-											<button class="file-upload__button" disabled><span>Загрузить из XLS</span></button>
-										</div>
-									</div>
-									<div class="file-upload__box">
-										<div class="file-upload__item">
-											<input id="formFile" accept=".jpg, .png, .gif, .doc,.docx,.xml" type="file" name="file" class="file-upload__input">
-											<button class="file-upload__button">Выбрать файл</button>
-										</div>
-										<span id="formPreview" class="file-upload__preview">файл не выбран</span>
-									</div>
-								</div>
-							</div>
-							<div class="form-modal__item">
-								<label class="form-modal__label">Лист из файла</label>
-								<div class="form-modal__choice">
-									<select name="word" class="form__select">
-										<option value="word" selected>Sheet1</option>
-										<option value="word-2">слово</option>
-										<option value="word-3">кредит</option>
-										<option value="word-4">деньги</option>
-										<option value="word-5">платить</option>
-										<option value="word-6">оплачивать</option>
-										<option value="word-7">дорого</option>
-										<option value="word-8">оплата</option>
-										<option value="word-9">кредитование</option>
+								<div class="form-modal__item">
+									<select name="number" class="form__select">
+										<option value="number" selected>Номер телефона</option>
+										<option value="number-2">+7 915 7777711</option>
+										<option value="number-3">+7 909 1111111</option>
 									</select>
 								</div>
 							</div>
 							<div class="form-modal__item">
-								<div class="form-modal-words">
-									<textarea class="form-modal__textarea" autocomplete="off" placeholder="Слова"></textarea>
-								</div>
-							</div>
-							<div class="form-modal__item">
-								<div class="form-modal-count">
-									<input class="form-modal__input" type="number" autocomplete="off" value="10">
-									<span class="form-modal-count__label">Вес словаря</span>
+								<div class="form-modal-count form-modal-count__id">
+									<input class="form-modal__input" type="number" autocomplete="off" placeholder="ID">
+									<span class="form-modal-count__label">ID</span>
 								</div>
 							</div>
 						</div>
@@ -721,64 +535,37 @@
 			</div>
 		</div>
 
-		<div class="modal fade modal__glossary" id="glossary-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="glossary-redact-modal" aria-hidden="true">
+		<div class="modal modal__department fade" id="operators-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="operators-redact-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
 					</button>
-					<form action="#" class="modal__form form-modal">
-						<h2 class="form-modal__title">Редактирование словаря</h2>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Редактирование оператора</h2>
 						<div class="form-modal__body">
 							<div class="form-modal__item">
-								<input class="form-modal__input" type="text" autocomplete="off" value="Медицинский словарь">
+								<input class="form-modal__input" type="text" autocomplete="off" value="Ирина Хон">
 							</div>
 							<div class="form-modal__item">
-								<input class="form-modal__input" type="text" autocomplete="off" value="Медицина">
+								<select name="department" class="form__select">
+									<option value="department" selected>2</option>
+									<option value="department-2">3</option>
+									<option value="department-3">4</option>
+								</select>
 							</div>
 							<div class="form-modal__item">
-								<div class="form-modal-words">
-									<label class="form-modal-words__label">Слова</label>
-									<div class="form-modal__item">
-										<div class="file-upload__item file-upload__item-xls">
-											<input accept=".jpg, .png, .gif" type="file" class="file-upload__input" disabled>
-											<button class="file-upload__button" disabled><span>Загрузить из XLS</span></button>
-										</div>
-									</div>
-									<div class="file-upload__box">
-										<div class="file-upload__item">
-											<input id="formFile" accept=".jpg, .png, .gif, .doc,.docx,.xml" type="file" name="file" class="file-upload__input">
-											<button class="file-upload__button">Выбрать файл</button>
-										</div>
-										<span id="formPreview" class="file-upload__preview">словарь_тест_банк.xls</span>
-									</div>
-								</div>
-							</div>
-							<div class="form-modal__item">
-								<label class="form-modal__label">Лист из файла</label>
-								<div class="form-modal__choice">
-									<select name="word" class="form__select">
-										<option value="word" selected>Sheet1</option>
-										<option value="word-2">слово</option>
-										<option value="word-3">кредит</option>
-										<option value="word-4">деньги</option>
-										<option value="word-5">платить</option>
-										<option value="word-6">оплачивать</option>
-										<option value="word-7">дорого</option>
-										<option value="word-8">оплата</option>
-										<option value="word-9">кредитование</option>
+								<div class="form-modal__item">
+									<select name="number" class="form__select">
+										<option value="number" selected>+7 915 7777711</option>
+										<option value="number-2">+7 915 7777711</option>
+										<option value="number-3">+7 909 1111111</option>
 									</select>
 								</div>
 							</div>
 							<div class="form-modal__item">
-								<div class="form-modal-words form-modal__textarea-wrapper">
-									<textarea class="form-modal__textarea" placeholder="" id="formTextarea">
-									</textarea>
-								</div>
-							</div>
-							<div class="form-modal__item">
-								<div class="form-modal-count">
-									<input class="form-modal__input" type="number" autocomplete="off" value="10">
-									<span class="form-modal-count__label">Вес словаря</span>
+								<div class="form-modal-count form-modal-count__id">
+									<input class="form-modal__input" type="number" autocomplete="off" value="237845">
+									<span class="form-modal-count__label">ID</span>
 								</div>
 							</div>
 						</div>
@@ -790,7 +577,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<script src="https://kit.fontawesome.com/ed89a4511e.js" crossorigin="anonymous"></script>

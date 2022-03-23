@@ -36,35 +36,154 @@
 				</div>
 			</div>
 			<div class="connection__content">
-				<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#connection">Подключить номер</button>
+				<div class="block__buttons">
+					<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#connection-modal">Подключить номер</button>
+				</div>
 				<div class="actions__buttons">
-					<button class="actions__button">Удалить <span class="actions__counter">(1)</span></button>
-					<button class="actions__button">Скачать шаблон</button>
+					<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
+					<a href="#" download="" class="actions__button">Скачать шаблон</a>
 					<button class="actions__button">Импорт</button>
 					<button class="actions__button">Экспорт</button>
 				</div>
 				<div class="settings__table table-settings" data-table-settings="6">
 					<ul class="table-settings__list">
 						<li class="table-settings__item table-settings__heading">
-							<div class="table-settings__checkbox">
-								<div class="checkbox-item">
+							<div class="table-settings__checkbox table-checkbox">
+								<div class="checkbox-item" id="select-all">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox"></span>
 									</label>
 								</div>
 							</div>
-							<div class="table-settings__number">
+							<div class="table-settings__number choice-search search">
 								Номер
 								<a href="#" class="all-btn">Все</a>
+								<div class="choice-search__box">
+									<div class="search__body">
+										<form action="#" class="search-form">
+											<button class="search__button">
+												<img src="img/icons/search.svg" alt="">
+											</button>
+											<input class="form__input" type="text" autocomplete="off">
+										</form>
+										<ul class="choice-search__list">
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">+7 999 99 99 99</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">+7 999 99 99 99</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">+7 999 99 99 99</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<div class="table-settings__services">
+							<div class="table-settings__services choice-search search">
 								Услуга
 								<a href="#" class="all-btn">Все</a>
+								<div class="choice-search__box">
+									<div class="search__body">
+										<form action="#" class="search-form">
+											<button class="search__button">
+												<img src="img/icons/search.svg" alt="">
+											</button>
+											<input class="form__input" type="text" autocomplete="off">
+										</form>
+										<ul class="choice-search__list">
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Речевая аналитика</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Речевая аналитика</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Речевая аналитика</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<div class="table-settings__depart">
+							<div class="table-settings__depart choice-search search">
 								Отдел
 								<a href="#" class="all-btn">Все</a>
+								<div class="choice-search__box">
+									<div class="search__body">
+										<form action="#" class="search-form">
+											<button class="search__button">
+												<img src="img/icons/search.svg" alt="">
+											</button>
+											<input class="form__input" type="text" autocomplete="off">
+										</form>
+										<ul class="choice-search__list">
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Отдел 1</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Отдел 2</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Отдел 3</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="table-settings__redact">
 								Редактирование
@@ -74,7 +193,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -91,7 +210,7 @@
 							<div class="table-settings__depart">
 								<span>-</span>
 							</div>
-							<div class="table-settings__redact">
+							<div class="table-settings__redact" data-bs-toggle="modal" data-bs-target="#connection-redact-modal">
 								<button class="redact__button _icon-pen">
 								</button>
 							</div>
@@ -100,7 +219,7 @@
 							</div>
 						</li>
 						<li class="table-settings__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -117,7 +236,59 @@
 							<div class="table-settings__depart">
 								<span>-</span>
 							</div>
-							<div class="table-settings__redact">
+							<div class="table-settings__redact" data-bs-toggle="modal" data-bs-target="#connection-redact-modal">
+								<button class="redact__button _icon-pen">
+								</button>
+							</div>
+							<div class="table-settings__delete">
+								<button class="delete__button _icon-delete"></button>
+							</div>
+						</li>
+						<li class="table-settings__item">
+							<div class="table-settings__checkbox table-checkbox">
+								<div class="checkbox-item">
+									<label>
+										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+										<span class="custom-checkbox"></span>
+									</label>
+								</div>
+							</div>
+							<div class="table-settings__number">
+								+7 999 99 99 99
+							</div>
+							<div class="table-settings__services">
+								<span>Речевая аналитика</span>
+							</div>
+							<div class="table-settings__depart">
+								<span>-</span>
+							</div>
+							<div class="table-settings__redact" data-bs-toggle="modal" data-bs-target="#connection-redact-modal">
+								<button class="redact__button _icon-pen">
+								</button>
+							</div>
+							<div class="table-settings__delete">
+								<button class="delete__button _icon-delete"></button>
+							</div>
+						</li>
+						<li class="table-settings__item">
+							<div class="table-settings__checkbox table-checkbox">
+								<div class="checkbox-item">
+									<label>
+										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+										<span class="custom-checkbox"></span>
+									</label>
+								</div>
+							</div>
+							<div class="table-settings__number">
+								+7 999 99 99 00
+							</div>
+							<div class="table-settings__services">
+								<span>Речевая аналитика</span>
+							</div>
+							<div class="table-settings__depart">
+								<span>-</span>
+							</div>
+							<div class="table-settings__redact" data-bs-toggle="modal" data-bs-target="#connection-redact-modal">
 								<button class="redact__button _icon-pen">
 								</button>
 							</div>
@@ -132,7 +303,7 @@
 
 		<!-- @import "footer.kit" -->
 
-		<div class="modal fade" id="connection" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="connection" aria-hidden="true">
+		<div class="modal fade" id="connection-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="connection-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
@@ -142,11 +313,14 @@
 						<div class="form-modal__body">
 							<div class="form-modal__item">
 								<div class="form-modal__box">
-									<textarea class="form-modal__textarea" autocomplete="off" placeholder="Номера телефонов, через запятую списком"></textarea>
+									<div class="form-modal__textarea-wrapper">
+										<textarea class="form-modal__textarea" autocomplete="off" placeholder="Номера телефонов, через запятую списком"></textarea>
+									</div>
 									<button class="form-modal__button">Проверить номера</button>
 								</div>
 							</div>
 							<div class="form-modal__item">
+								<label class="form-modal__label">Услуга</label>
 								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Услуга">
 							</div>
 							<div class="form-modal__item">
@@ -154,8 +328,41 @@
 							</div>
 						</div>
 						<div class="form-modal__buttons">
-							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
+							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
 							<button class="form-modal__button form-modal__button_yellow">Добавить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="connection-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="connection-redact-modal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+					<form action="#" class="modal__form form-modal">
+						<h2 class="form-modal__title">Редактировать подключение номеров</h2>
+						<div class="form-modal__body">
+							<div class="form-modal__item">
+								<div class="form-modal__box">
+									<div class="form-modal__textarea-wrapper">
+										<textarea class="form-modal__textarea" autocomplete="off" id="formTextareaNumbers"></textarea>
+									</div>
+									<button class="form-modal__button">Проверить номера</button>
+								</div>
+							</div>
+							<div class="form-modal__item">
+								<label class="form-modal__label">Услуга</label>
+								<input class="form-modal__input" type="text" autocomplete="off" value="Речевая аналитика">
+							</div>
+							<div class="form-modal__item">
+								<input class="form-modal__input" type="text" autocomplete="off" value="Важные клиенты">
+							</div>
+						</div>
+						<div class="form-modal__buttons">
+							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow">Сохранить</button>
 						</div>
 					</form>
 				</div>

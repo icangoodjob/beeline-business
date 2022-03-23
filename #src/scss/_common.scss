@@ -102,6 +102,11 @@ input[type="number"]:focus {
 .record-talk .actions__buttons.actions__buttons_mtop{
   margin: 16px 0 0;
 }
+.file-table .actions__buttons{
+  position: absolute;
+  top: -79px;
+  right: 24px;
+}
 .actions__button {
   min-height: 48px;
   display: flex;
@@ -251,6 +256,10 @@ input[type="number"]:focus {
   transform: translateY(20px);
   transition: all .3s ease 0s;
 }
+.table-settings__weight .choice-search__box{
+  left: auto;
+  right: 0;
+}
 .search__body {
   background: #FDFDFD;
   box-shadow: 0px 0px 10px 10px rgba(182, 182, 182, 0.15);
@@ -277,6 +286,8 @@ input[type="number"]:focus {
 }
 .choice-search__list {
   padding: 0px 0 0 16px;
+  max-height: 188px;
+  overflow-y: auto;
   & li{
     font-size: 16px;
     line-height: math.div(24, 16) * 100%;
@@ -286,6 +297,16 @@ input[type="number"]:focus {
   & li:not(:last-child){
     margin: 0 0 4px;
   }
+}
+.choice-search__list::-webkit-scrollbar{
+  width: 4px;
+  background: var(--scrollbar-color);
+  border-radius: 8px;
+}
+.choice-search__list::-webkit-scrollbar-thumb{
+  width: 4px;
+  border-radius: 22px;
+  background: #BABABA;
 }
 
 // Стили для таблиц table-settings

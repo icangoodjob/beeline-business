@@ -12,125 +12,10 @@
 
 	<div class="wrapper" id="wrapper">
 
-		<!-- HEADER -->
-		<header class="header" id="header">
-			<div class="header__row">
-				<div class="header__menu menu-header">
-					<ul class="menu-header__list">
-						<li>
-							<a href="#" class="menu-header__link">
-								Помощь
-							</a>
-						</li>
-						<li>
-							<a href="#" class="menu-header__link">
-								ООО «Светлое будущее»
-							</a>
-						</li>
-					</ul>
-				</div>
-				<a href="#" class="header__user user-header">
-					<div class="user-header__icon">
-						<img src="img/icons/user.svg" alt="">
-					</div>
-					<div class="user-header__name">Иван Иванович</div>
-				</a>
-			</div>
-		</header>
-		<!-- SIDEBAR -->
-		<aside class="aside" id="sidebar">
-			<button type="button" class="aside__close" id="sidebarCollapse">
-				<img src="img/icons/plus.svg" alt="">
-			</button>
-			<a href="#" class="aside__logo logo">
-				<span class="logo__circle">
-					<img src="img/icons/logo-circle.svg" alt="">
-				</span>
-				<span class="logo__text">
-					<img src="img/icons/logo-text.svg" alt="">
-				</span>
-			</a>
-			<div class="aside__menu">
-				<nav class="menu">
-					<ul class="menu__list accordion" id="accordionExample">
-						<li class="menu__item active">
-							<div class="menu__link menu__link-current collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								<span class="menu__icon">
-									<img src="img/icons/cloud.svg" alt="">
-								</span>
-								<div class="menu__text">Речевая аналитика</div>
-								<div class="menu__arrow">
-									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-									</svg>
-								</div>
-							</div>
-							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-								<ul class="menu-dropdown__list">
-									<li><a href="index.html" class="menu-dropdown__link current"><span class="menu__text">Рабочая область</span> </a></li>
-									<li><a href="record-talk.html" class="menu-dropdown__link"><span class="menu__text">Записи раговоров</span></a></li>
-									<li><a href="scripts-2.html" class="menu-dropdown__link"><span class="menu__text">Скрипты обслуживания</span></a></li>
-									<li>
-										<div class="menu__link menu__link-settings collapsed" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-											<span class="menu__icon">
-											</span>
-											<div class="menu__text">Настройки</div>
-											<div class="menu__arrow">
-												<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-												</svg>
-											</div>
-										</div>
-										<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo">
-											<ul class="menu-dropdown__list">
-												<li><a href="glossary.html" class="menu-dropdown__link"><span class="menu__text">Словари</span></a></li>
-												<li><a href="scripts.html" class="menu-dropdown__link"><span class="menu__text">Скрипты</span></a></li>
-												<li><a href="department.html" class="menu-dropdown__link"><span class="menu__text">Отделы и операторы</span></a></li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="menu__item">
-							<div class="menu__link collapsed" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								<span class="menu__icon">
-									<img src="img/icons/synth.svg" alt="">
-								</span>
-								<div class="menu__text">Синтез речи</div>
-								<div class="menu__arrow">
-									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-									</svg>
-								</div>
-							</div>
-							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-								<ul class="menu-dropdown__list">
-									<li><a href="synth.html" class="menu-dropdown__link"><span class="menu__text">Синтез речи</span></a></li>
-									<li><a href="synth-2.html" class="menu-dropdown__link"><span class="menu__text">Синтезированные записи</span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="menu__item">
-							<a href="recognize.html" class="menu__link collapsed">
-								<span class="menu__icon">
-									<img src="img/icons/ab-check.svg" alt="">
-								</span>
-								<div class="menu__text">Распознавание речи</div>
-							</a>
-						</li>
-						<li class="menu__item">
-							<a href="connection.html" class="menu__link">
-								<span class="menu__icon">
-									<img src="img/icons/phone.svg" alt="">
-								</span>
-								<div class="menu__text">Подключение номеров к услугам</div>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</aside>
+		<!-- @import "header.kit" -->
+
+		<!-- @import "sidebar.html" -->
+
 		<main class="main departments-page departments settings" id="main">
 			<div class="main__header">
 				<h1 class="main__title">
@@ -152,12 +37,12 @@
 			</div>
 			<div class="tabs">
 				<ul class="tabs__list nav nav-tabs" id="myTab" role="tablist">
-					<li class="tabs__item"><a class="tabs__link active" href="departments.html"><span>Отделы</span></a></li>
-					<li class="tabs__item"><a class="tabs__link" href="operators.html"><span>Операторы</span></a></li>
+					<li class="tabs__item"><a class="tabs__link" href="departments.html"><span>Отделы</span></a></li>
+					<li class="tabs__item"><a class="tabs__link active" href="operators.html"><span>Операторы</span></a></li>
 				</ul>
 				<div class="tabs__content departments-content">
 					<div class="block__buttons">
-						<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#department-modal">Добавить отдел</button>
+						<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#operators-modal">Добавить оператора</button>
 					</div>
 					<div class="actions__buttons">
 						<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
@@ -165,7 +50,7 @@
 						<button class="actions__button">Импорт</button>
 						<button class="actions__button">Экспорт</button>
 					</div>
-					<div class="settings__table table-settings" data-table-settings="4">
+					<div class="settings__table table-settings" data-table-settings="5">
 						<ul class="table-settings__list">
 							<li class="table-settings__item table-settings__heading">
 								<div class="table-settings__checkbox table-checkbox">
@@ -177,6 +62,135 @@
 									</div>
 								</div>
 								<div class="table-settings__name choice-search search">
+									Оператор
+									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Оператор 1</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Оператор 2</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Оператор 3</span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="table-settings__id choice-search search">
+									ID
+									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">39894028910</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">39894028910</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">39894028910</span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="table-settings__phone choice-search search">
+									Телефонный номер
+									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">+7 915 7777777</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">+7 915 7777777</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">+7 915 7777777</span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="table-settings__depart choice-search search">
 									Отдел
 									<a href="#" class="all-btn">Все</a>
 									<div class="choice-search__box">
@@ -219,52 +233,6 @@
 										</div>
 									</div>
 								</div>
-								<div class="table-settings__operators choice-search search">
-									Операторы
-									<a href="#" class="all-btn">Все</a>
-									<div class="choice-search__box">
-										<div class="search__body">
-											<form action="#" class="search-form">
-												<button class="search__button">
-													<img src="img/icons/search.svg" alt="">
-												</button>
-												<input class="form__input" type="text" autocomplete="off">
-											</form>
-											<ul class="choice-search__list">
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Оператор 1</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Оператор 2</span>
-														</label>
-													</div>
-												</li>
-												<li>
-													<div class="checkbox-item">
-														<label>
-															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-															<span class="custom-checkbox custom-checkbox_dpl"></span>
-															<span class="checkbox-item__text">Оператор 3</span>
-														</label>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="table-settings__connect-glossary">
-									Подключенные словари
-								</div>
 								<div class="table-settings__redact">
 									Редактирование
 								</div>
@@ -282,16 +250,48 @@
 									</div>
 								</div>
 								<div class="table-settings__name">
+									Екатерина Константинопольская
+								</div>
+								<div class="table-settings__id">
+									39894028910
+								</div>
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777777</a>
+								</div>
+								<div class="table-settings__depart">
+									Не назначен
+								</div>
+								<div class="table-settings__redact">
+									<button class="redact__button _icon-pen"  data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
+									</button>
+								</div>
+								<div class="table-settings__delete">
+									<button class="delete__button _icon-delete"></button>
+								</div>
+							</li>
+							<li class="table-settings__item">
+								<div class="table-settings__checkbox table-checkbox">
+									<div class="checkbox-item">
+										<label>
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+										</label>
+									</div>
+								</div>
+								<div class="table-settings__name">
+									Иван Петров
+								</div>
+								<div class="table-settings__id">
+									79157777711
+								</div>
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777711</a>
+								</div>
+								<div class="table-settings__depart">
 									Отдел 1
 								</div>
-								<div class="table-settings__operators">
-									Имена опреаторов количество операторов
-								</div>
-								<div class="table-settings__connect-glossary">
-									<span>Показ словарей и переход в добавление новых</span>
-								</div>
 								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
 									</button>
 								</div>
 								<div class="table-settings__delete">
@@ -308,15 +308,19 @@
 									</div>
 								</div>
 								<div class="table-settings__name">
-									Отдел 2
+									Екатерина Константинопольская
 								</div>
-								<div class="table-settings__operators">
-									Имена опреаторов количество операторов
+								<div class="table-settings__id">
+									39894028910
 								</div>
-								<div class="table-settings__connect-glossary">
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777777</a>
+								</div>
+								<div class="table-settings__depart">
+									Не назначен
 								</div>
 								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
+									<button class="redact__button _icon-pen"  data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
 									</button>
 								</div>
 								<div class="table-settings__delete">
@@ -333,41 +337,19 @@
 									</div>
 								</div>
 								<div class="table-settings__name">
+									Иван Петров
+								</div>
+								<div class="table-settings__id">
+									79157777711
+								</div>
+								<div class="table-settings__phone">
+									<a href="tel:+79157777777">+7 915 7777711</a>
+								</div>
+								<div class="table-settings__depart">
 									Отдел 1
 								</div>
-								<div class="table-settings__operators">
-									Имена опреаторов количество операторов
-								</div>
-								<div class="table-settings__connect-glossary">
-									<span>Показ словарей и переход в добавление новых</span>
-								</div>
 								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
-									</button>
-								</div>
-								<div class="table-settings__delete">
-									<button class="delete__button _icon-delete"></button>
-								</div>
-							</li>
-							<li class="table-settings__item">
-								<div class="table-settings__checkbox table-checkbox">
-									<div class="checkbox-item">
-										<label>
-											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-											<span class="custom-checkbox"></span>
-										</label>
-									</div>
-								</div>
-								<div class="table-settings__name">
-									Отдел 2
-								</div>
-								<div class="table-settings__operators">
-									Имена опреаторов количество операторов
-								</div>
-								<div class="table-settings__connect-glossary">
-								</div>
-								<div class="table-settings__redact">
-									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#operators-redact-modal">
 									</button>
 								</div>
 								<div class="table-settings__delete">
@@ -381,30 +363,40 @@
 
 		</main>
 
-		<!-- FOOTER -->
-		<footer class="footer">
-			<div class="footer__body">
-				<div class="footer__copy">
-					2021 ПАО «ВымпелКом»
-				</div>
-				<div class="footer__support support-footer">
-					<div class="support-footer__label">Консультация со специалистом:
-						
-					</div>
-					<a href="tel:88006006262" class="support-footer__phone">8 800 600 62 62</a>
-				</div>
-			</div>
-		</footer>
-		<div class="modal modal__department fade" id="department-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="department-modal" aria-hidden="true">
+		<!-- @import "footer.kit" -->
+
+		<div class="modal modal__department fade" id="operators-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="operator-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
 					</button>
 					<form action="" class="modal__form form-modal">
-						<h2 class="form-modal__title">Добавить отдел</h2>
+						<h2 class="form-modal__title">Добавить оператора</h2>
 						<div class="form-modal__body">
 							<div class="form-modal__item">
-								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Название отдела">
+								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Имя и фамилия">
+							</div>
+							<div class="form-modal__item">
+								<select name="department" class="form__select">
+									<option value="department" selected>Отдел</option>
+									<option value="department-2">Отдел 2</option>
+									<option value="department-3">Отдел 3</option>
+								</select>
+							</div>
+							<div class="form-modal__item">
+								<div class="form-modal__item">
+									<select name="number" class="form__select">
+										<option value="number" selected>Номер телефона</option>
+										<option value="number-2">+7 915 7777711</option>
+										<option value="number-3">+7 909 1111111</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-modal__item">
+								<div class="form-modal-count form-modal-count__id">
+									<input class="form-modal__input" type="number" autocomplete="off" placeholder="ID">
+									<span class="form-modal-count__label">ID</span>
+								</div>
 							</div>
 						</div>
 						<div class="form-modal__buttons">
@@ -416,16 +408,38 @@
 			</div>
 		</div>
 
-		<div class="modal modal__department fade" id="department-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="department-redact-modal" aria-hidden="true">
+		<div class="modal modal__department fade" id="operators-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="operators-redact-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
 					</button>
 					<form action="" class="modal__form form-modal">
-						<h2 class="form-modal__title">Редактировать отдел</h2>
+						<h2 class="form-modal__title">Редактирование оператора</h2>
 						<div class="form-modal__body">
 							<div class="form-modal__item">
-								<input class="form-modal__input" type="text" autocomplete="off" value="Отдел 2">
+								<input class="form-modal__input" type="text" autocomplete="off" value="Ирина Хон">
+							</div>
+							<div class="form-modal__item">
+								<select name="department" class="form__select">
+									<option value="department" selected>2</option>
+									<option value="department-2">3</option>
+									<option value="department-3">4</option>
+								</select>
+							</div>
+							<div class="form-modal__item">
+								<div class="form-modal__item">
+									<select name="number" class="form__select">
+										<option value="number" selected>+7 915 7777711</option>
+										<option value="number-2">+7 915 7777711</option>
+										<option value="number-3">+7 909 1111111</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-modal__item">
+								<div class="form-modal-count form-modal-count__id">
+									<input class="form-modal__input" type="number" autocomplete="off" value="237845">
+									<span class="form-modal-count__label">ID</span>
+								</div>
 							</div>
 						</div>
 						<div class="form-modal__buttons">
@@ -436,16 +450,9 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 
-	<script src="https://kit.fontawesome.com/ed89a4511e.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/datepicker.min.js"></script>
-	<script src="js/select.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/main.js"></script>
+	<!-- @import "js.kit" -->
 
 
 

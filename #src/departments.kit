@@ -37,207 +37,229 @@
 			</div>
 			<div class="tabs">
 				<ul class="tabs__list nav nav-tabs" id="myTab" role="tablist">
-					<li class="tabs__item">
-						<button class="active" id="department-tab" data-bs-toggle="tab" data-bs-target="#department" role="tab" type="button" aria-controls="department" aria-selected="true"><span>Отделы</span></button>
-					</li>
-					<li class="tabs__item">
-						<button id="operator-tab" data-bs-toggle="tab" data-bs-target="#operator" role="tab" type="button" aria-controls="operator" aria-selected="true"><span>Операторы</span></button>
-					</li>
+					<li class="tabs__item"><a class="tabs__link active" href="departments.html"><span>Отделы</span></a></li>
+					<li class="tabs__item"><a class="tabs__link" href="operators.html"><span>Операторы</span></a></li>
 				</ul>
-				<div class="tab-content" id="myTabContent">
-					<div class="tabs__content departments-content tab-pane fade show active" id="department" role="tabpanel" aria-labelledby="department-tab">
-						<button class="add__button _icon-plus">Добавить отдел</button>
-						<div class="actions__buttons">
-							<button class="actions__button">Удалить <span class="actions__counter">(1)</span></button>
-							<button class="actions__button">Скачать шаблон</button>
-							<button class="actions__button">Импорт</button>
-							<button class="actions__button">Экспорт</button>
-						</div>
-						<div class="settings__table table-settings" data-table-settings="4">
-							<ul class="table-settings__list">
-								<li class="table-settings__item table-settings__heading">
-									<div class="table-settings__checkbox">
-										<div class="checkbox-item">
-											<label>
-												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-												<span class="custom-checkbox"></span>
-											</label>
-										</div>
-									</div>
-									<div class="table-settings__name">
-										Отдел
-										<a href="#" class="all-btn">Все</a>
-									</div>
-									<div class="table-settings__operators">
-										Операторы
-										<a href="#" class="all-btn">Все</a>
-									</div>
-									<div class="table-settings__connect-glossary">
-										Подключенные словари
-									</div>
-									<div class="table-settings__redact">
-										Редактирование
-									</div>
-									<div class="table-settings__delete">
-										Удалить
-									</div>
-								</li>
-								<li class="table-settings__item">
-									<div class="table-settings__checkbox">
-										<div class="checkbox-item">
-											<label>
-												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-												<span class="custom-checkbox"></span>
-											</label>
-										</div>
-									</div>
-									<div class="table-settings__name">
-										Отдел 1
-									</div>
-									<div class="table-settings__operators">
-										Имена опреаторов количество операторов
-									</div>
-									<div class="table-settings__connect-glossary">
-										<span>Показ словарей и переход в добавление новых</span>
-									</div>
-									<div class="table-settings__redact">
-										<button class="redact__button _icon-pen">
-										</button>
-									</div>
-									<div class="table-settings__delete">
-										<button class="delete__button _icon-delete"></button>
-									</div>
-								</li>
-								<li class="table-settings__item">
-									<div class="table-settings__checkbox">
-										<div class="checkbox-item">
-											<label>
-												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-												<span class="custom-checkbox"></span>
-											</label>
-										</div>
-									</div>
-									<div class="table-settings__name">
-										Отдел 2
-									</div>
-									<div class="table-settings__operators">
-										Имена опреаторов количество операторов
-									</div>
-									<div class="table-settings__connect-glossary">
-									</div>
-									<div class="table-settings__redact">
-										<button class="redact__button _icon-pen">
-										</button>
-									</div>
-									<div class="table-settings__delete">
-										<button class="delete__button _icon-delete"></button>
-									</div>
-								</li>
-							</ul>
-						</div>
+				<div class="tabs__content departments-content">
+					<div class="block__buttons">
+						<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#department-modal">Добавить отдел</button>
 					</div>
-					<div class="tabs__content departments-content tab-pane fade" id="operator" role="tabpanel" aria-labelledby="operator-tab">
-						<button class="add__button _icon-plus" data-bs-toggle="modal" data-bs-target="#operators">Добавить оператора</button>
-						<div class="actions__buttons">
-							<button class="actions__button">Удалить <span class="actions__counter">(1)</span></button>
-							<button class="actions__button">Скачать шаблон</button>
-							<button class="actions__button">Импорт</button>
-							<button class="actions__button">Экспорт</button>
-						</div>
-						<div class="settings__table table-settings" data-table-settings="5">
-							<ul class="table-settings__list">
-								<li class="table-settings__item table-settings__heading">
-									<div class="table-settings__checkbox">
-										<div class="checkbox-item">
-											<label>
-												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-												<span class="custom-checkbox"></span>
-											</label>
+					<div class="actions__buttons">
+						<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
+						<a href="#" download="" class="actions__button">Скачать шаблон</a>
+						<button class="actions__button">Импорт</button>
+						<button class="actions__button">Экспорт</button>
+					</div>
+					<div class="settings__table table-settings" data-table-settings="4">
+						<ul class="table-settings__list">
+							<li class="table-settings__item table-settings__heading">
+								<div class="table-settings__checkbox table-checkbox">
+									<div class="checkbox-item" id="select-all">
+										<label>
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+										</label>
+									</div>
+								</div>
+								<div class="table-settings__name choice-search search">
+									Отдел
+									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Отдел 1</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Отдел 2</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Отдел 3</span>
+														</label>
+													</div>
+												</li>
+											</ul>
 										</div>
 									</div>
-									<div class="table-settings__name">
-										Оператор
-										<a href="#" class="all-btn">Все</a>
-									</div>
-									<div class="table-settings__id">
-										ID
-										<a href="#" class="all-btn">Все</a>
-									</div>
-									<div class="table-settings__phone">
-										Телефонный номер
-										<a href="#" class="all-btn">Все</a>
-									</div>
-									<div class="table-settings__depart">
-										Отдел
-										<a href="#" class="all-btn">Все</a>
-									</div>
-									<div class="table-settings__redact">
-										Редактирование
-									</div>
-									<div class="table-settings__delete">
-										Удалить
-									</div>
-								</li>
-								<li class="table-settings__item">
-									<div class="table-settings__checkbox">
-										<div class="checkbox-item">
-											<label>
-												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-												<span class="custom-checkbox"></span>
-											</label>
+								</div>
+								<div class="table-settings__operators choice-search search">
+									Операторы
+									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Оператор 1</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Оператор 2</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Оператор 3</span>
+														</label>
+													</div>
+												</li>
+											</ul>
 										</div>
 									</div>
-									<div class="table-settings__name">
-										Екатерина Константинопольская
+								</div>
+								<div class="table-settings__connect-glossary">
+									Подключенные словари
+								</div>
+								<div class="table-settings__redact">
+									Редактирование
+								</div>
+								<div class="table-settings__delete">
+									Удалить
+								</div>
+							</li>
+							<li class="table-settings__item">
+								<div class="table-settings__checkbox table-checkbox">
+									<div class="checkbox-item">
+										<label>
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+										</label>
 									</div>
-									<div class="table-settings__id">
-										39894028910
+								</div>
+								<div class="table-settings__name">
+									Отдел 1
+								</div>
+								<div class="table-settings__operators">
+									Имена опреаторов количество операторов
+								</div>
+								<div class="table-settings__connect-glossary">
+									<span>Показ словарей и переход в добавление новых</span>
+								</div>
+								<div class="table-settings__redact">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
+									</button>
+								</div>
+								<div class="table-settings__delete">
+									<button class="delete__button _icon-delete"></button>
+								</div>
+							</li>
+							<li class="table-settings__item">
+								<div class="table-settings__checkbox table-checkbox">
+									<div class="checkbox-item">
+										<label>
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+										</label>
 									</div>
-									<div class="table-settings__phone">
-										<a href="tel:+79157777777">+7 915 7777777</a>
+								</div>
+								<div class="table-settings__name">
+									Отдел 2
+								</div>
+								<div class="table-settings__operators">
+									Имена опреаторов количество операторов
+								</div>
+								<div class="table-settings__connect-glossary">
+								</div>
+								<div class="table-settings__redact">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
+									</button>
+								</div>
+								<div class="table-settings__delete">
+									<button class="delete__button _icon-delete"></button>
+								</div>
+							</li>
+							<li class="table-settings__item">
+								<div class="table-settings__checkbox table-checkbox">
+									<div class="checkbox-item">
+										<label>
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+										</label>
 									</div>
-									<div class="table-settings__depart">
-										Не назначен
+								</div>
+								<div class="table-settings__name">
+									Отдел 1
+								</div>
+								<div class="table-settings__operators">
+									Имена опреаторов количество операторов
+								</div>
+								<div class="table-settings__connect-glossary">
+									<span>Показ словарей и переход в добавление новых</span>
+								</div>
+								<div class="table-settings__redact">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
+									</button>
+								</div>
+								<div class="table-settings__delete">
+									<button class="delete__button _icon-delete"></button>
+								</div>
+							</li>
+							<li class="table-settings__item">
+								<div class="table-settings__checkbox table-checkbox">
+									<div class="checkbox-item">
+										<label>
+											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+											<span class="custom-checkbox"></span>
+										</label>
 									</div>
-									<div class="table-settings__redact">
-										<button class="redact__button _icon-pen">
-										</button>
-									</div>
-									<div class="table-settings__delete">
-										<button class="delete__button _icon-delete"></button>
-									</div>
-								</li>
-								<li class="table-settings__item">
-									<div class="table-settings__checkbox">
-										<div class="checkbox-item">
-											<label>
-												<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-												<span class="custom-checkbox"></span>
-											</label>
-										</div>
-									</div>
-									<div class="table-settings__name">
-										Иван Петров
-									</div>
-									<div class="table-settings__id">
-										79157777711
-									</div>
-									<div class="table-settings__phone">
-										<a href="tel:+79157777777">+7 915 7777711</a>
-									</div>
-									<div class="table-settings__depart">
-										Отдел 1
-									</div>
-									<div class="table-settings__redact">
-										<button class="redact__button _icon-pen">
-										</button>
-									</div>
-									<div class="table-settings__delete">
-										<button class="delete__button _icon-delete"></button>
-									</div>
-								</li>
-							</ul>
-						</div>
+								</div>
+								<div class="table-settings__name">
+									Отдел 2
+								</div>
+								<div class="table-settings__operators">
+									Имена опреаторов количество операторов
+								</div>
+								<div class="table-settings__connect-glossary">
+								</div>
+								<div class="table-settings__redact">
+									<button class="redact__button _icon-pen" data-bs-toggle="modal" data-bs-target="#department-redact-modal">
+									</button>
+								</div>
+								<div class="table-settings__delete">
+									<button class="delete__button _icon-delete"></button>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -246,34 +268,42 @@
 
 		<!-- @import "footer.kit" -->
 
-		<div class="modal modal__department fade" id="operators" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="operator" aria-hidden="true">
+		<div class="modal modal__department fade" id="department-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="department-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
 					</button>
 					<form action="" class="modal__form form-modal">
-						<h2 class="form-modal__title">Добавить оператора</h2>
+						<h2 class="form-modal__title">Добавить отдел</h2>
 						<div class="form-modal__body">
 							<div class="form-modal__item">
-								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Имя и фамилия">
-							</div>
-							<div class="form-modal__item">
-								<select name="department" class="form__select">
-									<option value="department" selected>Отдел</option>
-									<option value="department-2">Отдел 2</option>
-									<option value="department-3">Отдел 3</option>
-								</select>
-							</div>
-							<div class="form-modal__item">
-								<input class="form-modal__input" type="number" autocomplete="off" placeholder="Номер телефона">
-							</div>
-							<div class="form-modal__item">
-								<input class="form-modal__input" type="number" autocomplete="off" placeholder="ID">
+								<input class="form-modal__input" type="text" autocomplete="off" placeholder="Название отдела">
 							</div>
 						</div>
 						<div class="form-modal__buttons">
-							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
+							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
 							<button class="form-modal__button form-modal__button_yellow">Добавить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal__department fade" id="department-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="department-redact-modal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Редактировать отдел</h2>
+						<div class="form-modal__body">
+							<div class="form-modal__item">
+								<input class="form-modal__input" type="text" autocomplete="off" value="Отдел 2">
+							</div>
+						</div>
+						<div class="form-modal__buttons">
+							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow">Сохранить</button>
 						</div>
 					</form>
 				</div>

@@ -52,9 +52,9 @@
 			</a>
 			<div class="aside__menu">
 				<nav class="menu">
-					<ul class="menu__list accordion" id="accordionPanelsStayOpenExample">
+					<ul class="menu__list accordion" id="accordionExample">
 						<li class="menu__item active">
-							<div class="menu__link menu__link-current collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+							<div class="menu__link menu__link-current collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 								<span class="menu__icon">
 									<img src="img/icons/cloud.svg" alt="">
 								</span>
@@ -65,13 +65,13 @@
 									</svg>
 								</div>
 							</div>
-							<div class="dropdown__menu menu-dropdown collapse" id="panelsStayOpen-collapseOne" aria-labelledby="panelsStayOpen-headingOne">
+							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 								<ul class="menu-dropdown__list">
 									<li><a href="index.html" class="menu-dropdown__link current"><span class="menu__text">Рабочая область</span> </a></li>
 									<li><a href="record-talk.html" class="menu-dropdown__link"><span class="menu__text">Записи раговоров</span></a></li>
 									<li><a href="scripts-2.html" class="menu-dropdown__link"><span class="menu__text">Скрипты обслуживания</span></a></li>
 									<li>
-										<div class="menu__link menu__link-settings collapsed" id="panelsStayOpen-headingTwo" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+										<div class="menu__link menu__link-settings collapsed" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 											<span class="menu__icon">
 											</span>
 											<div class="menu__text">Настройки</div>
@@ -81,7 +81,7 @@
 												</svg>
 											</div>
 										</div>
-										<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse" id="panelsStayOpen-collapseTwo" aria-labelledby="panelsStayOpen-headingTwo">
+										<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo">
 											<ul class="menu-dropdown__list">
 												<li><a href="glossary.html" class="menu-dropdown__link"><span class="menu__text">Словари</span></a></li>
 												<li><a href="scripts.html" class="menu-dropdown__link"><span class="menu__text">Скрипты</span></a></li>
@@ -93,7 +93,7 @@
 							</div>
 						</li>
 						<li class="menu__item">
-							<div class="menu__link collapsed" id="panelsStayOpen-headingThree" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+							<div class="menu__link collapsed" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 								<span class="menu__icon">
 									<img src="img/icons/synth.svg" alt="">
 								</span>
@@ -104,7 +104,7 @@
 									</svg>
 								</div>
 							</div>
-							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="panelsStayOpen-collapseThree" aria-labelledby="panelsStayOpen-headingThree">
+							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
 								<ul class="menu-dropdown__list">
 									<li><a href="synth.html" class="menu-dropdown__link"><span class="menu__text">Синтез речи</span></a></li>
 									<li><a href="synth-2.html" class="menu-dropdown__link"><span class="menu__text">Синтезированные записи</span></a></li>
@@ -157,32 +157,143 @@
 				</ul>
 				<div class="tabs__content synth-content">
 					<div class="synth-content__table file-table" data-file-table="3">
-						<button class="report-btn"><span>Отчет Excel</span></button>
+						<div class="actions__buttons">
+							<a href="#" download="" class="actions__button" data-actions-button="upload">Скачать .zip <span class="actions__counter">(<span>1</span>)</span></a>
+							<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
+							<a href="#" download="" class="actions__button report-btn"><span>Отчет Excel</span></a>
+						</div>
 						<ul class="file-table__list">
 							<li class="file-table__item file-table__heading">
-								<div class="table-settings__checkbox">
-									<div class="checkbox-item">
+								<div class="table-settings__checkbox table-checkbox">
+									<div class="checkbox-item" id="select-all">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 											<span class="custom-checkbox"></span>
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name">
+								<div class="file-table__name choice-search search">
 									Название файла
 									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Название файла</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Название файла</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Название файла</span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-								<div class="file-table__text">
+								<div class="file-table__text choice-search search">
 									Текст
 									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Не определено</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Не определено</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Входящий</span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-								<div class="file-table__gender">
+								<div class="file-table__gender choice-search search">
 									Пол
 									<a href="#" class="all-btn">Все</a>
+									<div class="choice-search__box">
+										<div class="search__body">
+											<form action="#" class="search-form">
+												<button class="search__button">
+													<img src="img/icons/search.svg" alt="">
+												</button>
+												<input class="form__input" type="text" autocomplete="off">
+											</form>
+											<ul class="choice-search__list">
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Мужской</span>
+														</label>
+													</div>
+												</li>
+												<li>
+													<div class="checkbox-item">
+														<label>
+															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<span class="custom-checkbox custom-checkbox_dpl"></span>
+															<span class="checkbox-item__text">Женский</span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
 								<div class="file-table__time">
 									Время создания
-									<a href="#" class="all-btn">Все</a>
 								</div>
 								<div class="file-table__sound">Прослушать</div>
 								<div class="file-table__download">
@@ -190,7 +301,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -198,8 +309,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name arrow-down">
-									Mix_13001_17005_202
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Утро красит нежный светом стены древнего кремля
@@ -222,7 +339,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -230,8 +347,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name">
-									Volna.wav
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Volna.wav</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Здравствуйте!
@@ -254,7 +377,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -262,8 +385,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name arrow-down">
-									Mix_14001_17005_202
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Mix_14001_17005_202</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Здравствуйте!
@@ -286,7 +415,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -294,8 +423,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name arrow-down">
-									Mix_14001_17005_202
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Mix_14001_17005_202</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Не определено
@@ -318,7 +453,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -326,8 +461,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name arrow-down">
-									Mix_14001_17005_202
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Mix_14001_17005_202</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Входящий
@@ -350,7 +491,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -358,8 +499,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name arrow-down">
-									Mix_14001_17005_202
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Mix_14001_17005_202</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Не определено
@@ -382,7 +529,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -390,8 +537,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name">
-									Volna2.wav
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Volna2.wav</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Не определено
@@ -414,7 +567,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -422,8 +575,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name arrow-down">
-									Mix_999001_17005_202
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Mix_999001_17005_202</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Входящий
@@ -446,7 +605,7 @@
 								</div>
 							</li>
 							<li class="file-table__item">
-								<div class="table-settings__checkbox">
+								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item">
 										<label>
 											<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -454,8 +613,14 @@
 										</label>
 									</div>
 								</div>
-								<div class="file-table__name arrow-down">
-									Mix_999001_17005_202
+								<div class="file-table__name file-name">
+									<div class="file-name__box">
+										<span class="arrow-down"></span>
+										<span class="file-name__text" title="Переименовать файл">Mix_999001_17005_202</span>
+									</div>
+									<form class="file-name__form">
+										<input class="form__input file-name__input" type="text">
+									</form>
 								</div>
 								<div class="file-table__text">
 									Не определно

@@ -54,11 +54,16 @@
 						</div>
 					</form>
 				</div>
+				<div class="actions__buttons">
+					<a href="#" download="" class="actions__button" data-actions-button="upload">Скачать .zip <span class="actions__counter">(<span>1</span>)</span></a>
+					<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
+					<a href="#" download="" class="actions__button report-btn"><span>Отчет Excel</span></a>
+				</div>
 				<div class="recognize-content__table file-table" data-file-table="4">
 					<ul class="file-table__list">
 						<li class="file-table__item file-table__heading">
-							<div class="table-settings__checkbox">
-								<div class="checkbox-item">
+							<div class="table-settings__checkbox table-checkbox">
+								<div class="checkbox-item" id="select-all">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox"></span>
@@ -68,13 +73,91 @@
 							<div class="file-table__period">
 								Время загрузки
 							</div>
-							<div class="file-table__name">
+							<div class="file-table__name choice-search search">
 								Название файла
 								<a href="#" class="all-btn">Все</a>
+								<div class="choice-search__box">
+									<div class="search__body">
+										<form action="#" class="search-form">
+											<button class="search__button">
+												<img src="img/icons/search.svg" alt="">
+											</button>
+											<input class="form__input" type="text" autocomplete="off">
+										</form>
+										<ul class="choice-search__list">
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Название файла</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Название файла</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Название файла</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<div class="file-table__status">
+							<div class="file-table__status choice-search search">
 								Статус
 								<a href="#" class="all-btn">Все</a>
+								<div class="choice-search__box">
+									<div class="search__body">
+										<form action="#" class="search-form">
+											<button class="search__button">
+												<img src="img/icons/search.svg" alt="">
+											</button>
+											<input class="form__input" type="text" autocomplete="off">
+										</form>
+										<ul class="choice-search__list">
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Выполнено</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Ожидается выполнение</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox-item">
+													<label>
+														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+														<span class="custom-checkbox custom-checkbox_dpl"></span>
+														<span class="checkbox-item__text">Выполнено</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="file-table__text">
 								Текст
@@ -90,7 +173,7 @@
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -102,8 +185,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Mix_13001_17005_202
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202Mix_13001_17005_202</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -115,16 +204,16 @@
 								64.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -136,8 +225,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Volna.wav
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Volna.wav</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -149,16 +244,16 @@
 								90.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -170,8 +265,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Mix_14001_17005_202
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Mix_14001_17005_202</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -183,16 +284,16 @@
 								90.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -204,8 +305,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Mix_15001_17005_202
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Mix_15001_17005_202</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -217,16 +324,16 @@
 								90.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -239,7 +346,13 @@
 								<span class="file-table__tense">12:22</span>
 							</div>
 							<div class="file-table__name">
-								Mix_995001_17005_202
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Mix_995001_17005_202</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -251,16 +364,16 @@
 								64.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -272,8 +385,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Mix_045001_17005_202
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Mix_045001_17005_202</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -285,16 +404,16 @@
 								64.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -306,8 +425,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Volna2.wav
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Volna2.wav</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -319,16 +444,16 @@
 								64.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -340,8 +465,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Mix_999001_17005_202
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Mix_999001_17005_202</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -353,16 +484,16 @@
 								64.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
 						<li class="file-table__item">
-							<div class="table-settings__checkbox">
+							<div class="table-settings__checkbox table-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -374,8 +505,14 @@
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__name">
-								Mix_777001_17005_202
+							<div class="file-table__name file-name">
+								<div class="file-name__box">
+									<span class="arrow-down"></span>
+									<span class="file-name__text" title="Переименовать файл">Mix_777001_17005_202</span>
+								</div>
+								<form class="file-name__form">
+									<input class="form__input file-name__input" type="text">
+								</form>
 							</div>
 							<div class="file-table__status">
 								Выполнено
@@ -387,9 +524,9 @@
 								64.12366
 							</div>
 							<div class="file-table__watch">
-								<div class="file-table__icon">
+								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
-								</div>
+								</a>
 							</div>
 							<div class="file-table__delete">
 								<button class="delete__button _icon-delete"></button>

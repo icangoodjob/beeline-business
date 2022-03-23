@@ -78,7 +78,11 @@ $('#datepickerTwo').each(function() {
 	});
 });
 $('.datepicker--cells').click(function(){
-	$('.datepicker').removeClass('active');
+	if (!$(this).hasClass('.-weekend-')) {
+		$('.datepicker').removeClass('active');
+	} else {
+		return;
+	}
 });
 
 /*================== TOGGLE CHOICE (+ / -) ====================*/
@@ -160,22 +164,21 @@ $('#select-all').on('click', myCount);
 /*================== action button (show / hide) & counter ====================*/
 
 
-/*================== file-name text (show / hide) ====================*/
+/*================== file-name text (show / hide) Тест ====================*/
 $('.arrow-down').each(function(){
 	$('.file-name__text').addClass('hidden');
 	$(this).on('click',function(){
 		$(this).toggleClass('active');
 		$(this).parent().find($('.file-name__text')).toggleClass('hidden');
 	})
-	const textHeight = $(this).parent().find($('.file-name__text')).height();
+	let textHeight = $(this).parent().find($('.file-name__text')).height();
 	console.log(textHeight);
-	if (textHeight >= 15) {
-		$(this).show();
-	} else {
+	if (textHeight < 15) {
 		$(this).hide();
+	} else {
+		$(this).show();
 	}
 })
-
 /*================== file-name text (show / hide) ====================*/
 
 
@@ -198,17 +201,17 @@ $(document).mouseup(function (e){
 /*================== redact file name ====================*/
 
 
-/*================== Offcanvas load files====================*/
+/*================== load files====================*/
 const filesItem = document.querySelectorAll('.load-file__item').length;
 const uploadBtn = document.getElementById('upload-btn');
 if (filesItem) {
-	if (filesItem > 0) {
+	if (filesItem >= 0) {
 		uploadBtn.removeAttribute('disabled');
 	} else {
 		uploadBtn.setAttribute('disabled');
 	}
 }
-/*================== Offcanvas load files====================*/
+// /*================== files====================*/
 
 /*================== Offcanvas overlay====================*/
 $('#add-btn').on('click', function(){
@@ -218,6 +221,33 @@ $('[data-modal-close]').on('click', function(){
 	$('.overlay-offcanvas').toggleClass('show');
 });
 /*================== Offcanvas overlay====================*/
+
+
+/*================== Textarea value ====================*/
+$('#formTextarea').val('слово, кредит, деньги, платить, оплачивать, займ, дорого, кредитование, оплата');
+$('#formTextarea').focus(function(){
+	$(this).select();
+});
+$('#formTextareaNumbers').val('89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111')
+$('#formTextareaNumbers').focus(function(){
+	$(this).select();
+});
+/*================== Textarea value ====================*/
+
+/*================== Проверка на существание загруженных скриптов ====================*/
+$('.load-file__item').each(function(){
+	if ($(this).length < 1){
+		$('#fileUpload').addClass('hidden');
+	}  else {
+		$('#fileUpload').removeClass('hidden');
+		$('.load-file').addClass('hidden');
+	}
+})
+/*================== Проверка на существание загруженных скриптов ====================*/
+
+
+
+
 
 /*================== RANGE-SLIDER ====================*/
 let rangeSliderTonality = document.getElementById('range-tonality');
@@ -255,5 +285,35 @@ if (rangeSliderSpeed){
 }
 /*================== RANGE-SLIDER ====================*/
 
-
+//Получаем инпут file в переменную
+const formFile = document.getElementById('formFile');
+	//Получаем див для превью в переменную
+	const formPreview = document.getElementById('formPreview');
+	//Слушаем изменения в инпуте file
+	if (formFile != null) {
+		formFile.addEventListener('change', () => {
+			uploadFile(formFile.files[0]);
+		});
+	}
+	function uploadFile(file) {
+		// провераяем тип файла
+		if (!['image/jpeg', 'image/png', 'image/gif', '.docx'].includes(file.type)) {
+			alert('Неверный тип файла');
+			formFile.value = '';
+			return;
+		}
+		// проверим размер файла (<2 Мб)
+		if (file.size > 2 * 1024 * 1024) {
+			alert('Файл должен быть менее 2 МБ.');
+			return;
+		}
+		var reader = new FileReader();
+		reader.onload = function (e) {
+			formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+		};
+		reader.onerror = function (e) {
+			alert('Ошибка');
+		};
+		reader.readAsDataURL(file);
+	}
 
