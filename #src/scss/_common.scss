@@ -317,6 +317,7 @@ input[type="number"]:focus {
   min-width: 700px;
   overflow-x: auto;
   padding: 0 24px;
+  min-height: 350px;
 }
 [data-table-settings="1"] .table-settings__item{
   grid-template-columns: 55px 180px minmax(317px, 1fr) 163px 92px 106px 79px;

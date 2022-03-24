@@ -164,23 +164,55 @@ $('#select-all').on('click', myCount);
 /*================== action button (show / hide) & counter ====================*/
 
 
-/*================== file-name text (show / hide) Тест ====================*/
+/*================== file-name text (show / hide) ====================*/
 $('.arrow-down').each(function(){
-	$('.file-name__text').addClass('hidden');
 	$(this).on('click',function(){
 		$(this).toggleClass('active');
 		$(this).parent().find($('.file-name__text')).toggleClass('hidden');
 	})
-	let textHeight = $(this).parent().find($('.file-name__text')).height();
+})
+
+$('.file-name__box').each(function(){
+	let textHeight = $(this).find($('.file-name__text')).height();
 	console.log(textHeight);
-	if (textHeight < 15) {
-		$(this).hide();
+	if (textHeight < 16) {
+		$(this).find($('.arrow-down')).hide();
 	} else {
-		$(this).show();
+		$(this).find($('.arrow-down')).show();
+		$(this).find($('.file-name__text')).addClass('hidden');
 	}
 })
 /*================== file-name text (show / hide) ====================*/
 
+
+/*================== words items ====================*/
+$('.words__list').each(function(){
+	console.log($(this));
+	let itemLength =  $(this).find($('.words__item')).length;
+	let listHeight = $(this).height();
+	console.log(itemLength);
+	console.log(listHeight);
+	if (itemLength > 16) {
+		$(this).find($('.words__item_all')).show();
+	}
+	else if (listHeight > 26) {
+		$(this).find($('.words__item_all')).show();
+	}
+	else {
+		$(this).find($('.words__item_all')).hide();
+	}
+	$(this).find($('.words__all')).on('click', function(e){
+		$(this).closest('.words__list').find($('.words__item:nth-child(n+16)')).toggleClass('active');
+		$(this).toggleClass('active');
+		if ($(this).hasClass('active')) {
+			$(this).text('Скрыть слова');
+		} else {
+			$(this).text('Все слова');
+		}
+	})
+})
+
+/*================== words items ====================*/
 
 
 /*================== redact file name ====================*/
@@ -244,10 +276,6 @@ $('.load-file__item').each(function(){
 	}
 })
 /*================== Проверка на существание загруженных скриптов ====================*/
-
-
-
-
 
 /*================== RANGE-SLIDER ====================*/
 let rangeSliderTonality = document.getElementById('range-tonality');

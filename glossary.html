@@ -54,15 +54,17 @@
 				<nav class="menu">
 					<ul class="menu__list accordion" id="accordionExample">
 						<li class="menu__item active">
-							<div class="menu__link menu__link-current collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								<span class="menu__icon">
+							<div class="menu__item-heading current">
+								<a href="index.html" class="menu__icon">
 									<img src="img/icons/cloud.svg" alt="">
-								</span>
-								<div class="menu__text">Речевая аналитика</div>
-								<div class="menu__arrow">
-									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-									</svg>
+								</a>
+								<div class="menu__link collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									<div class="menu__text">Речевая аналитика</div>
+									<div class="menu__arrow">
+										<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
+										</svg>
+									</div>
 								</div>
 							</div>
 							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -93,15 +95,17 @@
 							</div>
 						</li>
 						<li class="menu__item">
-							<div class="menu__link collapsed" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								<span class="menu__icon">
+							<div class="menu__item-heading">
+								<a href="synth.html" class="menu__icon">
 									<img src="img/icons/synth.svg" alt="">
-								</span>
-								<div class="menu__text">Синтез речи</div>
-								<div class="menu__arrow">
-									<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-									</svg>
+								</a>
+								<div class="menu__link collapsed" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									<div class="menu__text">Синтез речи</div>
+									<div class="menu__arrow">
+										<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
+										</svg>
+									</div>
 								</div>
 							</div>
 							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -112,20 +116,24 @@
 							</div>
 						</li>
 						<li class="menu__item">
-							<a href="recognize.html" class="menu__link collapsed">
-								<span class="menu__icon">
+							<div class="menu__item-heading">
+								<a href="recognize.html" class="menu__icon">
 									<img src="img/icons/ab-check.svg" alt="">
-								</span>
-								<div class="menu__text">Распознавание речи</div>
-							</a>
+								</a>
+								<a href="recognize.html" class="menu__link collapsed">
+									<div class="menu__text">Распознавание речи</div>
+								</a>
+							</div>
 						</li>
 						<li class="menu__item">
-							<a href="connection.html" class="menu__link">
-								<span class="menu__icon">
+							<div class="menu__item-heading">
+								<a href="connection.html" class="menu__icon">
 									<img src="img/icons/phone.svg" alt="">
-								</span>
-								<div class="menu__text">Подключение номеров к услугам</div>
-							</a>
+								</a>
+								<a href="connection.html" class="menu__link">
+									<div class="menu__text">Подключение номеров к услугам</div>
+								</a>
+							</div>
 						</li>
 					</ul>
 				</nav>
@@ -420,10 +428,22 @@
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item_all">
+											<span class="words__all">
 												Все слова
-											</a>
+											</span>
 										</li>
 									</ul>
 								</div>
@@ -461,10 +481,22 @@
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Терапевт</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item">Пицца</li>
+										<li class="words__item_all">
+											<span class="words__all">
 												Все слова
-											</a>
+											</span>
 										</li>
 									</ul>
 								</div>
@@ -502,10 +534,10 @@
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
+										<li class="words__item_all">
+											<span class="words__all">
 												Все слова
-											</a>
+											</span>
 										</li>
 									</ul>
 								</div>
@@ -543,10 +575,10 @@
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
 										<li class="words__item">Пицца</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
+										<li class="words__item_all">
+											<span class="words__all">
 												Все слова
-											</a>
+											</span>
 										</li>
 									</ul>
 								</div>
@@ -579,10 +611,10 @@
 								<div class="table-settings__words">
 									<ul class="words__list">
 										<li class="words__item">Терапевт</li>
-										<li class="words__item words__item_all">
-											<a class="words__all" href="#">
+										<li class="words__item_all">
+											<span class="words__all">
 												Все слова
-											</a>
+											</span>
 										</li>
 									</ul>
 								</div>
@@ -713,8 +745,8 @@
 							</div>
 						</div>
 						<div class="form-modal__buttons">
-							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
-							<button class="form-modal__button form-modal__button_yellow">Добавить</button>
+							<button class="form-modal__button" type="button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow" type="button">Добавить</button>
 						</div>
 					</form>
 				</div>
@@ -783,8 +815,8 @@
 							</div>
 						</div>
 						<div class="form-modal__buttons">
-							<button class="form-modal__button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
-							<button class="form-modal__button form-modal__button_yellow">Сохранить</button>
+							<button class="form-modal__button" type="button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow" type="button">Сохранить</button>
 						</div>
 					</form>
 				</div>
