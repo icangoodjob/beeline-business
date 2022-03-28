@@ -248,7 +248,7 @@ input[type="number"]:focus {
 }
 .choice-search__box {
   position: absolute;
-  top: calc(100% - 10px);
+  top: 100%;
   left: 0;
   z-index: 5;
   opacity: 0;

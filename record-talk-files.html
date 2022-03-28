@@ -55,7 +55,7 @@
 				<nav class="menu">
 					<ul class="menu__list accordion" id="accordionExample">
 						<li class="menu__item active">
-							<div class="menu__item-heading current">
+							<div class="menu__item-heading">
 								<a href="index.html" class="menu__icon">
 									<img src="img/icons/cloud.svg" alt="">
 								</a>
@@ -70,7 +70,7 @@
 							</div>
 							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 								<ul class="menu-dropdown__list">
-									<li><a href="index.html" class="menu-dropdown__link current"><span class="menu__text">Рабочая область</span> </a></li>
+									<li><a href="index.html" class="menu-dropdown__link"><span class="menu__text">Рабочая область</span> </a></li>
 									<li><a href="record-talk.html" class="menu-dropdown__link"><span class="menu__text">Записи раговоров</span></a></li>
 									<li><a href="scripts-2.html" class="menu-dropdown__link"><span class="menu__text">Скрипты обслуживания</span></a></li>
 									<li>
@@ -88,7 +88,7 @@
 											<ul class="menu-dropdown__list">
 												<li><a href="glossary.html" class="menu-dropdown__link"><span class="menu__text">Словари</span></a></li>
 												<li><a href="scripts.html" class="menu-dropdown__link"><span class="menu__text">Скрипты</span></a></li>
-												<li><a href="department.html" class="menu-dropdown__link"><span class="menu__text">Отделы и операторы</span></a></li>
+												<li><a href="departments.html" class="menu-dropdown__link"><span class="menu__text">Отделы и операторы</span></a></li>
 											</ul>
 										</div>
 									</li>
@@ -205,7 +205,7 @@
 						<button class="actions__button settings-btn" id="settings-btn"><img src="img/icons/settings.svg" alt=""></button>
 						<ul class="dropmenu">
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="name">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -214,7 +214,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="status">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -223,7 +223,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="guide">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -232,7 +232,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="operator">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -241,7 +241,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="client">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -250,7 +250,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="estimate">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -259,7 +259,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="glossary">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -268,7 +268,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="period">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -277,7 +277,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="checkbox-item">
+								<div class="checkbox-item" data-id="comment">
 									<label>
 										<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 										<span class="custom-checkbox custom-checkbox_dpl"></span>
@@ -290,8 +290,8 @@
 				</div>
 				<div class="file-table" data-file-table="1" data-table>
 					<ul class="file-table__list">
-						<li class="file-table__item file-table__heading" data-tr>
-							<div class="table-settings__checkbox table-checkbox">
+						<li class="file-table__item file-table__heading tr thead">
+							<div class="table-settings__checkbox table-checkbox td td-checkbox">
 								<div class="checkbox-item" id="select-all">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -299,7 +299,7 @@
 									</label>
 								</div>
 							</div>
-							<div class="file-table__name choice-search search">
+							<div class="file-table__name choice-search search td td-name" data-td="name">
 								Название файла
 								<a href="#" class="all-btn" data-search-btn>Все</a>
 								<div class="choice-search__box">
@@ -342,7 +342,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__status choice-search search">
+							<div class="file-table__status choice-search search td td-status" data-td="status">
 								Статус
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
@@ -385,7 +385,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__guide choice-search search">
+							<div class="file-table__guide choice-search search td td-guide" data-td="guide">
 								Направление
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
@@ -419,7 +419,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__operator choice-search search">
+							<div class="file-table__operator choice-search search td td-operator" data-td="operator">
 								Оператор
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
@@ -480,7 +480,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__client choice-search search">
+							<div class="file-table__client choice-search search td td-client" data-td="client">
 								Клиент
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
@@ -523,7 +523,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__estimate choice-search search">
+							<div class="file-table__estimate choice-search search td td-estimate" data-td="estimate">
 								Оценка
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
@@ -566,7 +566,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__glossary choice-search search">
+							<div class="file-table__glossary choice-search search td td-glossary" data-td="glossary">
 								Определен словарь/тематика
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
@@ -645,7 +645,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__period choice-search search">
+							<div class="file-table__period choice-search search td td-period" data-td="period">
 								Время загрузки
 								<a href="#" class="all-btn">Все</a>
 								<div class="choice-search__box">
@@ -688,22 +688,22 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__comment">
+							<div class="file-table__comment td td-comment" data-td="comment">
 								Комментарии
 							</div>
-							<div class="file-table__sound">Прослушать</div>
-							<div class="file-table__download">
+							<div class="file-table__sound td td-sound">Прослушать</div>
+							<div class="file-table__download td td-download">
 								Скачать
 							</div>
-							<div class="file-table__watch">
+							<div class="file-table__watch td td-watch">
 								Просмотр
 							</div>
-							<div class="file-table__delete">
+							<div class="file-table__delete td td-delete">
 								Удалить
 							</div>
 						</li>
-						<li class="file-table__item" data-tr>
-							<div class="table-settings__checkbox table-checkbox">
+						<li class="file-table__item tr">
+							<div class="table-settings__checkbox table-checkbox td td-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -711,7 +711,7 @@
 									</label>
 								</div>
 							</div>
-							<div class="file-table__name file-name">
+							<div class="file-table__name file-name td td-name" data-td="name">
 								<div class="file-name__box">
 									<span class="arrow-down"></span>
 									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202Mix_13001_17005_202</span>
@@ -720,7 +720,7 @@
 									<input class="form__input file-name__input" type="text">
 								</form>
 							</div>
-							<div class="file-table__status">
+							<div class="file-table__status td td-status" data-td="status">
 								<div class="status-box status-box__finish">
 									<div class="status-box__label">Завершено</div>
 									<div class="status-box__progress">
@@ -730,33 +730,33 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__guide">
+							<div class="file-table__guide td td-guide" data-td="guide">
 								<div class="guide-box">
 									<div class="quantity__in quantity-call">Входящий</div>
 								</div>
 							</div>
-							<div class="file-table__operator">
+							<div class="file-table__operator td td-operator" data-td="operator">
 								Екатерина Константинопольская
 							</div>
-							<div class="file-table__client file-table__phone">
+							<div class="file-table__client file-table__phone td td-client" data-td="client">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
+							<div class="file-table__estimate estimate td td-estimate" data-td="estimate">
 								<div class="estimate__box estimate__box_4">
 									4
 								</div>
 							</div>
-							<div class="file-table__glossary glossary-theme">
+							<div class="file-table__glossary glossary-theme td td-glossary" data-td="glossary">
 								<div class="glossary-theme__labels">
 									<span class="glossary-theme__label">Приветствия x1</span>
 									<span class="glossary-theme__label">Приветствия x2</span>
 								</div>
 							</div>
-							<div class="file-table__period">
+							<div class="file-table__period td td-period" data-td="period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__comment">
+							<div class="file-table__comment td td-comment" data-td="comment">
 								<div class="comment-box">
 									<div class="file-table__icon">
 										<img src="img/icons/message.svg" alt="">
@@ -766,7 +766,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__sound">
+							<div class="file-table__sound td td-sound">
 								<div class="sound-box">
 									<div class="file-table__icon">
 										<img src="img/icons/sound.svg" alt="">
@@ -776,7 +776,7 @@
 									</span>
 								</div>
 							</div>
-							<div class="file-table__download">
+							<div class="file-table__download td td-download">
 								<div class="download-box">
 									<div class="file-table__icon">
 										<img src="img/icons/download-black.svg" alt="">
@@ -786,17 +786,17 @@
 									</span>
 								</div>
 							</div>
-							<div class="file-table__watch">
+							<div class="file-table__watch td td-watch">
 								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
 								</a>
 							</div>
-							<div class="file-table__delete">
+							<div class="file-table__delete td td-delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
-						<li class="file-table__item" data-tr>
-							<div class="table-settings__checkbox table-checkbox">
+						<li class="file-table__item tr">
+							<div class="table-settings__checkbox table-checkbox td td-checkbox">
 								<div class="checkbox-item">
 									<label>
 										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
@@ -804,7 +804,7 @@
 									</label>
 								</div>
 							</div>
-							<div class="file-table__name file-name">
+							<div class="file-table__name file-name td td-name" data-td="name">
 								<div class="file-name__box">
 									<span class="arrow-down"></span>
 									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202 Mix_13001_17005_202</span>
@@ -813,7 +813,7 @@
 									<input class="form__input file-name__input" type="text">
 								</form>
 							</div>
-							<div class="file-table__status">
+							<div class="file-table__status td td-status" data-td="status">
 								<div class="status-box status-box__loading">
 									<div class="status-box__label">Выполняется</div>
 									<div class="status-box__progress">
@@ -823,32 +823,32 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__guide">
+							<div class="file-table__guide td td-guide" data-td="guide">
 								<div class="guide-box">
 									<div class="quantity__out quantity-call">Исходящий</div>
 								</div>
 							</div>
-							<div class="file-table__operator">
+							<div class="file-table__operator td td-operator" data-td="operator">
 								Екатерина Константинопольская
 							</div>
-							<div class="file-table__client file-table__phone">
+							<div class="file-table__client file-table__phone td td-client" data-td="client">
 								+7 915 7777777
 							</div>
-							<div class="file-table__estimate estimate">
+							<div class="file-table__estimate estimate td td-estimate" data-td="estimate">
 								<div class="estimate__box estimate__box_4">
 									4
 								</div>
 							</div>
-							<div class="file-table__glossary glossary-theme">
+							<div class="file-table__glossary glossary-theme td td-glossary" data-td="glossary">
 								<div class="glossary-theme__labels">
 									<span class="glossary-theme__label">Приветствия x1</span>
 								</div>
 							</div>
-							<div class="file-table__period">
+							<div class="file-table__period td td-period" data-td="period">
 								<span class="file-table__date">17.12.2022</span>
 								<span class="file-table__tense">12:22</span>
 							</div>
-							<div class="file-table__comment">
+							<div class="file-table__comment td td-comment" data-td="comment">
 								<div class="comment-box">
 									<div class="file-table__icon">
 										<img src="img/icons/message.svg" alt="">
@@ -858,7 +858,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="file-table__sound">
+							<div class="file-table__sound td td-sound">
 								<div class="sound-box">
 									<div class="file-table__icon">
 										<img src="img/icons/sound.svg" alt="">
@@ -868,7 +868,7 @@
 									</span>
 								</div>
 							</div>
-							<div class="file-table__download">
+							<div class="file-table__download td td-download">
 								<div class="download-box">
 									<div class="file-table__icon">
 										<img src="img/icons/download-black.svg" alt="">
@@ -878,196 +878,12 @@
 									</span>
 								</div>
 							</div>
-							<div class="file-table__watch">
+							<div class="file-table__watch td td-watch">
 								<a href="#" class="file-table__icon">
 									<img src="img/icons/eye.svg" alt="">
 								</a>
 							</div>
-							<div class="file-table__delete">
-								<button class="delete__button _icon-delete"></button>
-							</div>
-						</li>
-						<li class="file-table__item" data-tr>
-							<div class="table-settings__checkbox table-checkbox">
-								<div class="checkbox-item">
-									<label>
-										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-										<span class="custom-checkbox"></span>
-									</label>
-								</div>
-							</div>
-							<div class="file-table__name file-name">
-								<div class="file-name__box">
-									<span class="arrow-down"></span>
-									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202</span>
-								</div>
-								<form class="file-name__form">
-									<input class="form__input file-name__input" type="text">
-								</form>
-							</div>
-							<div class="file-table__status">
-								<div class="status-box status-box__null">
-									<div class="status-box__label">Не определено</div>
-									<div class="status-box__progress">
-										<div class="progress-full">
-											<div class="progress-line"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="file-table__guide">
-								<div class="guide-box">
-									<div class="quantity__out quantity-call">Исходящий</div>
-								</div>
-							</div>
-							<div class="file-table__operator">
-								Екатерина Константинопольская
-							</div>
-							<div class="file-table__client file-table__phone">
-								+7 915 7777777
-							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_1">
-									1
-								</div>
-							</div>
-							<div class="file-table__glossary glossary-theme">
-								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
-								</div>
-							</div>
-							<div class="file-table__period">
-								<span class="file-table__date">17.12.2022</span>
-								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
-							</div>
-							<div class="file-table__sound">
-								<div class="sound-box">
-									<div class="file-table__icon">
-										<img src="img/icons/sound.svg" alt="">
-									</div>
-									<span class="file-table__sound-time">
-										0:18
-									</span>
-								</div>
-							</div>
-							<div class="file-table__download">
-								<div class="download-box">
-									<div class="file-table__icon">
-										<img src="img/icons/download-black.svg" alt="">
-									</div>
-									<span class="file-table__download-size">
-										65.4 Kb
-									</span>
-								</div>
-							</div>
-							<div class="file-table__watch">
-								<a href="#" class="file-table__icon">
-									<img src="img/icons/eye.svg" alt="">
-								</a>
-							</div>
-							<div class="file-table__delete">
-								<button class="delete__button _icon-delete"></button>
-							</div>
-						</li>
-						<li class="file-table__item" data-tr>
-							<div class="table-settings__checkbox table-checkbox">
-								<div class="checkbox-item">
-									<label>
-										<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
-										<span class="custom-checkbox"></span>
-									</label>
-								</div>
-							</div>
-							<div class="file-table__name file-name">
-								<div class="file-name__box">
-									<span class="arrow-down"></span>
-									<span class="file-name__text" title="Переименовать файл">Mix_13001_17005_202</span>
-								</div>
-								<form class="file-name__form">
-									<input class="form__input file-name__input" type="text">
-								</form>
-							</div>
-							<div class="file-table__status">
-								<div class="status-box status-box__loading">
-									<div class="status-box__label">Выполняется</div>
-									<div class="status-box__progress">
-										<div class="progress-full">
-											<div class="progress-line"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="file-table__guide">
-								<div class="guide-box">
-									<div class="quantity__in quantity-call">Исходящий</div>
-								</div>
-							</div>
-							<div class="file-table__operator">
-								Екатерина Константинопольская
-							</div>
-							<div class="file-table__client file-table__phone">
-								+7 915 7777777
-							</div>
-							<div class="file-table__estimate estimate">
-								<div class="estimate__box estimate__box_5">
-									5
-								</div>
-							</div>
-							<div class="file-table__glossary glossary-theme">
-								<div class="glossary-theme__labels">
-									<span class="glossary-theme__label">Приветствия x1</span>
-								</div>
-							</div>
-							<div class="file-table__period">
-								<span class="file-table__date">17.12.2022</span>
-								<span class="file-table__tense">12:22</span>
-							</div>
-							<div class="file-table__comment">
-								<div class="comment-box">
-									<div class="file-table__icon">
-										<img src="img/icons/message.svg" alt="">
-									</div>
-									<div class="comment-box__message">
-										Небольшой комменатрий о разговоре. Заполняется на странице расширенного отчета
-									</div>
-								</div>
-							</div>
-							<div class="file-table__sound">
-								<div class="sound-box">
-									<div class="file-table__icon">
-										<img src="img/icons/sound.svg" alt="">
-									</div>
-									<span class="file-table__sound-time">
-										0:18
-									</span>
-								</div>
-							</div>
-							<div class="file-table__download">
-								<div class="download-box">
-									<div class="file-table__icon">
-										<img src="img/icons/download-black.svg" alt="">
-									</div>
-									<span class="file-table__download-size">
-										65.4 Kb
-									</span>
-								</div>
-							</div>
-							<div class="file-table__watch">
-								<a href="#" class="file-table__icon">
-									<img src="img/icons/eye.svg" alt="">
-								</a>
-							</div>
-							<div class="file-table__delete">
+							<div class="file-table__delete td td-delete">
 								<button class="delete__button _icon-delete"></button>
 							</div>
 						</li>
@@ -1243,7 +1059,7 @@
 					</div>
 					<div class="form-modal__buttons">
 						<button class="form-modal__button" type="button" data-bs-dismiss="offcanvas" data-modal-close aria-label="Close">Отменить</button>
-						<button class="form-modal__button form-modal__button_yellow" id="upload-btn" type="button" disabled>Загрузить записи</button>
+						<button class="form-modal__button form-modal__button_yellow" id="upload-btn" type="button">Загрузить записи</button>
 					</div>
 				</div>
 			</form>

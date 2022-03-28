@@ -135,6 +135,12 @@ $('#select-all').on('click', function(){
 	return false;
 });
 
+$('.table-checkbox input:checkbox').each(function(){
+	if ($('.table-checkbox input').prop('checked', false)) {
+		$('#select-all').removeClass('checked');
+	}
+})
+
 $('[data-actions-button="delete"]').on('click', function(){
 	$('.table-checkbox input').each(function(){
 		$(this).prop('checked', false);
@@ -159,6 +165,9 @@ myCount();
 
 $('.table-checkbox input').each(function(){
 	$(this).on('click', myCount);
+	if (!$(this).prop('checked', false)) {
+		$('#select-all').removeClass('checked');
+	}
 });
 $('#select-all').on('click', myCount);
 /*================== action button (show / hide) & counter ====================*/
@@ -174,7 +183,6 @@ $('.arrow-down').each(function(){
 
 $('.file-name__box').each(function(){
 	let textHeight = $(this).find($('.file-name__text')).height();
-	console.log(textHeight);
 	if (textHeight < 16) {
 		$(this).find($('.arrow-down')).hide();
 	} else {
@@ -187,18 +195,11 @@ $('.file-name__box').each(function(){
 
 /*================== words items ====================*/
 $('.words__list').each(function(){
-	console.log($(this));
 	let itemLength =  $(this).find($('.words__item')).length;
 	let listHeight = $(this).height();
-	console.log(itemLength);
-	console.log(listHeight);
 	if (itemLength > 16) {
 		$(this).find($('.words__item_all')).show();
-	}
-	else if (listHeight > 26) {
-		$(this).find($('.words__item_all')).show();
-	}
-	else {
+	} else {
 		$(this).find($('.words__item_all')).hide();
 	}
 	$(this).find($('.words__all')).on('click', function(e){
@@ -231,19 +232,6 @@ $(document).mouseup(function (e){
 	}
 });
 /*================== redact file name ====================*/
-
-
-/*================== load files====================*/
-const filesItem = document.querySelectorAll('.load-file__item').length;
-const uploadBtn = document.getElementById('upload-btn');
-if (filesItem) {
-	if (filesItem >= 0) {
-		uploadBtn.removeAttribute('disabled');
-	} else {
-		uploadBtn.setAttribute('disabled');
-	}
-}
-// /*================== files====================*/
 
 /*================== Offcanvas overlay====================*/
 $('#add-btn').on('click', function(){
@@ -313,6 +301,93 @@ if (rangeSliderSpeed){
 }
 /*================== RANGE-SLIDER ====================*/
 
+/*================== DELETE BUTTON ====================*/
+$('.delete__button').each(function(){
+	$(this).on('click', function(){
+		$(this).closest('.tr').remove();
+	})
+})
+/*================== DELETE BUTTON ====================*/
+
+
+/*================== FILTER-TABLE ====================*/
+// // FILTER
+$('[data-id="name"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="name"]').show();
+	} else {
+		$('[data-td="name"]').hide();
+	}
+})
+$('[data-id="status"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="status"]').show();
+	} else {
+		$('[data-td="status"]').hide();
+	}
+})
+$('[data-id="guide"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="guide"]').show();
+	} else {
+		$('[data-td="guide"]').hide();
+	}
+})
+$('[data-id="operator"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="operator"]').show();
+	} else {
+		$('[data-td="operator"]').hide();
+	}
+})
+$('[data-id="client"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="client"]').show();
+	} else {
+		$('[data-td="client"]').hide();
+	}
+})
+$('[data-id="estimate"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="estimate"]').show();
+	} else {
+		$('[data-td="estimate"]').hide();
+	}
+})
+$('[data-id="glossary"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="glossary"]').show();
+	} else {
+		$('[data-td="glossary"]').hide();
+	}
+})
+$('[data-id="period"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="period"]').show();
+	} else {
+		$('[data-td="period"]').hide();
+	}
+})
+$('[data-id="comment"]').click(function(){
+	if ($(this).find($('input')).is(':checked')){
+		$('[data-td="comment"]').show();
+	} else {
+		$('[data-td="comment"]').hide();
+	}
+})
+
+/*================== FILTER-TABLE ====================*/
+
+/*================== Добавление класса current текущим страницам ====================*/
+$('.menu a').each(function() {
+    if ($(this).attr('href') == location.href.split("/").slice(-1)){ $(this).addClass('current'); }
+});
+$('.menu a').each(function() {
+    if ($(this).attr('href') == location.href.split("/").slice(-1)){$(this).closest('.menu__item').addClass('current'); }
+});
+/*================== Добавление класса current текущим страницам ====================*/
+
+
 //Получаем инпут file в переменную
 const formFile = document.getElementById('formFile');
 	//Получаем див для превью в переменную
@@ -344,4 +419,5 @@ const formFile = document.getElementById('formFile');
 		};
 		reader.readAsDataURL(file);
 	}
+
 

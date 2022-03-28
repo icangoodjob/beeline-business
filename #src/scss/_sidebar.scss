@@ -86,8 +86,6 @@
 	pointer-events: none;
 	transition: all .25s linear .25s;
 }
-.aside__menu {}
-.menu {}
 .menu__list {
 	display: flex;
 	flex-direction: column;
@@ -99,11 +97,12 @@
 	padding-left: 36px;
 	display: flex;
 	align-items: center;
-	transition: all .35s linear .15s;
-	&.current{
-		background: var(--white-color);
-	}
+	transition: all .2s linear .15s;
 }
+.menu__item.current .menu__item-heading{
+	background: var(--white-color);
+}
+
 .menu__link {
 	display: grid;
 	grid-template-columns: max-content 1fr max-content;
@@ -124,7 +123,7 @@
 	background: var(--white-color);
 	transition: all .2s ease .2s;
 }
-.aside.active .menu__item-heading.current{
+.aside.active .menu__item.current .menu__item-heading{
 	background: transparent;
 }
 .menu__link-settings {
@@ -174,11 +173,6 @@
 	transform: rotate(-90deg);
 	opacity: 0;
 }
-.dropdown__menu {}
-
-.menu-dropdown {
-}
-
 .menu-dropdown__list {
 	& li{
 		width: 100%;
