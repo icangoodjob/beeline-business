@@ -310,6 +310,29 @@ $('.delete__button').each(function(){
 /*================== DELETE BUTTON ====================*/
 
 
+/*================== ADD COMMENT ====================*/
+$('[data-comment-button]').on('click', function(){
+	let textareaCommentVal = $('#formTextareaComment').val();
+	$('.record__comment').css('display', 'block');
+	$('.record__comment p').text(textareaCommentVal);
+});
+
+$('[data-comment-close]').on('click', function(){
+	$('.record__comment').css('display', 'none');
+})
+/*================== ADD COMMENT ====================*/
+
+
+/*================== Добавление класса current текущим страницам ====================*/
+$('.menu a').each(function() {
+    if ($(this).attr('href') == location.href.split("/").slice(-1)){ $(this).addClass('current'); }
+});
+$('.menu a').each(function() {
+    if ($(this).attr('href') == location.href.split("/").slice(-1)){$(this).closest('.menu__item').addClass('current'); }
+});
+/*================== Добавление класса current текущим страницам ====================*/
+
+
 /*================== FILTER-TABLE ====================*/
 // // FILTER
 $('[data-id="name"]').click(function(){
@@ -377,16 +400,6 @@ $('[data-id="comment"]').click(function(){
 })
 
 /*================== FILTER-TABLE ====================*/
-
-/*================== Добавление класса current текущим страницам ====================*/
-$('.menu a').each(function() {
-    if ($(this).attr('href') == location.href.split("/").slice(-1)){ $(this).addClass('current'); }
-});
-$('.menu a').each(function() {
-    if ($(this).attr('href') == location.href.split("/").slice(-1)){$(this).closest('.menu__item').addClass('current'); }
-});
-/*================== Добавление класса current текущим страницам ====================*/
-
 
 //Получаем инпут file в переменную
 const formFile = document.getElementById('formFile');

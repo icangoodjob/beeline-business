@@ -1699,6 +1699,7 @@ body.lock {
 	max-width: 535px;
 	padding: 23px 51px 23px 32px;
 	margin-bottom: 18px;
+	display: none;
 }
 .record__comment p {
 	margin: 0;

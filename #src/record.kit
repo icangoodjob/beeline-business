@@ -25,10 +25,9 @@
 				<a href="#" class="back__link"><span>Назад к отчетам</span></a>
 			</div>
 			<div class="record__comment">
-				<button class="comment__close _icon-close">
+				<button class="comment__close _icon-close" data-comment-close>
 				</button>
 				<p>
-					Комментарий ограничение символов, возможно несколько строк
 				</p>
 			</div>
 			<div class="record__audio-track audio-track-record">
@@ -325,7 +324,7 @@
 						<div class="form-modal__body">
 							<div class="form-modal__box">
 								<div class="form-modal__item">
-									<textarea class="form-modal__textarea" autocomplete="off" placeholder="Комментарий" maxlength="50"></textarea>
+									<textarea class="form-modal__textarea" id="formTextareaComment" autocomplete="off" placeholder="Комментарий" maxlength="50"></textarea>
 									<div class="form-modal__counter">
 										<span>0</span>
 										<span> / </span>
@@ -336,7 +335,7 @@
 						</div>
 						<div class="form-modal__buttons">
 							<button class="form-modal__button" type="button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
-							<button class="form-modal__button form-modal__button_yellow" type="button">Добавить</button>
+							<button class="form-modal__button form-modal__button_yellow" type="button" data-bs-dismiss="modal" aria-label="Close" data-comment-button>Добавить</button>
 						</div>
 					</form>
 				</div>
