@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<title>Записи раговоров</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/floatingscroll.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
+
 <body>
 
 	<div class="wrapper" id="wrapper">
@@ -21,7 +24,8 @@
 				<h1 class="main__title">
 					Volna2.wav
 				</h1>
-				<button class="button__add-comment" data-bs-toggle="modal" data-bs-target="#comment">Добавить комментарий</button>
+				<button class="button__add-comment" data-bs-toggle="modal" data-bs-target="#comment">Добавить
+					комментарий</button>
 				<a href="#" class="back__link"><span>Назад к отчетам</span></a>
 			</div>
 			<div class="record__comment">
@@ -66,7 +70,8 @@
 							<label class="events-record__badge">Перебивание</label>
 							<label class="events-record__badge events-record__badge_glossary">Словарь Приветствие</label>
 							<label class="events-record__badge events-record__badge_outrage">Словарь Возмущение</label>
-							<label class="events-record__badge events-record__badge_emotion">Эмоция оператора: удивление</label>
+							<label class="events-record__badge events-record__badge_emotion">Эмоция оператора:
+								удивление</label>
 							<label class="events-record__badge events-record__badge_emotion">Эмоция клиента: злой</label>
 						</div>
 						<div class="events-record__graphics graphics-record">
@@ -137,7 +142,7 @@
 								</div>
 							</div>
 							<div class="graphics-record__item">
-								<div class="graphics-record__title graph__title">Процент речи,  %</div>
+								<div class="graphics-record__title graph__title">Процент речи, %</div>
 								<div class="graphics-record__data graph__data">
 									<div>
 										<div class="chart chartBar" data-id="chartBarPercent"></div>
@@ -249,7 +254,8 @@
 							<ul class="dialog-record__list">
 								<li class="dialog-record__item item-dialog item-dialog__operator">
 									<div class="item-dialog__name">Оператор</div>
-									<label class="item-dialog__label events-record__badge events-record__badge_glossary">Словарь Приветствие</label>
+									<label class="item-dialog__label events-record__badge events-record__badge_glossary">Словарь
+										Приветствие</label>
 									<div class="item-dialog__box">
 										<span class="item-dialog__message">Здравствуйте!</span>
 										<span class="item-dialog__time">1.583 сек</span>
@@ -271,7 +277,8 @@
 								</li>
 								<li class="dialog-record__item item-dialog item-dialog__client">
 									<div class="item-dialog__name">Клиент</div>
-									<label class="item-dialog__label events-record__badge events-record__badge_outrage">Словарь Возмущение</label>
+									<label class="item-dialog__label events-record__badge events-record__badge_outrage">Словарь
+										Возмущение</label>
 									<div class="item-dialog__box">
 										<span class="item-dialog__message">Хочу купить услугу!</span>
 										<span class="item-dialog__time">1.583 сек</span>
@@ -314,7 +321,8 @@
 
 		<!-- @import "footer.kit" -->
 
-		<div class="modal modal__comment fade" id="comment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="comment" aria-hidden="true">
+		<div class="modal modal__comment fade" id="comment" data-bs-backdrop="static" data-bs-keyboard="false"
+			tabindex="-1" aria-labelledby="comment" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
@@ -324,7 +332,8 @@
 						<div class="form-modal__body">
 							<div class="form-modal__box">
 								<div class="form-modal__item">
-									<textarea class="form-modal__textarea" id="formTextareaComment" autocomplete="off" placeholder="Комментарий" maxlength="50"></textarea>
+									<textarea class="form-modal__textarea" id="formTextareaComment" autocomplete="off"
+										placeholder="Комментарий" maxlength="50"></textarea>
 									<div class="form-modal__counter">
 										<span>0</span>
 										<span> / </span>
@@ -334,8 +343,10 @@
 							</div>
 						</div>
 						<div class="form-modal__buttons">
-							<button class="form-modal__button" type="button" data-bs-dismiss="modal" aria-label="Close">Отменить</button>
-							<button class="form-modal__button form-modal__button_yellow" type="button" data-bs-dismiss="modal" aria-label="Close" data-comment-button>Добавить</button>
+							<button class="form-modal__button" type="button" data-bs-dismiss="modal"
+								aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow" type="button" data-bs-dismiss="modal"
+								aria-label="Close" data-comment-button>Добавить</button>
 						</div>
 					</form>
 				</div>
@@ -354,4 +365,5 @@
 
 
 </body>
+
 </html>

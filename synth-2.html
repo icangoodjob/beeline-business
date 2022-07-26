@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<title>Синтез речи</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/floatingscroll.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
+
 <body>
 
 	<div class="wrapper" id="wrapper">
@@ -147,8 +150,12 @@
 				<div class="main-info">
 					<button class="main-info__btn">
 						<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M12.9985 24.6683C19.4418 24.6683 24.6651 19.445 24.6651 13.0016C24.6651 6.55831 19.4418 1.33496 12.9985 1.33496C6.55516 1.33496 1.33181 6.55831 1.33181 13.0016C1.33181 19.445 6.55516 24.6683 12.9985 24.6683Z" stroke="#979797" stroke-width="1.55556" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M13.0037 6.5C13.3637 6.5 13.6637 6.62 13.9037 6.86C14.157 7.08667 14.2837 7.4 14.2837 7.8C14.2837 8.2 14.157 8.52 13.9037 8.76C13.6637 9 13.3637 9.12 13.0037 9.12C12.6437 9.12 12.337 9 12.0837 8.76C11.8303 8.52 11.7037 8.2 11.7037 7.8C11.7037 7.4 11.8303 7.08667 12.0837 6.86C12.337 6.62 12.6437 6.5 13.0037 6.5ZM11.9837 10.2H14.0237V20H11.9837V10.2Z" fill="#979797"/>
+							<path
+								d="M12.9985 24.6683C19.4418 24.6683 24.6651 19.445 24.6651 13.0016C24.6651 6.55831 19.4418 1.33496 12.9985 1.33496C6.55516 1.33496 1.33181 6.55831 1.33181 13.0016C1.33181 19.445 6.55516 24.6683 12.9985 24.6683Z"
+								stroke="#979797" stroke-width="1.55556" stroke-linecap="round" stroke-linejoin="round" />
+							<path
+								d="M13.0037 6.5C13.3637 6.5 13.6637 6.62 13.9037 6.86C14.157 7.08667 14.2837 7.4 14.2837 7.8C14.2837 8.2 14.157 8.52 13.9037 8.76C13.6637 9 13.3637 9.12 13.0037 9.12C12.6437 9.12 12.337 9 12.0837 8.76C11.8303 8.52 11.7037 8.2 11.7037 7.8C11.7037 7.4 11.8303 7.08667 12.0837 6.86C12.337 6.62 12.6437 6.5 13.0037 6.5ZM11.9837 10.2H14.0237V20H11.9837V10.2Z"
+								fill="#979797" />
 						</svg>
 					</button>
 					<div class="main-info__tooltip">
@@ -161,16 +168,19 @@
 			<div class="tabs">
 				<ul class="tabs__list">
 					<li class="tabs__item"><a class="tabs__link" href="synth.html"><span>Синтез записей</span></a></li>
-					<li class="tabs__item"><a class="tabs__link active" href="synth-2.html"><span>Синтезированные записи</span></a></li>
+					<li class="tabs__item"><a class="tabs__link active" href="synth-2.html"><span>Синтезированные
+								записи</span></a></li>
 				</ul>
 				<div class="tabs__content synth-content">
 					<div class="synth-content__table file-table" data-file-table="3">
 						<div class="actions__buttons">
-							<a href="#" download="" class="actions__button" data-actions-button="upload">Скачать .zip <span class="actions__counter">(<span>1</span>)</span></a>
-							<button class="actions__button null" data-actions-button="delete">Удалить <span class="actions__counter">(<span>1</span>)</span></button>
+							<a href="#" download="" class="actions__button" data-actions-button="upload">Скачать .zip <span
+									class="actions__counter">(<span>1</span>)</span></a>
+							<button class="actions__button null" data-actions-button="delete">Удалить <span
+									class="actions__counter">(<span>1</span>)</span></button>
 							<a href="#" download="" class="actions__button report-btn"><span>Отчет Excel</span></a>
 						</div>
-						<ul class="file-table__list">
+						<ul class="file-table__list" data-table-list>
 							<li class="file-table__item file-table__heading">
 								<div class="table-settings__checkbox table-checkbox">
 									<div class="checkbox-item" id="select-all">
@@ -195,7 +205,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Название файла</span>
 														</label>
@@ -204,7 +215,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Название файла</span>
 														</label>
@@ -213,7 +225,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Название файла</span>
 														</label>
@@ -238,7 +251,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Не определено</span>
 														</label>
@@ -247,7 +261,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Не определено</span>
 														</label>
@@ -256,7 +271,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Входящий</span>
 														</label>
@@ -281,7 +297,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Мужской</span>
 														</label>
@@ -290,7 +307,8 @@
 												<li>
 													<div class="checkbox-item">
 														<label>
-															<input checked type="checkbox" name="settings" value="checkbox" class="real-checkbox">
+															<input checked type="checkbox" name="settings" value="checkbox"
+																class="real-checkbox">
 															<span class="custom-checkbox custom-checkbox_dpl"></span>
 															<span class="checkbox-item__text">Женский</span>
 														</label>
@@ -673,14 +691,15 @@
 		</footer>
 	</div>
 
-	<script src="https://kit.fontawesome.com/ed89a4511e.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/datepicker.min.js"></script>
-	<script src="js/select.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/main.js"></script>
-
+<script src="https://kit.fontawesome.com/ed89a4511e.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/select.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/floatingscroll.min.js"></script>
+<script src="js/main.js"></script>
 
 </body>
+
 </html>

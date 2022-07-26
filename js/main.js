@@ -1,5 +1,10 @@
-/*===== SHOW SIDEBAR  =====*/ 
+
+// Плавающий скролл
+
+
+/*===== SHOW SIDEBAR  =====*/
 $(document).ready(function () {
+
 	$('#sidebarCollapse').on('click', function () {
 		$(this).toggleClass('active');
 		$('#sidebar').toggleClass('active');
@@ -12,13 +17,15 @@ $(document).ready(function () {
 	});
 });
 
+$("[data-table-list]").floatingScroll("init");
+
 /*===== Показать другие отчеты ====*/
 const btnMore = document.getElementById('btn-more');
 const graphElements = document.querySelectorAll('.graph__item').length;
 const graphElementsHidden = document.querySelectorAll('.graph__item:nth-child(n+4)');
 if (btnMore != null) {
 	btnMore.addEventListener('click', () => {
-		for (let element of graphElementsHidden){
+		for (let element of graphElementsHidden) {
 			element.classList.toggle('active');
 			btnMore.classList.toggle('active');
 		}
@@ -35,20 +42,20 @@ if (btnMore != null) {
 
 // Календари (+ неактивные воскресенье и суббота)
 var disabledDays = [0, 6];
-$('#datepickerOne').each(function() {
+$('#datepickerOne').each(function () {
 	$(this).datepicker({
 		navTitles: {
 			days: 'MM yyyy'
 		},
 		format: "dd/mm/yyyy",
-		weekends: [6,0],
+		weekends: [6, 0],
 		inline: false,
 		autoclose: true,
 		position: 'bottom left',
 		onRenderCell: function (date, cellType) {
 			if (cellType == 'day') {
 				var day = date.getDay(),
-				isDisabled = disabledDays.indexOf(day) != -1;
+					isDisabled = disabledDays.indexOf(day) != -1;
 				return {
 					disabled: isDisabled
 				}
@@ -56,20 +63,20 @@ $('#datepickerOne').each(function() {
 		},
 	});
 });
-$('#datepickerTwo').each(function() {
+$('#datepickerTwo').each(function () {
 	$(this).datepicker({
 		navTitles: {
 			days: 'MM yyyy'
 		},
 		format: "dd/mm/yyyy",
-		weekends: [6,0],
+		weekends: [6, 0],
 		inline: false,
 		autoclose: true,
 		position: 'bottom left',
 		onRenderCell: function (date, cellType) {
 			if (cellType == 'day') {
 				var day = date.getDay(),
-				isDisabled = disabledDays.indexOf(day) != -1;
+					isDisabled = disabledDays.indexOf(day) != -1;
 				return {
 					disabled: isDisabled
 				}
@@ -77,7 +84,7 @@ $('#datepickerTwo').each(function() {
 		},
 	});
 });
-$('.datepicker--cells').click(function(){
+$('.datepicker--cells').click(function () {
 	if (!$(this).hasClass('.-weekend-')) {
 		$('.datepicker').removeClass('active');
 	} else {
@@ -98,7 +105,7 @@ let boxSettings = document.querySelector('.settings-box');
 document.addEventListener('click', dropMenuOpen);
 function dropMenuOpen(event) {
 	if (boxSettings) {
-		if (event.target.closest('.settings-btn')){
+		if (event.target.closest('.settings-btn')) {
 			boxSettings.classList.toggle('show');
 			return false;
 		}
@@ -110,22 +117,22 @@ function dropMenuOpen(event) {
 /*================== Dropdown menu settings ====================*/
 
 /*================== all btn ====================*/
-$('.all-btn').on('click', function(event) {
+$('.all-btn').on('click', function (event) {
 	event.preventDefault();
 	$('.choice-search').removeClass('show');
 	$(this).parent('.choice-search').toggleClass('show');
 })
-$(document).mouseup(function (e){
-	let searchContainer = $('.choice-search'); 
+$(document).mouseup(function (e) {
+	let searchContainer = $('.choice-search');
 	if (!searchContainer.is(e.target) && searchContainer.has(e.target).length === 0) {
-		searchContainer.removeClass('show'); 
+		searchContainer.removeClass('show');
 	}
 });
 /*================== all btn ====================*/
 
 
 /*================== checkbox ====================*/
-$('#select-all').on('click', function(){
+$('#select-all').on('click', function () {
 	$(this).toggleClass('checked');
 	if ($(this).hasClass('checked')) {
 		$('.table-checkbox input:checkbox').prop('checked', true);
@@ -135,14 +142,14 @@ $('#select-all').on('click', function(){
 	return false;
 });
 
-$('.table-checkbox input:checkbox').each(function(){
+$('.table-checkbox input:checkbox').each(function () {
 	if ($('.table-checkbox input').prop('checked', false)) {
 		$('#select-all').removeClass('checked');
 	}
 })
 
-$('[data-actions-button="delete"]').on('click', function(){
-	$('.table-checkbox input').each(function(){
+$('[data-actions-button="delete"]').on('click', function () {
+	$('.table-checkbox input').each(function () {
 		$(this).prop('checked', false);
 	});
 	$(this).hide();
@@ -163,7 +170,7 @@ function myCount() {
 };
 myCount();
 
-$('.table-checkbox input').each(function(){
+$('.table-checkbox input').each(function () {
 	$(this).on('click', myCount);
 	if (!$(this).prop('checked', false)) {
 		$('#select-all').removeClass('checked');
@@ -174,14 +181,14 @@ $('#select-all').on('click', myCount);
 
 
 /*================== file-name text (show / hide) ====================*/
-$('.arrow-down').each(function(){
-	$(this).on('click',function(){
+$('.arrow-down').each(function () {
+	$(this).on('click', function () {
 		$(this).toggleClass('active');
 		$(this).parent().find($('.file-name__text')).toggleClass('hidden');
 	})
 })
 
-$('.file-name__box').each(function(){
+$('.file-name__box').each(function () {
 	let textHeight = $(this).find($('.file-name__text')).height();
 	if (textHeight < 16) {
 		$(this).find($('.arrow-down')).hide();
@@ -194,15 +201,15 @@ $('.file-name__box').each(function(){
 
 
 /*================== words items ====================*/
-$('.words__list').each(function(){
-	let itemLength =  $(this).find($('.words__item')).length;
+$('.words__list').each(function () {
+	let itemLength = $(this).find($('.words__item')).length;
 	let listHeight = $(this).height();
 	if (itemLength > 16) {
 		$(this).find($('.words__item_all')).show();
 	} else {
 		$(this).find($('.words__item_all')).hide();
 	}
-	$(this).find($('.words__all')).on('click', function(e){
+	$(this).find($('.words__all')).on('click', function (e) {
 		$(this).closest('.words__list').find($('.words__item:nth-child(n+16)')).toggleClass('active');
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
@@ -217,14 +224,14 @@ $('.words__list').each(function(){
 
 
 /*================== redact file name ====================*/
-$('.file-name__text').on('click', function(event) {
+$('.file-name__text').on('click', function (event) {
 	$('.file-name').removeClass('show');
 	$(this).parents('.file-name').toggleClass('show');
 	$('.file-name__box').removeClass('hide');
 	$(this).parents('.file-name').find('.file-name__box').addClass('hide');
 })
 
-$(document).mouseup(function (e){
+$(document).mouseup(function (e) {
 	let fileContainer = $('.file-name');
 	if (!fileContainer.is(e.target) && fileContainer.has(e.target).length === 0) {
 		fileContainer.removeClass('show');
@@ -234,10 +241,10 @@ $(document).mouseup(function (e){
 /*================== redact file name ====================*/
 
 /*================== Offcanvas overlay====================*/
-$('#add-btn').on('click', function(){
+$('#add-btn').on('click', function () {
 	$('.overlay-offcanvas').toggleClass('show');
 });
-$('[data-modal-close]').on('click', function(){
+$('[data-modal-close]').on('click', function () {
 	$('.overlay-offcanvas').toggleClass('show');
 });
 /*================== Offcanvas overlay====================*/
@@ -245,20 +252,20 @@ $('[data-modal-close]').on('click', function(){
 
 /*================== Textarea value ====================*/
 $('#formTextarea').val('слово, кредит, деньги, платить, оплачивать, займ, дорого, кредитование, оплата');
-$('#formTextarea').focus(function(){
+$('#formTextarea').focus(function () {
 	$(this).select();
 });
 $('#formTextareaNumbers').val('89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111, 89991111111')
-$('#formTextareaNumbers').focus(function(){
+$('#formTextareaNumbers').focus(function () {
 	$(this).select();
 });
 /*================== Textarea value ====================*/
 
 /*================== Проверка на существание загруженных скриптов ====================*/
-$('.load-file__item').each(function(){
-	if ($(this).length < 1){
+$('.load-file__item').each(function () {
+	if ($(this).length < 1) {
 		$('#fileUpload').addClass('hidden');
-	}  else {
+	} else {
 		$('#fileUpload').removeClass('hidden');
 		$('.load-file').addClass('hidden');
 	}
@@ -267,7 +274,7 @@ $('.load-file__item').each(function(){
 
 /*================== RANGE-SLIDER ====================*/
 let rangeSliderTonality = document.getElementById('range-tonality');
-if (rangeSliderTonality){
+if (rangeSliderTonality) {
 	noUiSlider.create(rangeSliderTonality, {
 		start: 41,
 		connect: 'lower',
@@ -278,7 +285,7 @@ if (rangeSliderTonality){
 	});
 }
 let rangeSliderSpeed = document.getElementById('range-speed');
-if (rangeSliderSpeed){
+if (rangeSliderSpeed) {
 	noUiSlider.create(rangeSliderSpeed, {
 		start: 41,
 		connect: 'lower',
@@ -289,7 +296,7 @@ if (rangeSliderSpeed){
 	});
 }
 let rangeSliderVolume = document.getElementById('range-volume');
-if (rangeSliderSpeed){
+if (rangeSliderSpeed) {
 	noUiSlider.create(rangeSliderVolume, {
 		start: 41,
 		connect: 'lower',
@@ -302,8 +309,8 @@ if (rangeSliderSpeed){
 /*================== RANGE-SLIDER ====================*/
 
 /*================== DELETE BUTTON ====================*/
-$('.delete__button').each(function(){
-	$(this).on('click', function(){
+$('.delete__button').each(function () {
+	$(this).on('click', function () {
 		$(this).closest('.tr').remove();
 	})
 })
@@ -311,87 +318,87 @@ $('.delete__button').each(function(){
 
 
 /*================== ADD COMMENT ====================*/
-$('[data-comment-button]').on('click', function(){
+$('[data-comment-button]').on('click', function () {
 	let textareaCommentVal = $('#formTextareaComment').val();
 	$('.record__comment').css('display', 'block');
 	$('.record__comment p').text(textareaCommentVal);
 });
 
-$('[data-comment-close]').on('click', function(){
+$('[data-comment-close]').on('click', function () {
 	$('.record__comment').css('display', 'none');
 })
 /*================== ADD COMMENT ====================*/
 
 
 /*================== Добавление класса current текущим страницам ====================*/
-$('.menu a').each(function() {
-    if ($(this).attr('href') == location.href.split("/").slice(-1)){ $(this).addClass('current'); }
+$('.menu a').each(function () {
+	if ($(this).attr('href') == location.href.split("/").slice(-1)) { $(this).addClass('current'); }
 });
-$('.menu a').each(function() {
-    if ($(this).attr('href') == location.href.split("/").slice(-1)){$(this).closest('.menu__item').addClass('current'); }
+$('.menu a').each(function () {
+	if ($(this).attr('href') == location.href.split("/").slice(-1)) { $(this).closest('.menu__item').addClass('current'); }
 });
 /*================== Добавление класса current текущим страницам ====================*/
 
 /*================== FILTER-TABLE ====================*/
 // // FILTER
-$('[data-id="name"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="name"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="name"]').show();
 	} else {
 		$('[data-td="name"]').hide();
 	}
 })
-$('[data-id="status"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="status"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="status"]').show();
 	} else {
 		$('[data-td="status"]').hide();
 	}
 })
-$('[data-id="guide"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="guide"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="guide"]').show();
 	} else {
 		$('[data-td="guide"]').hide();
 	}
 })
-$('[data-id="operator"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="operator"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="operator"]').show();
 	} else {
 		$('[data-td="operator"]').hide();
 	}
 })
-$('[data-id="client"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="client"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="client"]').show();
 	} else {
 		$('[data-td="client"]').hide();
 	}
 })
-$('[data-id="estimate"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="estimate"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="estimate"]').show();
 	} else {
 		$('[data-td="estimate"]').hide();
 	}
 })
-$('[data-id="glossary"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="glossary"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="glossary"]').show();
 	} else {
 		$('[data-td="glossary"]').hide();
 	}
 })
-$('[data-id="period"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="period"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="period"]').show();
 	} else {
 		$('[data-td="period"]').hide();
 	}
 })
-$('[data-id="comment"]').click(function(){
-	if ($(this).find($('input')).is(':checked')){
+$('[data-id="comment"]').click(function () {
+	if ($(this).find($('input')).is(':checked')) {
 		$('[data-td="comment"]').show();
 	} else {
 		$('[data-td="comment"]').hide();
@@ -402,34 +409,34 @@ $('[data-id="comment"]').click(function(){
 
 //Получаем инпут file в переменную
 const formFile = document.getElementById('formFile');
-	//Получаем див для превью в переменную
-	const formPreview = document.getElementById('formPreview');
-	//Слушаем изменения в инпуте file
-	if (formFile != null) {
-		formFile.addEventListener('change', () => {
-			uploadFile(formFile.files[0]);
-		});
+//Получаем див для превью в переменную
+const formPreview = document.getElementById('formPreview');
+//Слушаем изменения в инпуте file
+if (formFile != null) {
+	formFile.addEventListener('change', () => {
+		uploadFile(formFile.files[0]);
+	});
+}
+function uploadFile(file) {
+	// провераяем тип файла
+	if (!['image/jpeg', 'image/png', 'image/gif', '.docx'].includes(file.type)) {
+		alert('Неверный тип файла');
+		formFile.value = '';
+		return;
 	}
-	function uploadFile(file) {
-		// провераяем тип файла
-		if (!['image/jpeg', 'image/png', 'image/gif', '.docx'].includes(file.type)) {
-			alert('Неверный тип файла');
-			formFile.value = '';
-			return;
-		}
-		// проверим размер файла (<2 Мб)
-		if (file.size > 2 * 1024 * 1024) {
-			alert('Файл должен быть менее 2 МБ.');
-			return;
-		}
-		var reader = new FileReader();
-		reader.onload = function (e) {
-			formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-		};
-		reader.onerror = function (e) {
-			alert('Ошибка');
-		};
-		reader.readAsDataURL(file);
+	// проверим размер файла (<2 Мб)
+	if (file.size > 2 * 1024 * 1024) {
+		alert('Файл должен быть менее 2 МБ.');
+		return;
 	}
+	var reader = new FileReader();
+	reader.onload = function (e) {
+		formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+	};
+	reader.onerror = function (e) {
+		alert('Ошибка');
+	};
+	reader.readAsDataURL(file);
+}
 
 

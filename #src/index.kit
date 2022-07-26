@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/datepicker.min.css">
+	<link rel="stylesheet" href="css/floatingscroll.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
+
 <body>
 
 	<div class="wrapper" id="wrapper">
@@ -25,8 +28,12 @@
 				<div class="main-info">
 					<button class="main-info__btn">
 						<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M12.9985 24.6683C19.4418 24.6683 24.6651 19.445 24.6651 13.0016C24.6651 6.55831 19.4418 1.33496 12.9985 1.33496C6.55516 1.33496 1.33181 6.55831 1.33181 13.0016C1.33181 19.445 6.55516 24.6683 12.9985 24.6683Z" stroke="#979797" stroke-width="1.55556" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M13.0037 6.5C13.3637 6.5 13.6637 6.62 13.9037 6.86C14.157 7.08667 14.2837 7.4 14.2837 7.8C14.2837 8.2 14.157 8.52 13.9037 8.76C13.6637 9 13.3637 9.12 13.0037 9.12C12.6437 9.12 12.337 9 12.0837 8.76C11.8303 8.52 11.7037 8.2 11.7037 7.8C11.7037 7.4 11.8303 7.08667 12.0837 6.86C12.337 6.62 12.6437 6.5 13.0037 6.5ZM11.9837 10.2H14.0237V20H11.9837V10.2Z" fill="#979797"/>
+							<path
+								d="M12.9985 24.6683C19.4418 24.6683 24.6651 19.445 24.6651 13.0016C24.6651 6.55831 19.4418 1.33496 12.9985 1.33496C6.55516 1.33496 1.33181 6.55831 1.33181 13.0016C1.33181 19.445 6.55516 24.6683 12.9985 24.6683Z"
+								stroke="#979797" stroke-width="1.55556" stroke-linecap="round" stroke-linejoin="round" />
+							<path
+								d="M13.0037 6.5C13.3637 6.5 13.6637 6.62 13.9037 6.86C14.157 7.08667 14.2837 7.4 14.2837 7.8C14.2837 8.2 14.157 8.52 13.9037 8.76C13.6637 9 13.3637 9.12 13.0037 9.12C12.6437 9.12 12.337 9 12.0837 8.76C11.8303 8.52 11.7037 8.2 11.7037 7.8C11.7037 7.4 11.8303 7.08667 12.0837 6.86C12.337 6.62 12.6437 6.5 13.0037 6.5ZM11.9837 10.2H14.0237V20H11.9837V10.2Z"
+								fill="#979797" />
 						</svg>
 					</button>
 					<div class="main-info__tooltip">
@@ -66,7 +73,8 @@
 								Начало
 							</div>
 							<div class="group-calendar__box">
-								<input class="group-calendar__input"  data-multiple-dates-separator="" id="datepickerOne" type="text" name="date" autocomplete="off" placeholder="01.12.2021">
+								<input class="group-calendar__input" data-multiple-dates-separator="" id="datepickerOne"
+									type="text" name="date" autocomplete="off" placeholder="01.12.2021">
 							</div>
 						</div>
 						<div class="work-area__item">
@@ -74,7 +82,8 @@
 								Окончание
 							</div>
 							<div class="group-calendar__box">
-								<input class="group-calendar__input" id="datepickerTwo" type="text" name="date" autocomplete="off" placeholder="01.01.2022">
+								<input class="group-calendar__input" id="datepickerTwo" type="text" name="date"
+									autocomplete="off" placeholder="01.01.2022">
 							</div>
 						</div>
 						<button class="group-calendar__button">Выбрать</button>
@@ -119,12 +128,12 @@
 					<span>Свернуть отчеты</span>
 					<div class="work-area__watching-arrow">
 						<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#3F9FE4"/>
+							<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#3F9FE4" />
 						</svg>
 					</div>
 				</button>
 				<div class="work-area__table table-area">
-					<ul class="table-area__list">
+					<ul class="table-area__list" data-table-list>
 						<li class="table-area__item table-area__item-head">
 							<div class="table-area__name choice-search search">
 								Оператор
@@ -143,7 +152,8 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+														<span class="checkbox-item__text">Екатерина
+															Константинопольская</span>
 													</label>
 												</div>
 											</li>
@@ -152,7 +162,8 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+														<span class="checkbox-item__text">Екатерина
+															Константинопольская</span>
 													</label>
 												</div>
 											</li>
@@ -161,7 +172,8 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+														<span class="checkbox-item__text">Екатерина
+															Константинопольская</span>
 													</label>
 												</div>
 											</li>
@@ -170,7 +182,8 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+														<span class="checkbox-item__text">Екатерина
+															Константинопольская</span>
 													</label>
 												</div>
 											</li>
@@ -179,7 +192,8 @@
 													<label>
 														<input type="checkbox" name="settings" value="checkbox" class="real-checkbox">
 														<span class="custom-checkbox custom-checkbox_dpl"></span>
-														<span class="checkbox-item__text">Екатерина Константинопольская</span>
+														<span class="checkbox-item__text">Екатерина
+															Константинопольская</span>
 													</label>
 												</div>
 											</li>
@@ -434,8 +448,9 @@
 								<li class="page-item">
 									<a class="page-link" href="#" aria-label="Previous" disabled>
 										<span aria-hidden="true" class="page-link__arrow page-link__arrow-prev">
-											<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 1L4.68 5.14L1 9.28" stroke="none"/>
+											<svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 1L4.68 5.14L1 9.28" stroke="none" />
 											</svg>
 										</span>
 									</a>
@@ -450,8 +465,9 @@
 								<li class="page-item">
 									<a class="page-link" href="#" aria-label="Next">
 										<span aria-hidden="true" class="page-link__arrow page-link__arrow-next">
-											<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 1L4.68 5.14L1 9.28" stroke="#66696A"/>
+											<svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 1L4.68 5.14L1 9.28" stroke="#66696A" />
 											</svg>
 										</span>
 									</a>
@@ -474,9 +490,10 @@
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script src="js/charts.js"></script>
-	
+
 	<!-- @import "js.kit" -->
 
 
 </body>
+
 </html>

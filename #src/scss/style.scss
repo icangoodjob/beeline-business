@@ -32,7 +32,7 @@ $md3: 767.98;
 $md4: 479.98;
 $fontSize: 16px;
 
-:root{
+:root {
 	/* SIZES */
 	--fonz-size: 16px;
 	--aside-width: 160px;
@@ -42,44 +42,44 @@ $fontSize: 16px;
 	--font-family: "Beeline Sans", sans-serif;
 
 	/* COLORS */
-	--common-bgcolor: #F3F3F3;
-	--main-color: #25282A;
-	--white-color: #FFFFFF;
+	--common-bgcolor: #f3f3f3;
+	--main-color: #25282a;
+	--white-color: #ffffff;
 	--black-color: #000000;
-	--gray-color: #66696A;
-	--gray-color-dbl: #8F9192;
-	--gray-color-light: #CACACA;
-	--gray-color-blond: #A5A6A6;
-	--gray-color-dark: #595B5C;
-	--yellow-color: #FED305;
-	--blue-color: #3F9FE4;
-	--pink-number-color:#E4A6A6;
-	--brown-number-color:#E4C8A6;
-	--purple-number-color:#A6B3E4;
-	--azure-number-color:#A6E1E4;
-	--green-number-color:#95F0A9;
-	--volcano-color: #FF7A45;
-	--golden-purple: #9254DE;
-	--red-color: #EF2525;
+	--gray-color: #66696a;
+	--gray-color-dbl: #8f9192;
+	--gray-color-light: #cacaca;
+	--gray-color-blond: #a5a6a6;
+	--gray-color-dark: #595b5c;
+	--yellow-color: #fed305;
+	--blue-color: #3f9fe4;
+	--pink-number-color: #e4a6a6;
+	--brown-number-color: #e4c8a6;
+	--purple-number-color: #a6b3e4;
+	--azure-number-color: #a6e1e4;
+	--green-number-color: #95f0a9;
+	--volcano-color: #ff7a45;
+	--golden-purple: #9254de;
+	--red-color: #ef2525;
 
 	/* WORDS COLOR */
-	--circle-gray-light: #E8E8E8;
-	--circle-gray-mid: #C5C5C5;
-	--circle-gray-dark: #8E8E8E;
-	--circle-purple: #7A81B0;
-	--circle-purple-light: #9CA3CE;
-	--circle-green-light: #BAE637;
-	--circle-yellow: #FADB14;
-	--circle-orange: #FF7A45;
-	--circle-blue: #69C0FF;
-	--circle-pink: #FFA39E;
-	--circle-azure: #87E8DE;
+	--circle-gray-light: #e8e8e8;
+	--circle-gray-mid: #c5c5c5;
+	--circle-gray-dark: #8e8e8e;
+	--circle-purple: #7a81b0;
+	--circle-purple-light: #9ca3ce;
+	--circle-green-light: #bae637;
+	--circle-yellow: #fadb14;
+	--circle-orange: #ff7a45;
+	--circle-blue: #69c0ff;
+	--circle-pink: #ffa39e;
+	--circle-azure: #87e8de;
 	/* MESSAGES RECORD */
-	--message-yellow-light: #FFEFA5;
-	--message-gray-light: #F3F3F3;
+	--message-yellow-light: #ffefa5;
+	--message-gray-light: #f3f3f3;
 	/* SCROLLBAR */
-	--scrollbar-color: #F3F3F3;
-	--scrollbar-thumb-color: #A5A6A6;
+	--scrollbar-color: #f3f3f3;
+	--scrollbar-thumb-color: #a5a6a6;
 }
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
@@ -107,14 +107,14 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	transition: all .5s linear 0s;
+	transition: all 0.5s linear 0s;
 	padding-left: calc(var(--aside-width) + 24px);
 	overflow: hidden;
-	&.active{
+	&.active {
 		padding-left: calc(var(--aside-width) + 264px);
 	}
 }
-.main{
+.main {
 	flex: 1 1 auto;
 	padding-top: calc(var(--header-height) + 28px);
 	padding-right: 24px;
@@ -144,12 +144,12 @@ body {
 @import "_modals";
 @import "_chart";
 @import "_datepicker";
+@import "_notice";
 @import "_media";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
 //===================================================================================================================================
-
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
