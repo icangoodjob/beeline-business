@@ -1556,9 +1556,9 @@
 	letter-spacing: 0.3px;
 }
 
-input[type="radio"] {
+.real-radio {
+	clip: rect(0, 0, 0, 0);
 	appearance: none;
-	display: none;
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -1569,8 +1569,7 @@ input[type="radio"] {
 	opacity: 0;
 	visibility: hidden;
 }
-
-input[type="radio"]:checked + label {
+.real-radio:checked + label {
 	background-color: #e4e4e4;
 }
 

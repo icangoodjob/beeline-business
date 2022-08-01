@@ -272,42 +272,6 @@ $('.load-file__item').each(function () {
 })
 /*================== Проверка на существание загруженных скриптов ====================*/
 
-/*================== RANGE-SLIDER ====================*/
-let rangeSliderTonality = document.getElementById('range-tonality');
-if (rangeSliderTonality) {
-	noUiSlider.create(rangeSliderTonality, {
-		start: 41,
-		connect: 'lower',
-		range: {
-			'min': 0,
-			'max': 100
-		}
-	});
-}
-let rangeSliderSpeed = document.getElementById('range-speed');
-if (rangeSliderSpeed) {
-	noUiSlider.create(rangeSliderSpeed, {
-		start: 41,
-		connect: 'lower',
-		range: {
-			'min': 0,
-			'max': 100
-		}
-	});
-}
-let rangeSliderVolume = document.getElementById('range-volume');
-if (rangeSliderSpeed) {
-	noUiSlider.create(rangeSliderVolume, {
-		start: 41,
-		connect: 'lower',
-		range: {
-			'min': 0,
-			'max': 100
-		}
-	});
-}
-/*================== RANGE-SLIDER ====================*/
-
 /*================== DELETE BUTTON ====================*/
 $('.delete__button').each(function () {
 	$(this).on('click', function () {
@@ -404,6 +368,57 @@ $('[data-id="comment"]').click(function () {
 		$('[data-td="comment"]').hide();
 	}
 })
+
+// SELECT-GROUP
+const selectGroup = document.querySelectorAll('[data-select]');
+selectGroup.forEach((item, i, arr) => {
+	const selectGroupButton = item.querySelector('[data-select-trigger]')
+	const selectGroupDropdown = item.querySelector('[data-select-dropdown]');
+	selectGroupButton.addEventListener('click', (e) => {
+		e.stopPropagation();
+		arr.forEach(arrElement => arrElement.classList.toggle('active', arrElement === item))
+	});
+	selectGroupDropdown.addEventListener('click', (e) => {
+		e.stopPropagation();
+	})
+});
+// Клик снаружи [data-select]. Закрыть [data-select]
+document.addEventListener('click', function (e) {
+	selectGroup.forEach((item) => {
+		if (e.target != item) {
+			item.classList.remove('active')
+		}
+	})
+})
+// Нажатие на Tab или Escape. Закрыть [data-select]
+document.addEventListener('keydown', function (e) {
+	selectGroup.forEach((item) => {
+		if (e.key === 'Tab' || e.key === 'Escape') {
+			item.classList.remove('active')
+		}
+	})
+});
+
+// TABS
+const tabsItem = document.querySelectorAll('[data-tab]');
+const tabsContent = document.querySelectorAll('[data-tab-content]');
+tabsItem.forEach((item) => {
+	item.addEventListener('click', (e) => {
+		const currentTab = item;
+		const tabId = currentTab.dataset.tab;
+		const currentContent = document.getElementById(tabId);
+		tabsItem.forEach((el) => {
+			el.classList.remove('active');
+		})
+		tabsContent.forEach((el) => {
+			el.classList.remove('show');
+		})
+		currentTab.classList.add('active');
+		currentContent.classList.add('show');
+	})
+})
+
+
 
 /*================== FILTER-TABLE ====================*/
 
