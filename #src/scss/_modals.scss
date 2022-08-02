@@ -20,13 +20,14 @@
 .modal__close {
 	position: absolute;
 	background: none;
-	width: 20px;
-	height: 20px;
+	padding: 30px;
+	width: 40px;
+	height: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	top: 19px;
-	right: 22px;
+	top: 0px;
+	right: 0px;
 	&::before {
 		font-size: 18px;
 		color: rgba(80, 80, 80, 0.3);
@@ -446,8 +447,8 @@
 	visibility: visible;
 }
 
-// Модальное окно "Добавить словарь"
-.form-modal__tabs {
+// Модальное окно "Добавить словарь/ Редактировать словарь"
+.form-modal {
 	& .form-modal__item:not(:last-child) {
 		margin: 0 0 32px;
 	}
@@ -466,7 +467,7 @@
 			gap: 16px;
 		}
 	}
-	&-content {
+	&__tabs-content {
 		display: none;
 		&.show {
 			display: block;
@@ -590,6 +591,9 @@
 		transform: translate(0, -50%) rotate(180deg);
 	}
 }
+.dropdown-sub-list {
+	padding: 16px 0px 0 16px;
+}
 .dropdown-list {
 	& li {
 		&:not(:last-child) {
@@ -705,6 +709,18 @@
 		}
 	}
 }
+.modal-redact {
+	& .form-modal__item-name,
+	& .form-modal__item-weight {
+		& .form-modal__input {
+			padding: 0;
+			min-height: 24px;
+			border: none;
+			color: var(--main-color);
+		}
+	}
+}
+
 .weight-item {
 	position: relative;
 	&__text {

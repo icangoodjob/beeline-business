@@ -4215,8 +4215,9 @@ input[type=number]:focus {
 .modal__close {
 	position: absolute;
 	background: none;
-	width: 20px;
-	height: 20px;
+	padding: 30px;
+	width: 40px;
+	height: 40px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -4226,8 +4227,8 @@ input[type=number]:focus {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	top: 19px;
-	right: 22px;
+	top: 0px;
+	right: 0px;
 }
 .modal__close::before {
 	font-size: 18px;
@@ -4794,23 +4795,23 @@ input[type=number]:focus {
 	visibility: visible;
 }
 
-.form-modal__tabs .form-modal__item:not(:last-child) {
+.form-modal .form-modal__item:not(:last-child) {
 	margin: 0 0 32px;
 }
-.form-modal__tabs .tabs__list {
+.form-modal .tabs__list {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	gap: 20px;
 }
-.form-modal__tabs .tabs__item {
+.form-modal .tabs__item {
 	padding: 0;
 	color: var(--gray-color);
 }
-.form-modal__tabs .tabs__item.active {
+.form-modal .tabs__item.active {
 	font-weight: 400;
 }
-.form-modal__tabs .tabs__item label {
+.form-modal .tabs__item label {
 	cursor: pointer;
 	gap: 16px;
 }
@@ -4820,7 +4821,7 @@ input[type=number]:focus {
 .form-modal__tabs-content.show {
 	display: block;
 }
-.form-modal__tabs label {
+.form-modal label {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -4828,7 +4829,7 @@ input[type=number]:focus {
 	    -ms-flex-align: center;
 	        align-items: center;
 }
-.form-modal__tabs .custom-radio {
+.form-modal .custom-radio {
 	border-radius: 50%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -4851,7 +4852,7 @@ input[type=number]:focus {
 	background: var(--white-color);
 	border-radius: 50%;
 }
-.form-modal__tabs .custom-radio::before {
+.form-modal .custom-radio::before {
 	content: "";
 	display: block;
 	height: 10px;
@@ -4871,44 +4872,44 @@ input[type=number]:focus {
 	transition: transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
 	z-index: 1;
 }
-.form-modal__tabs .real-radio:checked + .custom-radio::before {
+.form-modal .real-radio:checked + .custom-radio::before {
 	-webkit-transform: scale(1);
 	    -ms-transform: scale(1);
 	        transform: scale(1);
 }
-.form-modal__tabs .file-upload__body {
+.form-modal .file-upload__body {
 	-o-border-image: url("../img/icons/border.svg") 2;
 	   border-image: url("../img/icons/border.svg") 2;
 	margin: 0;
 	border-radius: 8px;
 	padding: 24px;
 }
-.form-modal__tabs .file-upload__body.error {
+.form-modal .file-upload__body.error {
 	-o-border-image: url("../img/icons/error-border.svg") 2;
 	   border-image: url("../img/icons/error-border.svg") 2;
 }
-.form-modal__tabs .file-upload__item .file-upload__input {
+.form-modal .file-upload__item .file-upload__input {
 	width: 100%;
 }
-.form-modal__tabs .file-upload__item {
+.form-modal .file-upload__item {
 	margin-bottom: 8px;
 }
-.form-modal__tabs .file-upload__button {
+.form-modal .file-upload__button {
 	padding: 10px 20px;
 }
-.form-modal__tabs .file-upload__content {
+.form-modal .file-upload__content {
 	max-width: 180px;
 	padding: 0;
 	margin: 0 auto;
 }
-.form-modal__tabs .form-modal__textarea {
+.form-modal .form-modal__textarea {
 	min-height: 144px;
 	max-height: 240px;
 }
-.form-modal__tabs .checkbox-item__text {
+.form-modal .checkbox-item__text {
 	margin-left: 16px;
 }
-.form-modal__tabs .custom-checkbox {
+.form-modal .custom-checkbox {
 	top: initial;
 }
 
@@ -4973,6 +4974,10 @@ input[type=number]:focus {
 	-webkit-transform: translate(0, -50%) rotate(180deg);
 	    -ms-transform: translate(0, -50%) rotate(180deg);
 	        transform: translate(0, -50%) rotate(180deg);
+}
+
+.dropdown-sub-list {
+	padding: 16px 0px 0 16px;
 }
 
 .dropdown-list li:not(:last-child) {
@@ -5119,6 +5124,13 @@ input[type=number]:focus {
 }
 .glossary-item__value span:not(:last-child) {
 	margin-bottom: 2px;
+}
+
+.modal-redact .form-modal__item-name .form-modal__input, .modal-redact .form-modal__item-weight .form-modal__input {
+	padding: 0;
+	min-height: 24px;
+	border: none;
+	color: var(--main-color);
 }
 
 .weight-item {

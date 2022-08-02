@@ -17,7 +17,10 @@ $(document).ready(function () {
 	});
 });
 
-$("[data-table-list]").floatingScroll("init");
+if ($("[data-table-list]")) {
+	$("[data-table-list]").floatingScroll("init");
+}
+
 
 /*===== Показать другие отчеты ====*/
 const btnMore = document.getElementById('btn-more');
@@ -417,41 +420,5 @@ tabsItem.forEach((item) => {
 		currentContent.classList.add('show');
 	})
 })
-
-
-
-/*================== FILTER-TABLE ====================*/
-
-//Получаем инпут file в переменную
-const formFile = document.getElementById('formFile');
-//Получаем див для превью в переменную
-const formPreview = document.getElementById('formPreview');
-//Слушаем изменения в инпуте file
-if (formFile != null) {
-	formFile.addEventListener('change', () => {
-		uploadFile(formFile.files[0]);
-	});
-}
-function uploadFile(file) {
-	// провераяем тип файла
-	if (!['image/jpeg', 'image/png', 'image/gif', '.docx'].includes(file.type)) {
-		alert('Неверный тип файла');
-		formFile.value = '';
-		return;
-	}
-	// проверим размер файла (<2 Мб)
-	if (file.size > 2 * 1024 * 1024) {
-		alert('Файл должен быть менее 2 МБ.');
-		return;
-	}
-	var reader = new FileReader();
-	reader.onload = function (e) {
-		formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-	};
-	reader.onerror = function (e) {
-		alert('Ошибка');
-	};
-	reader.readAsDataURL(file);
-}
 
 
