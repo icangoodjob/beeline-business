@@ -730,14 +730,14 @@
 	}
 	&__descr {
 		position: absolute;
-		bottom: -23px;
+		bottom: 27px;
 		font-size: 12px;
 		line-height: 16px;
 		&-negative {
-			left: 12%;
+			left: 15%;
 		}
 		&-positive {
-			right: 12%;
+			right: 15%;
 		}
 		&-zero {
 			left: 50%;

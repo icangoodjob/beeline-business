@@ -1,0 +1,41 @@
+.notice {
+	position: absolute;
+	top: 0;
+	right: 24px;
+	width: 347px;
+	min-height: 70px;
+	background: var(--main-color);
+	border-radius: 22px;
+	&__body {
+		padding: 20px;
+		font-size: 14px;
+		line-height: math.div(18, 14) * 100%;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: #c0c1c1;
+		font-weight: 400;
+		font-family: "Roboto", sans-serif;
+	}
+	&__text {
+		word-break: break-word;
+		position: relative;
+	}
+	&__icon {
+		display: block;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		min-height: 24px;
+		&.icon-delete {
+			cursor: pointer;
+			background-image: url("../img/icons/icon-delete.svg");
+		}
+		&.icon-success {
+			background-image: url("../img/icons/icon-success.svg");
+		}
+	}
+}

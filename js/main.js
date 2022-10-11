@@ -139,8 +139,10 @@ $('#select-all').on('click', function () {
 	$(this).toggleClass('checked');
 	if ($(this).hasClass('checked')) {
 		$('.table-checkbox input:checkbox').prop('checked', true);
+		$('.table-checkbox input:checkbox').closest('li:not(.table-settings__heading').addClass('active')
 	} else {
 		$('.table-checkbox input:checkbox').prop('checked', false);
+		$('.table-checkbox input:checkbox').closest('li:not(.table-settings__heading').removeClass('active')
 	}
 	return false;
 });
@@ -183,21 +185,77 @@ $('#select-all').on('click', myCount);
 /*================== action button (show / hide) & counter ====================*/
 
 
-/*================== file-name text (show / hide) ====================*/
+/*================== (show / hide block ====================*/
 $('.arrow-down').each(function () {
 	$(this).on('click', function () {
 		$(this).toggleClass('active');
 		$(this).parent().find($('.file-name__text')).toggleClass('hidden');
+		$(this).parent().find($('.js-settings__name')).toggleClass('hidden');
+		$(this).parent().find($('.glossary-theme__label:nth-child(n+4)')).toggleClass('hidden');
+		$(this).parent().find($('.file-table__list .js-filename')).toggleClass('hidden');
+		$(this).next('.js-file__content').toggleClass('hidden')
+		$(this).next('.js-settings__operators').toggleClass('hidden')
+		$(this).next('.js-glossary').toggleClass('hidden')
+		$(this).next('.file-table__list .js-filename').toggleClass('hidden')
 	})
 })
 
-$('.file-name__box').each(function () {
-	let textHeight = $(this).find($('.file-name__text')).height();
-	if (textHeight < 16) {
+// $('.file-name__box').each(function () {
+// 	let textHeight = $(this).find($('.file-name__text')).height();
+// 	if (textHeight < 16) {
+// 		$(this).find($('.arrow-down')).hide();
+// 	} else {
+// 		$(this).find($('.arrow-down')).show();
+// 		$(this).find($('.file-name__text')).addClass('hidden');
+// 	}
+// })
+$('.glossary-theme__labels').each(function () {
+	$(this).find($('.glossary-theme__label:nth-child(n + 6)')).addClass('hidden');
+	if ($(this).find('.glossary-theme__label').length <= 4) {
 		$(this).find($('.arrow-down')).hide();
 	} else {
 		$(this).find($('.arrow-down')).show();
 		$(this).find($('.file-name__text')).addClass('hidden');
+	}
+})
+$('.js-file__content').each(function () {
+	if ($(this).text().length > 346) {
+		$(this).addClass('hidden')
+		$(this).closest('.file-table__text').find('.arrow-down').show()
+	} else {
+		$(this).closest('.file-table__text').find('.arrow-down').hide()
+	}
+})
+$('.js-settings__operators').each(function () {
+	if ($(this).text().length > 230) {
+		$(this).addClass('hidden')
+		$(this).closest('.table-settings__operators').find('.arrow-down').show()
+	} else {
+		$(this).closest('.table-settings__operators').find('.arrow-down').hide()
+	}
+})
+$('.js-glossary').each(function () {
+	if ($(this).text().length > 329) {
+		$(this).addClass('hidden')
+		$(this).closest('.table-settings__connect-glossary').find('.arrow-down').show()
+	} else {
+		$(this).closest('.table-settings__connect-glossary').find('.arrow-down').hide()
+	}
+})
+$('.js-settings__name').each(function () {
+	if ($(this).text().length > 46) {
+		$(this).addClass('hidden');
+		$(this).closest('.table-settings__name').find('.arrow-down').show()
+	} else {
+		$(this).closest('.table-settings__name').find('.arrow-down').hide()
+	}
+})
+$('.js-filename').each(function () {
+	if ($(this).text().length > 50) {
+		$(this).addClass('hidden')
+		$(this).closest('.file-table__name').find('.arrow-down').show()
+	} else {
+		$(this).closest('.file-table__name').find('.arrow-down').hide()
 	}
 })
 /*================== file-name text (show / hide) ====================*/
@@ -422,3 +480,17 @@ tabsItem.forEach((item) => {
 })
 
 
+// Окрашивание строки в бежевый цвет при клике на checkbox
+const checkboxList = document.querySelectorAll('.table-checkbox input');
+for (let i = 0; i < checkboxList.length; i++) {
+	const checkboxItem = checkboxList[i];
+	checkboxItem.addEventListener('change', (event) => {
+		const target = event.target;
+		const parent = target.closest('li:not(.table-settings__heading)');
+		if (target.checked) {
+			parent.classList.add('active');
+		} else {
+			parent.classList.remove('active');
+		}
+	})
+}

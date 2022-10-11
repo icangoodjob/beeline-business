@@ -1,0 +1,88 @@
+// Поиск и чекбокс с состояними
+.form-group__input {
+	background: transparent;
+	width: 100%;
+	max-width: 396px;
+	min-height: 48px;
+	padding: 11px 28px 11px 16px;
+	border: 1px solid var(--gray-color-light);
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 150%;
+	color: var(--main-color);
+	display: flex;
+	align-items: center;
+	position: relative;
+	& .form__input {
+		height: 100%;
+		width: 100%;
+		background: transparent;
+		font-size: 16px;
+		line-height: 150%;
+		color: var(--main-color);
+		padding: 0 16px;
+		&::placeholder {
+			font-size: 16px;
+			line-height: 150%;
+			color: var(--gray-color-dbl);
+		}
+	}
+	& .form__button {
+		display: block;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--search {
+			pointer-events: none;
+		}
+		&--delete {
+			position: absolute;
+			padding: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			// display: none;
+			&:hover svg path {
+				stroke: var(--red-color);
+			}
+		}
+	}
+}
+.checkbox-item {
+	&.disabled {
+		& label {
+			pointer-events: none;
+			& .custom-checkbox {
+				background: #f0f0f0;
+				border: 1px solid #dedfdf;
+			}
+			& .checkbox-item__text {
+				color: #cbcccc;
+			}
+		}
+		& .notice-text {
+			display: block;
+		}
+	}
+	& .notice-text {
+		display: none;
+		color: #595b5c;
+		margin-top: 4px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+}
+// Найдено записей
+.file-table {
+	position: relative;
+}
+.record-quantity {
+	position: absolute;
+	transform: translateY(-100%);
+	top: -8px;
+	left: 24px;
+	font-size: 14px;
+	line-height: 15px;
+	color: var(--gray-color);
+}

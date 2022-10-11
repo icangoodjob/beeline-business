@@ -36,7 +36,6 @@ if (rangeSliderVolume) {
 
 // WEIGHT SLIDER
 const weightSliders = document.querySelectorAll('[data-range]');
-console.log(weightSliders);
 if (weightSliders) {
 	weightSliders.forEach((item) => {
 		let valuesForSlider = [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10];

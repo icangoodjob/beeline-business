@@ -193,7 +193,7 @@ input[type="number"]:focus {
 }
 .custom-checkbox {
   position: relative;
-  top: -2px;
+  // top: -2px;
   display: inline-block;
   overflow: hidden;
   width: 20px;
@@ -313,12 +313,25 @@ input[type="number"]:focus {
 // Стили для таблиц table-settings
 .table-settings__list {
   overflow: hidden;
-  background: var(--white-color);
+  // background: var(--white-color);
   margin: 12px 0px 0 -24px;
   min-width: 700px;
   overflow-x: auto;
-  padding: 0 24px;
   min-height: 350px;
+  & > li {
+    padding: 0 24px;
+    background: var(--white-color);
+    transition: background 0.2s linear 0s;
+    &:not(.table-settings__heading):hover {
+      background: var(--white-milk);
+    }
+    &:not(.table-settings__heading).active {
+      background: var(--white-milk);
+    }
+    &.table-settings__checkbox {
+      padding: 10px 5px;
+    }
+  }
 }
 [data-table-settings="1"] .table-settings__item {
   grid-template-columns: 55px 180px minmax(317px, 1fr) 163px 92px 106px 79px;
@@ -350,12 +363,15 @@ input[type="number"]:focus {
 [data-table-settings="6"] .table-settings__list {
   margin: 12px -24px 0 -25px;
 }
-[data-table-settings="6"] .table-settings__heading > * {
+[data-table-settings="6"] .table-settings__heading > *:not(.table-settings__checkbox) {
   padding-top: 24px;
   padding-left: 13px;
 }
 [data-table-settings="6"] .table-settings__item:not(.table-settings__heading) > * {
   padding: 17px 14px 16px;
+}
+[data-table-settings="6"] .table-settings__item.table-settings__checkbox {
+  padding: 10px 5px;
 }
 .table-settings__item {
   display: grid;
@@ -363,11 +379,17 @@ input[type="number"]:focus {
   font-size: 14px;
   line-height: 114%;
   letter-spacing: 0.3px;
+  &:not(.table-settings__heading) .table-settings__redact {
+    padding: 10px 5px;
+  }
+  &:not(.table-settings__heading) .table-settings__delete {
+    padding: 10px 5px;
+  }
 }
 .table-settings__heading {
   & > * {
     padding: 22px 11px 12px 16px;
-    min-width: 60px;
+    min-height: 60px;
     border-bottom: 1px solid rgba(#000000, 0.1);
   }
   & .all-btn {
@@ -378,5 +400,56 @@ input[type="number"]:focus {
   & > * {
     padding: 17px 17px 16px;
     min-height: 68px;
+  }
+  & .table-settings__checkbox {
+    padding: 10px 5px;
+  }
+}
+
+.table-settings__checkbox {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .checkbox-item {
+    width: auto;
+    height: auto;
+    & label {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 11px;
+    }
+  }
+}
+[data-table-settings="6"] .table-settings__item .table-settings__checkbox {
+  padding: 10px 5px;
+}
+
+.file-table__item .table-settings__checkbox {
+  padding: 10px 5px;
+}
+.file-table__list {
+  & > li {
+    padding: 0 24px;
+    background: var(--white-color);
+    transition: background 0.2s linear 0s;
+    &:not(.thead):hover {
+      background: var(--white-milk);
+      & .td {
+        background: var(--white-milk);
+      }
+    }
+    &:not(.thead).active {
+      background: var(--white-milk);
+      & .td {
+        background: var(--white-milk);
+      }
+    }
+    & .table-settings__checkbox {
+      padding: 10px 5px;
+    }
   }
 }
