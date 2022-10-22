@@ -482,7 +482,150 @@
 				</div>
 			</div>
 		</footer>
-		<div class="modal modal__script fade" id="script-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+<div class="modal fade modal__script" id="script-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="glossary-modal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+			</button>
+			<form action="#" class="modal__form form-modal">
+				<h2 class="form-modal__title">Добавить скрипт</h2>
+				<div class="form-modal__tabs">
+					<ul class="tabs__list">
+						<li class="tabs__item radiobutton-item" data-tab="single">
+							<label>
+								<input type="radio" class="real-radio" name="loading" checked>
+								<span class="custom-radio"></span>
+								<span class="radiobutton-item__text">Единичная загрузка скрипта</span>
+							</label>
+						</li>
+						<li class="tabs__item radiobutton-item" data-tab="mass">
+							<label>
+								<input type="radio" class="real-radio" name="loading">
+								<span class="custom-radio"></span>
+								<span class="radiobutton-item__text">Массовая загрузка скриптов</span>
+							</label>
+						</li>
+					</ul>
+					<div class="form-modal__tabs-content show" id="single" data-tab-content>
+						<div class="form-modal__body">
+							<div class="form-modal__item">
+								<label class="form-modal__label">Название</label>
+								<input type="text" class="form-modal__input error" required>
+								<span class="error-message">Введите название скрипта</span>
+							</div>
+							<div class="form-modal__item form-modal__percent">
+								<label class="form-modal__label">Минимальный процент совпадения, %</label>
+								<input type="text" class="form-modal__input error" placeholder="Например: 60" required>
+								<span class="error-message">Введите процент совпадения</span>
+							</div>
+							<div class="form-modal__item">
+								<label class="form-modal__label">Комментарий</label>
+								<input type="text" class="form-modal__input">
+							</div>
+							<div class="form-modal__item">
+								<label class="form-modal__label">Загрузить скрипт</label>
+								<div class="file-upload__body error">
+									<div class="file-upload__content">
+										<span class="file-upload__text file-upload__text-top">Перетащите файл сюда или</span>
+										<div class="file-upload__item">
+											<input accept=".jpg, .png, .gif" type="file" class="file-upload__input">
+											<button class="file-upload__button">Выберите из папки</button>
+										</div>
+										<span class="file-upload__text">Формат файла .xls</span>
+									</div>
+								</div>
+								<span class="error-message">Неверный формат. Загрузите файл в формате .xls</span>
+								<button type="button" class="file-upload__download"><span>Скачать шаблон</span></button>
+							</div>
+							<div class="form-modal__item">
+								<div class="script-item">
+									<button class="script-item__delete _icon-delete" type="button"></button>
+									<div class="script-item__name">Скрипт_1. xls</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-modal__tabs-content" id="mass" data-tab-content>
+						<div class="form-modal__body">
+							<div class="form-modal__item">
+								<label class="form-modal__label">Загрузить список скриптов</label>
+								<div class="file-upload__body">
+									<div class="file-upload__content">
+										<span class="file-upload__text file-upload__text-top">Перетащите файл сюда
+											или</span>
+										<div class="file-upload__item">
+											<input accept=".jpg, .png, .gif" type="file" class="file-upload__input">
+											<button class="file-upload__button">Выберите из папки</button>
+										</div>
+										<span class="file-upload__text">Формат файла .xls</span>
+									</div>
+								</div>
+								<button type="button" class="file-upload__download"><span>Скачать шаблон</span></button>
+							</div>
+							<div class="form-modal__item">
+								<div class="form-modal__item">
+									<div class="script-item">
+										<button class="script-item__delete _icon-delete" type="button"></button>
+										<div class="script-item__name">Скрипт_1.xls</div>
+										<div class="script-item__value">
+											<span>7 скриптов</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-modal__buttons">
+						<button class="form-modal__button" type="button" data-bs-dismiss="modal"
+							aria-label="Close">Отменить</button>
+						<button class="form-modal__button form-modal__button_yellow" type="submit">Добавить</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="modal modal__script-redact fade" id="script-redact-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+	tabindex="-1" aria-labelledby="script-redact-modal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+			</button>
+			<form action="" class="modal__form form-modal">
+				<h2 class="form-modal__title">Редактировать скрипт</h2>
+				<div class="form-modal__body">
+					<div class="form-modal__item">
+						<label class="form-modal__label">Название</label>
+						<input type="text" class="form-modal__input" value="Банк">
+					</div>
+					<div class="form-modal__item form-modal__percent">
+						<label class="form-modal__label">Минимальный процент совпадения, %</label>
+						<input type="text" class="form-modal__input" value="60">
+					</div>
+					<div class="form-modal__item">
+						<label class="form-modal__label">Комментарий</label>
+						<input type="text" class="form-modal__input" value="Продажи">
+					</div>
+					<div class="form-modal__item">
+						<div class="form-modal__item">
+							<div class="script-item">
+								<button class="script-item__delete _icon-delete" type="button"></button>
+								<div class="script-item__name">Скрипт_1.xls</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-modal__buttons">
+					<button class="form-modal__button" type="button" data-bs-dismiss="modal"
+						aria-label="Close">Отменить</button>
+					<button class="form-modal__button form-modal__button_yellow" type="button">Сохранить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+		<!-- <div class="modal modal__script fade" id="script-modal" data-bs-backdrop="static" data-bs-keyboard="false"
 			tabindex="-1" aria-labelledby="script-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
@@ -524,9 +667,9 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="modal modal__script-redact fade" id="script-redact-modal" data-bs-backdrop="static"
+		<!-- <div class="modal modal__script-redact fade" id="script-redact-modal" data-bs-backdrop="static"
 			data-bs-keyboard="false" tabindex="-1" aria-labelledby="script-redact-modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
@@ -587,7 +730,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 

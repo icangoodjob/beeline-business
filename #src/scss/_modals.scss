@@ -839,3 +839,77 @@
 		color: var(--main-color);
 	}
 }
+
+// Дополнительные стили для модальных окон Добавить/Редактировать скрипт
+.form-modal__input,
+.form-modal__textarea {
+	color: var(--main-color);
+}
+.form-modal .form-modal__item:not(:last-child) {
+	margin: 0 0 28px;
+}
+.form-modal__input.error {
+	border: 1px solid var(--red-color);
+}
+.form-modal__percent .form-modal__input {
+	max-width: 128px;
+	padding: 11px 15px;
+}
+.modal__script .file-upload__text.file-upload__text-top {
+	font-size: 16px;
+	line-height: math.div(18, 16) * 100%;
+	color: var(--main-color);
+}
+.modal__script-redact .form-modal__buttons,
+.modal__script .form-modal__buttons {
+	margin: 32px 0 0;
+}
+.script-item {
+	position: relative;
+	background: #e4e4e4;
+	border-radius: 8px;
+	min-height: 48px;
+	padding: 6px 36px 6px 8px;
+	display: flex;
+	align-items: center;
+	&__name {
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: math.div(24, 16) * 100%;
+		word-break: break-word;
+		margin-right: 56px;
+		&::before {
+			content: "";
+			background: url("../img/icons/file-gray.svg");
+			background-repeat: no-repeat;
+			flex: 0 0 35px;
+			width: 35px;
+			height: 35px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 16px;
+		}
+	}
+	&__value {
+		font-size: 16px;
+		line-height: math.div(17, 16) * 100%;
+		color: var(--gray-color);
+	}
+	&__delete {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		width: 20px;
+		height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: none;
+		padding: 20px;
+	}
+}

@@ -5360,6 +5360,109 @@ input[type=number]:focus {
 	color: var(--main-color);
 }
 
+.form-modal__input,
+.form-modal__textarea {
+	color: var(--main-color);
+}
+
+.form-modal .form-modal__item:not(:last-child) {
+	margin: 0 0 28px;
+}
+
+.form-modal__input.error {
+	border: 1px solid var(--red-color);
+}
+
+.form-modal__percent .form-modal__input {
+	max-width: 128px;
+	padding: 11px 15px;
+}
+
+.modal__script .file-upload__text.file-upload__text-top {
+	font-size: 16px;
+	line-height: 112.5%;
+	color: var(--main-color);
+}
+
+.modal__script-redact .form-modal__buttons,
+.modal__script .form-modal__buttons {
+	margin: 32px 0 0;
+}
+
+.script-item {
+	position: relative;
+	background: #e4e4e4;
+	border-radius: 8px;
+	min-height: 48px;
+	padding: 6px 36px 6px 8px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.script-item__name {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	word-break: break-word;
+	margin-right: 56px;
+}
+.script-item__name::before {
+	content: "";
+	background: url("../img/icons/file-gray.svg");
+	background-repeat: no-repeat;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 35px;
+	        flex: 0 0 35px;
+	width: 35px;
+	height: 35px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-right: 16px;
+}
+.script-item__value {
+	font-size: 16px;
+	line-height: 106.25%;
+	color: var(--gray-color);
+}
+.script-item__delete {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background: none;
+	padding: 20px;
+}
+
 .chartBar {
 	height: 250px !important;
 }
