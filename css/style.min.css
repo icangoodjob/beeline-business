@@ -2288,11 +2288,23 @@ input[type=number]:focus {
 }
 
 .comment__close {
-	width: 20px;
-	height: 20px;
+	width: 48px;
+	height: 48px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	position: absolute;
-	top: 15px;
-	right: 17px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	right: 0;
 	background: none;
 }
 .comment__close::before {
@@ -6026,6 +6038,7 @@ input[type=number]:focus {
 }
 .action-icon__tooltip {
 	position: absolute;
+	z-index: 4;
 	top: calc(100% + 4px);
 	left: 0;
 	padding: 4px 8px 5px 8px;
@@ -6049,6 +6062,10 @@ input[type=number]:focus {
 	-o-transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s, transform 0.2s ease 0s;
 	transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s, transform 0.2s ease 0s;
 	transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s, transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+}
+.action-icon__tooltip--excel {
+	left: auto;
+	right: 0;
 }
 
 .action-icon--change {
@@ -6079,14 +6096,25 @@ input[type=number]:focus {
 	grid-template-columns: 311px 1fr;
 	gap: 16px;
 }
-.main-channel__aside {
-	background: var(--white-color);
+
+.aside-decoding {
 	-webkit-box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.15);
 	        box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.15);
 	border-radius: 22px;
+	background: var(--white-color);
 }
 .aside-decoding__header {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	gap: 20px;
 	padding: 16px 14px 12px 20px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -6113,6 +6141,7 @@ input[type=number]:focus {
 .aside-decoding__item {
 	font-size: 14px;
 	line-height: 114.2857142857%;
+	letter-spacing: 0.2px;
 	width: calc(100% - 56px);
 }
 .aside-decoding__item:not(:last-child) {
@@ -6120,6 +6149,13 @@ input[type=number]:focus {
 }
 .aside-decoding__item:nth-child(even) {
 	margin-left: auto;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
+}
+.aside-decoding__item:nth-child(odd) {
+	margin-right: auto;
+	-ms-flex-item-align: start;
+	    align-self: flex-start;
 }
 .aside-decoding__item:nth-child(odd) .aside-decoding__box {
 	background: var(--message-yellow-light);
@@ -6129,6 +6165,15 @@ input[type=number]:focus {
 }
 .aside-decoding__name {
 	margin-bottom: 8px;
+}
+.aside-decoding__label {
+	color: var(--white-color);
+	padding: 8px 16px;
+	border-radius: 6px;
+	margin-bottom: 8px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
 }
 .aside-decoding__box {
 	padding: 16px;
@@ -6170,6 +6215,131 @@ input[type=number]:focus {
 	max-width: 100%;
 }
 
+/* ============================= NEWRECORD ========================== */
+.main-record {
+	padding-right: 40px;
+}
+
+.record__wrapper {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 311px 16px 1fr;
+	grid-template-columns: 311px 1fr;
+	gap: 16px;
+}
+.record__aside .aside-decoding__header {
+	padding: 12px 14px 12px 20px;
+}
+.record__aside .aside-decoding__list {
+	height: 280px;
+}
+
+.blue-color {
+	background: #2f54eb;
+}
+
+.orange-color {
+	background: #fa541c;
+	border-radius: 6px;
+}
+
+.action-icon-begin {
+	background-image: url("../img/newicons/icon-begin.svg");
+}
+
+.action-icon-play {
+	background-image: url("../img/newicons/icon-play.svg");
+}
+
+.action-icon-download {
+	background-image: url("../img/newicons/icon-download.svg");
+}
+
+.action-icon-callouts {
+	background-image: url("../img/newicons/icon-callouts.svg");
+}
+
+.action-icon-events {
+	background-image: url("../img/newicons/icon-events.svg");
+}
+
+.action-icon-excel {
+	background-image: url("../img/newicons/icon-excel.svg");
+}
+
+.record__audio {
+	background: var(--white-color);
+	-webkit-box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.15);
+	        box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.15);
+	border-radius: 22px;
+}
+
+.audio-record__top {
+	padding: 12px 19px 11px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.audio-record__actions {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	gap: 16px;
+}
+.audio-record__main {
+	padding: 17px 19px 20px 12px;
+}
+.audio-record__wave {
+	height: 221px;
+}
+.audio-record__wave img {
+	height: 100%;
+	max-width: 100%;
+	width: 100%;
+}
+.audio-record__list {
+	padding: 0 19px 29px;
+}
+
+.record-badges {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	gap: 8px;
+}
+
+.record-badge {
+	font-size: 14px;
+	line-height: 114.2857142857%;
+	padding: 8px 16px;
+	color: var(--white-color);
+}
+
+.events-record__badges {
+	max-width: 500px;
+}
+.events-record__inner {
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+}
+
+.events-record {
+	padding: 24px 11px 34px 0;
+}
+
+/* ============================= NEWRECORD ========================== */
 /* ===================1430px======================== */
 /* ===================1100px======================== */
 @media screen and (max-width: 1100px) {
