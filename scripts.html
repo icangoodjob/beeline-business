@@ -40,108 +40,125 @@
 				</a>
 			</div>
 		</header>
-		<!-- SIDEBAR -->
-		<aside class="aside" id="sidebar">
-			<button type="button" class="aside__close" id="sidebarCollapse">
-				<img src="img/icons/plus.svg" alt="">
-			</button>
-			<a href="#" class="aside__logo logo">
-				<span class="logo__circle">
-					<img src="img/icons/logo-circle.svg" alt="">
-				</span>
-				<span class="logo__text">
-					<img src="img/icons/logo-text.svg" alt="">
-				</span>
-			</a>
-			<div class="aside__menu">
-				<nav class="menu">
-					<ul class="menu__list accordion" id="accordionExample">
-						<li class="menu__item active">
-							<div class="menu__item-heading">
-								<a href="index.html" class="menu__icon">
-									<img src="img/icons/cloud.svg" alt="">
-								</a>
-								<div class="menu__link collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-									<div class="menu__text">Речевая аналитика</div>
+<!-- SIDEBAR -->
+<aside class="aside" id="sidebar">
+	<button type="button" class="aside__close" id="sidebarCollapse">
+		<img src="img/icons/plus.svg" alt="">
+	</button>
+	<a href="#" class="aside__logo logo">
+		<span class="logo__circle">
+			<img src="img/icons/logo-circle.svg" alt="">
+		</span>
+		<span class="logo__text">
+			<img src="img/icons/logo-text.svg" alt="">
+		</span>
+	</a>
+	<div class="aside__menu">
+		<nav class="menu">
+			<ul class="menu__list accordion" id="accordionExample">
+				<li class="menu__item active">
+					<div class="menu__item-heading">
+						<a href="index.html" class="menu__icon">
+							<img src="img/icons/cloud.svg" alt="">
+						</a>
+						<div class="menu__link collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse"
+							data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							<div class="menu__text">Речевая аналитика</div>
+							<div class="menu__arrow">
+								<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseOne"
+						aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<ul class="menu-dropdown__list">
+							<li><a href="index.html" class="menu-dropdown__link"><span class="menu__text">Рабочая
+										область</span> </a></li>
+							<li><a href="record-talk.html" class="menu-dropdown__link"><span class="menu__text">Записи
+										раговоров</span></a></li>
+							<li><a href="scripts-2.html" class="menu-dropdown__link"><span class="menu__text">Скрипты
+										обслуживания</span></a></li>
+							<li>
+								<div class="menu__link menu__link-settings collapsed" id="headingTwo" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									<span class="menu__icon">
+									</span>
+									<div class="menu__text">Настройки</div>
 									<div class="menu__arrow">
-										<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
+										<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6" />
 										</svg>
 									</div>
 								</div>
-							</div>
-							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-								<ul class="menu-dropdown__list">
-									<li><a href="index.html" class="menu-dropdown__link"><span class="menu__text">Рабочая область</span> </a></li>
-									<li><a href="record-talk.html" class="menu-dropdown__link"><span class="menu__text">Записи раговоров</span></a></li>
-									<li><a href="scripts-2.html" class="menu-dropdown__link"><span class="menu__text">Скрипты обслуживания</span></a></li>
-									<li>
-										<div class="menu__link menu__link-settings collapsed" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-											<span class="menu__icon">
-											</span>
-											<div class="menu__text">Настройки</div>
-											<div class="menu__arrow">
-												<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-												</svg>
-											</div>
-										</div>
-										<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo">
-											<ul class="menu-dropdown__list">
-												<li><a href="glossary.html" class="menu-dropdown__link"><span class="menu__text">Словари</span></a></li>
-												<li><a href="scripts.html" class="menu-dropdown__link"><span class="menu__text">Скрипты</span></a></li>
-												<li><a href="departments.html" class="menu-dropdown__link"><span class="menu__text">Отделы и операторы</span></a></li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="menu__item">
-							<div class="menu__item-heading">
-								<a href="synth.html" class="menu__icon">
-									<img src="img/icons/synth.svg" alt="">
-								</a>
-								<div class="menu__link collapsed" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-									<div class="menu__text">Синтез речи</div>
-									<div class="menu__arrow">
-										<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6"/>
-										</svg>
-									</div>
+								<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse"
+									id="collapseTwo" aria-labelledby="headingTwo">
+									<ul class="menu-dropdown__list">
+										<li><a href="departments.html" class="menu-dropdown__link"><span class="menu__text">Отделы
+													и операторы</span></a></li>
+										<li><a href="glossary.html" class="menu-dropdown__link"><span
+													class="menu__text">Словари</span></a></li>
+										<li><a href="scripts.html" class="menu-dropdown__link"><span
+													class="menu__text">Скрипты</span></a></li>
+										<li><a href="channel.html" class="menu-dropdown__link"><span
+													class="menu__text">Каналы</span></a></li>
+									</ul>
 								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu__item">
+					<div class="menu__item-heading">
+						<a href="synth.html" class="menu__icon">
+							<img src="img/icons/synth.svg" alt="">
+						</a>
+						<div class="menu__link collapsed" id="headingThree" data-bs-toggle="collapse"
+							data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<div class="menu__text">Синтез речи</div>
+							<div class="menu__arrow">
+								<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6" />
+								</svg>
 							</div>
-							<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-								<ul class="menu-dropdown__list">
-									<li><a href="synth.html" class="menu-dropdown__link"><span class="menu__text">Синтез речи</span></a></li>
-									<li><a href="synth-2.html" class="menu-dropdown__link"><span class="menu__text">Синтезированные записи</span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="menu__item">
-							<div class="menu__item-heading">
-								<a href="recognize.html" class="menu__icon">
-									<img src="img/icons/ab-check.svg" alt="">
-								</a>
-								<a href="recognize.html" class="menu__link collapsed">
-									<div class="menu__text">Распознавание речи</div>
-								</a>
-							</div>
-						</li>
-						<li class="menu__item">
-							<div class="menu__item-heading">
-								<a href="connection.html" class="menu__icon">
-									<img src="img/icons/phone.svg" alt="">
-								</a>
-								<a href="connection.html" class="menu__link">
-									<div class="menu__text">Подключение номеров к услугам</div>
-								</a>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</aside>
+						</div>
+					</div>
+					<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseThree"
+						aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						<ul class="menu-dropdown__list">
+							<li><a href="synth.html" class="menu-dropdown__link"><span class="menu__text">Синтез
+										речи</span></a></li>
+							<li><a href="synth-2.html" class="menu-dropdown__link"><span class="menu__text">Синтезированные
+										записи</span></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu__item">
+					<div class="menu__item-heading">
+						<a href="recognize.html" class="menu__icon">
+							<img src="img/icons/ab-check.svg" alt="">
+						</a>
+						<a href="recognize.html" class="menu__link collapsed">
+							<div class="menu__text">Распознавание речи</div>
+						</a>
+					</div>
+				</li>
+				<li class="menu__item">
+					<div class="menu__item-heading">
+						<a href="connection.html" class="menu__icon">
+							<img src="img/icons/phone.svg" alt="">
+						</a>
+						<a href="connection.html" class="menu__link">
+							<div class="menu__text">Подключение номеров к услугам</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</aside>
 		<main class="main scripts-page scripts settings" id="main">
 			<div class="main__header">
 				<h1 class="main__title">

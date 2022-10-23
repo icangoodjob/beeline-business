@@ -78,6 +78,7 @@ $fontSize: 16px;
 	/* MESSAGES RECORD */
 	--message-yellow-light: #ffefa5;
 	--message-gray-light: #f3f3f3;
+	--message-blue-light: #cae6fd;
 	/* SCROLLBAR */
 	--scrollbar-color: #f3f3f3;
 	--scrollbar-thumb-color: #a5a6a6;
@@ -152,6 +153,7 @@ body {
 @import "_datepicker";
 @import "_notice";
 @import "components/search.scss";
+@import "_channel";
 @import "_media";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
