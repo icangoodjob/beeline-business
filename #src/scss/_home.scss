@@ -561,40 +561,6 @@
 	}
 }
 
-.record__comment {
-	background: #ffffff;
-	border-radius: 22px;
-	position: relative;
-	max-width: 535px;
-	padding: 23px 51px 23px 32px;
-	margin-bottom: 18px;
-	display: none;
-
-	& p {
-		margin: 0;
-	}
-
-	& p:not(:last-child) {
-		margin: 0 0 10px;
-	}
-}
-
-.comment__close {
-	width: 48px;
-	height: 48px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 0;
-	background: none;
-	&::before {
-		font-size: 16px;
-	}
-}
-
 .audio-track-record {
 	margin: 0 15px 0 6px;
 	display: flex;

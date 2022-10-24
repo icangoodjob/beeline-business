@@ -2271,46 +2271,6 @@ input[type=number]:focus {
 	height: 13px;
 }
 
-.record__comment {
-	background: #ffffff;
-	border-radius: 22px;
-	position: relative;
-	max-width: 535px;
-	padding: 23px 51px 23px 32px;
-	margin-bottom: 18px;
-	display: none;
-}
-.record__comment p {
-	margin: 0;
-}
-.record__comment p:not(:last-child) {
-	margin: 0 0 10px;
-}
-
-.comment__close {
-	width: 48px;
-	height: 48px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	    -ms-transform: translateY(-50%);
-	        transform: translateY(-50%);
-	right: 0;
-	background: none;
-}
-.comment__close::before {
-	font-size: 16px;
-}
-
 .audio-track-record {
 	margin: 0 15px 0 6px;
 	display: -webkit-box;
@@ -6340,6 +6300,52 @@ input[type=number]:focus {
 }
 
 /* ============================= NEWRECORD ========================== */
+.record__comment {
+	background: #ffffff;
+	border-radius: 22px;
+	position: relative;
+	padding: 23px 140px 23px 32px;
+	margin-bottom: 32px;
+	display: none;
+	width: auto;
+}
+.record__comment p {
+	padding: 0;
+	margin: 0;
+}
+
+.comment-record__buttons {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	right: 4px;
+}
+.comment-record button {
+	width: 48px;
+	height: 48px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background: transparent;
+}
+.comment-record button::before {
+	font-size: 16px;
+}
+
 /* ===================1430px======================== */
 /* ===================1100px======================== */
 @media screen and (max-width: 1100px) {

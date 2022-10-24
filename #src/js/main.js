@@ -347,11 +347,26 @@ $('[data-comment-button]').on('click', function () {
 	let textareaCommentVal = $('#formTextareaComment').val();
 	$('.record__comment').css('display', 'block');
 	$('.record__comment p').text(textareaCommentVal);
+	$('#formTextareaCommentRedact').val(textareaCommentVal);
+	$('.button__add-comment').hide();
 });
-
+$('[data-comment-redact-button]').on('click', function () {
+	let textareaCommentRedactVal = $('#formTextareaCommentRedact').val();
+	$('.record__comment p').text(textareaCommentRedactVal);
+})
 $('[data-comment-close]').on('click', function () {
 	$('.record__comment').css('display', 'none');
+	$('.record__comment p').text('');
+	$('#formTextareaCommentRedact').val('');
+	$('#formTextareaComment').val('')
+	$('.button__add-comment').show();
 })
+$('#formTextareaComment').on('input', function () {
+	$('.count-start').text($(this).val().length);
+});
+$('#formTextareaCommentRedact').on('input', function () {
+	$('.count-start').text($(this).val().length);
+});
 /*================== ADD COMMENT ====================*/
 
 
