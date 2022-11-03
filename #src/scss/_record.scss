@@ -1,0 +1,102 @@
+/* ============================= NEWRECORD ========================== */
+.main-record {
+	padding-right: 40px;
+}
+.record {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 311px 1fr;
+		gap: 16px;
+	}
+	&__aside {
+		& .aside-decoding__header {
+			padding: 12px 14px 12px 20px;
+		}
+		& .aside-decoding__list {
+			height: 280px;
+		}
+	}
+}
+.blue-color {
+	background: #2f54eb;
+}
+.orange-color {
+	background: #fa541c;
+	border-radius: 6px;
+}
+.action-icon-begin {
+	background-image: url("../img/newicons/icon-begin.svg");
+}
+.action-icon-play {
+	background-image: url("../img/newicons/icon-play.svg");
+}
+.action-icon-download {
+	background-image: url("../img/newicons/icon-download.svg");
+}
+.action-icon-callouts {
+	background-image: url("../img/newicons/icon-callouts.svg");
+}
+.action-icon-events {
+	background-image: url("../img/newicons/icon-events.svg");
+}
+.action-icon-excel {
+	background-image: url("../img/newicons/icon-excel.svg");
+}
+.record {
+	&__audio {
+		background: var(--white-color);
+		box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.15);
+		border-radius: 22px;
+	}
+}
+.audio-record {
+	&__top {
+		padding: 12px 19px 11px;
+		border-bottom: 1px solid rgba(#000, 0.1);
+		display: flex;
+		justify-content: space-between;
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+	&__main {
+		padding: 17px 19px 20px 12px;
+	}
+	&__wave {
+		height: 221px;
+		& img {
+			height: 100%;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	&__list {
+		padding: 0 19px 29px;
+	}
+}
+.record-badges {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.record-badge {
+	font-size: 14px;
+	line-height: math.div(16, 14) * 100%;
+	padding: 8px 16px;
+	color: var(--white-color);
+}
+.events-record {
+	&__badges {
+		max-width: 500px;
+	}
+	&__inner {
+		grid-template-columns: 1fr;
+	}
+}
+.events-record {
+	padding: 24px 11px 34px 0;
+}
+/* ============================= NEWRECORD ========================== */

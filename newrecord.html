@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Записи раговоров</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/floatingscroll.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+
+	<div class="wrapper" id="wrapper">
+
+		<!-- HEADER -->
+		<header class="header" id="header">
+			<div class="header__row">
+				<div class="header__menu menu-header">
+					<ul class="menu-header__list">
+						<li>
+							<a href="#" class="menu-header__link">
+								Помощь
+							</a>
+						</li>
+						<li>
+							<a href="#" class="menu-header__link">
+								ООО «Светлое будущее»
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="header__user user-header">
+					<div class="user-header__icon">
+						<img src="img/icons/user.svg" alt="">
+					</div>
+					<div class="user-header__name">Иван Иванович</div>
+				</a>
+			</div>
+		</header>
+<!-- SIDEBAR -->
+<aside class="aside" id="sidebar">
+	<button type="button" class="aside__close" id="sidebarCollapse">
+		<img src="img/icons/plus.svg" alt="">
+	</button>
+	<a href="#" class="aside__logo logo">
+		<span class="logo__circle">
+			<img src="img/icons/logo-circle.svg" alt="">
+		</span>
+		<span class="logo__text">
+			<img src="img/icons/logo-text.svg" alt="">
+		</span>
+	</a>
+	<div class="aside__menu">
+		<nav class="menu">
+			<ul class="menu__list accordion" id="accordionExample">
+				<li class="menu__item active">
+					<div class="menu__item-heading">
+						<a href="index.html" class="menu__icon">
+							<img src="img/icons/cloud.svg" alt="">
+						</a>
+						<div class="menu__link collapsed" id="panelsStayOpen-headingOne" data-bs-toggle="collapse"
+							data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							<div class="menu__text">Речевая аналитика</div>
+							<div class="menu__arrow">
+								<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseOne"
+						aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<ul class="menu-dropdown__list">
+							<li><a href="index.html" class="menu-dropdown__link"><span class="menu__text">Рабочая
+										область</span> </a></li>
+							<li><a href="record-talk.html" class="menu-dropdown__link"><span class="menu__text">Записи
+										раговоров</span></a></li>
+							<li><a href="scripts-2.html" class="menu-dropdown__link"><span class="menu__text">Скрипты
+										обслуживания</span></a></li>
+							<li>
+								<div class="menu__link menu__link-settings collapsed" id="headingTwo" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									<span class="menu__icon">
+									</span>
+									<div class="menu__text">Настройки</div>
+									<div class="menu__arrow">
+										<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6" />
+										</svg>
+									</div>
+								</div>
+								<div class="dropdown__menu menu-dropdown menu-dropdown-settings accordion-collapse collapse"
+									id="collapseTwo" aria-labelledby="headingTwo">
+									<ul class="menu-dropdown__list">
+										<li><a href="departments.html" class="menu-dropdown__link"><span class="menu__text">Отделы
+													и операторы</span></a></li>
+										<li><a href="glossary.html" class="menu-dropdown__link"><span
+													class="menu__text">Словари</span></a></li>
+										<li><a href="scripts.html" class="menu-dropdown__link"><span
+													class="menu__text">Скрипты</span></a></li>
+										<li><a href="channel.html" class="menu-dropdown__link"><span
+													class="menu__text">Каналы</span></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu__item">
+					<div class="menu__item-heading">
+						<a href="synth.html" class="menu__icon">
+							<img src="img/icons/synth.svg" alt="">
+						</a>
+						<div class="menu__link collapsed" id="headingThree" data-bs-toggle="collapse"
+							data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<div class="menu__text">Синтез речи</div>
+							<div class="menu__arrow">
+								<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.2793 1L5.1393 4.68L0.999297 1" stroke="#A5A6A6" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown__menu menu-dropdown accordion-collapse collapse" id="collapseThree"
+						aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						<ul class="menu-dropdown__list">
+							<li><a href="synth.html" class="menu-dropdown__link"><span class="menu__text">Синтез
+										речи</span></a></li>
+							<li><a href="synth-2.html" class="menu-dropdown__link"><span class="menu__text">Синтезированные
+										записи</span></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu__item">
+					<div class="menu__item-heading">
+						<a href="recognize.html" class="menu__icon">
+							<img src="img/icons/ab-check.svg" alt="">
+						</a>
+						<a href="recognize.html" class="menu__link collapsed">
+							<div class="menu__text">Распознавание речи</div>
+						</a>
+					</div>
+				</li>
+				<li class="menu__item">
+					<div class="menu__item-heading">
+						<a href="connection.html" class="menu__icon">
+							<img src="img/icons/phone.svg" alt="">
+						</a>
+						<a href="connection.html" class="menu__link">
+							<div class="menu__text">Подключение номеров к услугам</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</aside>
+		<main class="main main-record record" id="main">
+			<div class="main__header">
+				<h1 class="main__title">
+					Volna2.wav
+				</h1>
+				<button class="button__add-comment" data-bs-toggle="modal" data-bs-target="#comment">Добавить
+					комментарий</button>
+				<a href="#" class="back__link"><span>Назад к отчетам</span></a>
+			</div>
+			<div class="record__comment comment-record">
+				<div class="comment-record__buttons">
+					<button class="comment__redact _icon-pen" data-comment-redact data-bs-toggle="modal"
+						data-bs-target="#comment-redact">
+					</button>
+					<button class="comment__close _icon-close" data-comment-close>
+					</button>
+				</div>
+				<p></p>
+			</div>
+			<div class="record__wrapper">
+				<aside class="record__aside aside-decoding">
+					<div class="aside-decoding__header">
+						<div class="aside-decoding__title">Расшифровка разговора</div>
+						<div class="action-icon-box">
+							<button class="aside-decoding__button action-icon action-icon--change" type="button"></button>
+							<span class="action-icon__tooltip">
+								Поменять каналы местами
+							</span>
+						</div>
+					</div>
+					<ul class="aside-decoding__list">
+						<li class="aside-decoding__item">
+							<div class="aside-decoding__name">
+								Оператор
+							</div>
+							<div class="aside-decoding__label blue-color">
+								Словарь Приветствие
+							</div>
+							<div class="aside-decoding__box">
+								<div class="aside-decoding__message">Здравствуйте!</div>
+								<div class="aside-decoding__time">1.583 сек</div>
+							</div>
+						</li>
+						<li class="aside-decoding__item">
+							<div class="aside-decoding__name">
+								Клиент
+							</div>
+							<div class="aside-decoding__box">
+								<div class="aside-decoding__message">Добрый день!</div>
+								<div class="aside-decoding__time">1.583 сек</div>
+							</div>
+						</li>
+						<li class="aside-decoding__item">
+							<div class="aside-decoding__name">
+								Оператор
+							</div>
+							<div class="aside-decoding__box">
+								<div class="aside-decoding__message">Добрый день!</div>
+								<div class="aside-decoding__time">1.583 сек</div>
+							</div>
+						</li>
+					</ul>
+				</aside>
+				<div class="record__audio audio-record">
+					<div class="audio-record__top">
+						<div class="audio-record__actions">
+							<div class="action-icon-box">
+								<button class="audio-record__button action-icon action-icon-begin"></button>
+								<span class="action-icon__tooltip">В начало аудиозаписи</span>
+							</div>
+							<div class="action-icon-box">
+								<button class="audio-record__button action-icon action-icon-play"></button>
+								<span class="action-icon__tooltip">Воспроизвести</span>
+							</div>
+							<div class="action-icon-box">
+								<button class="audio-record__button action-icon action-icon-download"></button>
+								<span class="action-icon__tooltip">Скачать аудиозапись</span>
+							</div>
+						</div>
+						<div class="audio-record__actions">
+							<div class="action-icon-box">
+								<button class="audio-record__button action-icon action-icon-callouts"></button>
+								<span class="action-icon__tooltip">Показать выноски</span>
+							</div>
+							<div class="action-icon-box">
+								<button class="audio-record__button action-icon action-icon-events"></button>
+								<span class="action-icon__tooltip">Показать события</span>
+							</div>
+							<div class="action-icon-box">
+								<button class="audio-record__button action-icon action-icon-excel"></button>
+								<span class="action-icon__tooltip action-icon__tooltip--excel">Скачать Excel</span>
+							</div>
+						</div>
+					</div>
+					<div class="audio-record__main">
+						<div class="audio-record__wave">
+							<img src="img/newicons/record-wave.svg" alt="Аудиоволна">
+						</div>
+					</div>
+					<ul class="audio-record__list record-badges">
+						<li class="record-badge orange-color">Перебивание</li>
+					</ul>
+				</div>
+			</div>
+			<div class="record__events events-record">
+				<div class="events-record__header">
+					<h2 class="events-record__title">Зафиксированы события</h2>
+				</div>
+				<div class="events-record__inner">
+					<div class="events-record__box">
+						<div class="events-record__badges record-badges">
+							<label class="events-record__badge record-badge">Перебивание</label>
+							<label class="events-record__badge record-badge events-record__badge_glossary">Словарь
+								Приветствие</label>
+							<label class="events-record__badge record-badge events-record__badge_outrage">Словарь
+								Возмущение</label>
+							<label class="events-record__badge record-badge events-record__badge_emotion">Эмоция оператора:
+								удивление</label>
+							<label class="events-record__badge record-badge events-record__badge_emotion">Эмоция клиента:
+								злой</label>
+						</div>
+						<div class="events-record__graphics graphics-record">
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Скорость речи, сек</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBarSpeed"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Количество пауз, шт</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBarPercent"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Длительность, сек</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBarDuration"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Процент речи, %</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBarPercent"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Одновременная речь, шт</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBar"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Пол</div>
+								<div class="graphics-record___genders genders">
+									<div class="graphics-record__gender genders__male">
+										<span class="genders__color"></span>
+										<span class="genders__text">Мужской</span>
+									</div>
+									<div class="graphics-record__gender genders__woman">
+										<span class="genders__color"></span>
+										<span class="genders__text">Женский</span>
+									</div>
+								</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBarGender"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Длительность, сек</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBarDuration"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item">
+								<div class="graphics-record__title graph__title">Процент речи, %</div>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartBar" data-id="chartBarPercent"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item graphics-record__item_circular">
+								<div class="graphics-record__title graph__title">Топ 10 слов клиента</div>
+								<ul class="graphics-record__word word__list">
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-light"></span>
+										<span class="word-item__text">сегмент</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-mid"></span>
+										<span class="word-item__text">сегмент</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-dark"></span>
+										<span class="word-item__text">компания</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_purple"></span>
+										<span class="word-item__text">клиента</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_green-light"></span>
+										<span class="word-item__text">иди</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_yellow"></span>
+										<span class="word-item__text">лес</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_orange"></span>
+										<span class="word-item__text">бабах</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_blue"></span>
+										<span class="word-item__text">слушания</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_pink"></span>
+										<span class="word-item__text">италия</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_azure"></span>
+										<span class="word-item__text">переписывает</span>
+									</li>
+								</ul>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartPie" data-id="chartPie"></div>
+									</div>
+								</div>
+							</div>
+							<div class="graphics-record__item graphics-record__item_circular">
+								<div class="graphics-record__title graph__title">Топ 10 слов оператора</div>
+								<ul class="graphics-record__word word__list">
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-light"></span>
+										<span class="word-item__text">але</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-mid"></span>
+										<span class="word-item__text">привет</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_gray-dark"></span>
+										<span class="word-item__text">говори</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_green-light"></span>
+										<span class="word-item__text">договор</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_purple"></span>
+										<span class="word-item__text">компания</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_yellow"></span>
+										<span class="word-item__text">периодичность</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_orange"></span>
+										<span class="word-item__text">подожди</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_blue"></span>
+										<span class="word-item__text">сторону</span>
+									</li>
+									<li class="word__list-item word-item">
+										<span class="word-item__circle word-item__circle_azure"></span>
+										<span class="word-item__text">переписывает</span>
+									</li>
+								</ul>
+								<div class="graphics-record__data graph__data">
+									<div>
+										<div class="chart chartPie" data-id="chartPie-2"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="footer__body">
+				<div class="footer__copy">
+					2021 ПАО «ВымпелКом»
+				</div>
+				<div class="footer__support support-footer">
+					<div class="support-footer__label">Консультация со специалистом:
+						
+					</div>
+					<a href="tel:88006006262" class="support-footer__phone">8 800 600 62 62</a>
+				</div>
+			</div>
+		</footer>
+		<div class="modal modal__comment fade" id="comment" data-bs-backdrop="static" data-bs-keyboard="false"
+			tabindex="-1" aria-labelledby="comment" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Добавить комментарий</h2>
+						<div class="form-modal__body">
+							<div class="form-modal__box">
+								<div class="form-modal__item">
+									<textarea class="form-modal__textarea" id="formTextareaComment" autocomplete="off"
+										placeholder="Комментарий" maxlength="120"></textarea>
+									<div class="form-modal__counter">
+										<span class="count-start">0</span>
+										<span> / </span>
+										<span class="count-end">120</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-modal__buttons">
+							<button class="form-modal__button" type="button" data-bs-dismiss="modal"
+								aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow" type="button" data-bs-dismiss="modal"
+								aria-label="Close" data-comment-button>Добавить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="modal modal__comment fade" id="comment-redact" data-bs-backdrop="static" data-bs-keyboard="false"
+			tabindex="-1" aria-labelledby="comment-redact" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button class="modal__close _icon-close" data-bs-dismiss="modal" aria-label="Close">
+					</button>
+					<form action="" class="modal__form form-modal">
+						<h2 class="form-modal__title">Редактировать комментарий</h2>
+						<div class="form-modal__body">
+							<div class="form-modal__box">
+								<div class="form-modal__item">
+									<textarea class="form-modal__textarea" id="formTextareaCommentRedact" autocomplete="off"
+										placeholder="Комментарий" maxlength="120"></textarea>
+									<div class="form-modal__counter">
+										<span class="count-start">0</span>
+										<span> / </span>
+										<span class="count-end">120</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-modal__buttons">
+							<button class="form-modal__button" type="button" data-bs-dismiss="modal"
+								aria-label="Close">Отменить</button>
+							<button class="form-modal__button form-modal__button_yellow" type="button" data-bs-dismiss="modal"
+								aria-label="Close" data-comment-redact-button>Добавить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/stock/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="js/charts.js"></script>
+<script src="https://kit.fontawesome.com/ed89a4511e.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/select.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/range-slider.js"></script>
+<script src="js/floatingscroll.min.js"></script>
+<script src="js/tablesearch.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
