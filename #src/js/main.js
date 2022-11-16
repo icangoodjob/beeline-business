@@ -367,6 +367,9 @@ $('#formTextareaComment').on('input', function () {
 $('#formTextareaCommentRedact').on('input', function () {
 	$('.count-start').text($(this).val().length);
 });
+$('#synthTextarea').on('input', function () {
+	$('.count-start').text($(this).val().length);
+});
 /*================== ADD COMMENT ====================*/
 
 

@@ -3358,14 +3358,15 @@ input[type=number]:focus {
 }
 
 .synth-content__textarea {
-	border-radius: 16px;
 	margin: 24px 18px 24px 8px;
-	border: 1px solid var(--gray-color-light);
 }
 .synth-content__textarea-wrapper {
 	padding-right: 5px;
 	padding-top: 4px;
 	padding-bottom: 4px;
+	border: 1px solid var(--gray-color-light);
+	margin-bottom: 4px;
+	border-radius: 16px;
 }
 .synth-content__textarea textarea {
 	padding: 10px 16px;
@@ -3423,6 +3424,18 @@ input[type=number]:focus {
 	border-radius: 5px;
 	background: #d5d5d5;
 	cursor: pointer;
+}
+
+.data-counter {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	font-size: 16px;
+	line-height: 24px;
+	color: #8f9192;
 }
 
 .synth-content__inner {
