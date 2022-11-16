@@ -1496,19 +1496,28 @@
 }
 
 .synth-content__textarea {
+	&-wrapper {
+		padding-right: 5px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+	border-radius: 16px;
 	margin: 24px 18px 24px 8px;
-
+	border: 1px solid var(--gray-color-light);
 	& textarea {
-		padding: 17px 16px;
+		padding: 10px 16px;
 		min-height: 100px;
 		line-height: 150%;
 		color: var(--main-color);
 		background: transparent;
 		width: 100%;
-		border: 1px solid var(--gray-color-light);
+		overflow: auto;
+		max-height: 250px;
 		resize: none;
-		border-radius: 16px;
-
+		scrollbar-width: 4px;
+		scrollbar-color: #d5d5d5 transparent;
+		scrollbar-face-color: #d5d5d5;
+		scrollbar-track-color: #d5d5d5;
 		&::placeholder {
 			font-size: 16px;
 			line-height: 150%;
@@ -1516,6 +1525,17 @@
 			letter-spacing: 0.35px;
 		}
 	}
+}
+// Custom scrollbar synth
+.synth-content__textarea textarea::-webkit-scrollbar {
+	width: 4px;
+	background: transparent;
+}
+.synth-content__textarea textarea::-webkit-scrollbar-thumb {
+	width: 4px;
+	border-radius: 5px;
+	background: #d5d5d5;
+	cursor: pointer;
 }
 
 .synth-content__inner {

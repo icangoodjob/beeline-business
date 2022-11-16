@@ -496,15 +496,17 @@
 			height: 10px;
 			width: 10px;
 			border-radius: 50%;
-			background: radial-gradient(50% 50% at 50% 50%, #f0c500 0%, #f5e217 100%);
-			box-shadow: 0px 0px 5px rgba(254, 211, 5, 0.45);
-			transform: scale(0);
+			background: #e4e4e4;
+			box-shadow: inset 0px 2px 4px rgba(160, 160, 160, 0.25);
+			transform: scale(1);
 			transition: transform 0.2s ease 0s;
 			z-index: 1;
 		}
 	}
 	& .real-radio:checked + .custom-radio::before {
 		transform: scale(1);
+		background: radial-gradient(50% 50% at 50% 50%, #f0c500 0%, #f5e217 100%);
+		box-shadow: 0px 0px 5px rgba(254, 211, 5, 0.45);
 	}
 	& .file-upload__body {
 		// background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23333' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='12' stroke-linecap='square'/%3e%3c/svg%3e");

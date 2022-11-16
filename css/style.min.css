@@ -3358,18 +3358,29 @@ input[type=number]:focus {
 }
 
 .synth-content__textarea {
+	border-radius: 16px;
 	margin: 24px 18px 24px 8px;
+	border: 1px solid var(--gray-color-light);
+}
+.synth-content__textarea-wrapper {
+	padding-right: 5px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 .synth-content__textarea textarea {
-	padding: 17px 16px;
+	padding: 10px 16px;
 	min-height: 100px;
 	line-height: 150%;
 	color: var(--main-color);
 	background: transparent;
 	width: 100%;
-	border: 1px solid var(--gray-color-light);
+	overflow: auto;
+	max-height: 250px;
 	resize: none;
-	border-radius: 16px;
+	scrollbar-width: 4px;
+	scrollbar-color: #d5d5d5 transparent;
+	scrollbar-face-color: #d5d5d5;
+	scrollbar-track-color: #d5d5d5;
 }
 .synth-content__textarea textarea::-webkit-input-placeholder {
 	font-size: 16px;
@@ -3400,6 +3411,18 @@ input[type=number]:focus {
 	line-height: 150%;
 	color: var(--gray-color);
 	letter-spacing: 0.35px;
+}
+
+.synth-content__textarea textarea::-webkit-scrollbar {
+	width: 4px;
+	background: transparent;
+}
+
+.synth-content__textarea textarea::-webkit-scrollbar-thumb {
+	width: 4px;
+	border-radius: 5px;
+	background: #d5d5d5;
+	cursor: pointer;
 }
 
 .synth-content__inner {
@@ -4932,13 +4955,12 @@ input[type=number]:focus {
 	height: 10px;
 	width: 10px;
 	border-radius: 50%;
-	background: -o-radial-gradient(50% 50%, 50% 50%, #f0c500 0%, #f5e217 100%);
-	background: radial-gradient(50% 50% at 50% 50%, #f0c500 0%, #f5e217 100%);
-	-webkit-box-shadow: 0px 0px 5px rgba(254, 211, 5, 0.45);
-	        box-shadow: 0px 0px 5px rgba(254, 211, 5, 0.45);
-	-webkit-transform: scale(0);
-	    -ms-transform: scale(0);
-	        transform: scale(0);
+	background: #e4e4e4;
+	-webkit-box-shadow: inset 0px 2px 4px rgba(160, 160, 160, 0.25);
+	        box-shadow: inset 0px 2px 4px rgba(160, 160, 160, 0.25);
+	-webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
 	-webkit-transition: -webkit-transform 0.2s ease 0s;
 	transition: -webkit-transform 0.2s ease 0s;
 	-o-transition: transform 0.2s ease 0s;
@@ -4950,6 +4972,10 @@ input[type=number]:focus {
 	-webkit-transform: scale(1);
 	    -ms-transform: scale(1);
 	        transform: scale(1);
+	background: -o-radial-gradient(50% 50%, 50% 50%, #f0c500 0%, #f5e217 100%);
+	background: radial-gradient(50% 50% at 50% 50%, #f0c500 0%, #f5e217 100%);
+	-webkit-box-shadow: 0px 0px 5px rgba(254, 211, 5, 0.45);
+	        box-shadow: 0px 0px 5px rgba(254, 211, 5, 0.45);
 }
 .form-modal .file-upload__body {
 	-o-border-image: url("../img/icons/border.svg") 2;
@@ -6353,27 +6379,22 @@ input[type=number]:focus {
 		top: 5px;
 		right: 5px;
 	}
-
 	.table-area__item > * {
 		padding: 15px 10px;
 	}
-
 	.footer__body {
 		padding: 16px 24px 25px 24px;
 	}
-
 	.menu__icon {
 		-webkit-transform: translate(0px);
 		    -ms-transform: translate(0px);
 		        transform: translate(0px);
 	}
-
 	.logo__circle {
 		-webkit-transform: translate(0px);
 		    -ms-transform: translate(0px);
 		        transform: translate(0px);
 	}
-
 	.menu__arrow {
 		position: static;
 	}
@@ -6384,7 +6405,6 @@ input[type=number]:focus {
 		-ms-grid-columns: 200px 1fr 1fr;
 		grid-template-columns: 200px 1fr 1fr;
 	}
-
 	.footer__body {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: reverse;
@@ -6395,7 +6415,6 @@ input[type=number]:focus {
 		    -ms-flex-align: center;
 		        align-items: center;
 	}
-
 	.footer__support {
 		margin: 0 0 15px;
 	}
@@ -6405,34 +6424,27 @@ input[type=number]:focus {
 	.aside.show {
 		width: 100%;
 	}
-
 	body.body-pd {
 		overflow: hidden;
 	}
-
 	.table-area__item {
 		-ms-grid-columns: 200px 300px minmax(150px, 1fr);
 		grid-template-columns: 200px 300px minmax(150px, 1fr);
 	}
-
 	.table-area__item.table-area__item-head > * {
 		height: 100%;
 		border-bottom: 1px solid var(--gray-color-light);
 	}
-
 	.table-area__item.table-area__item-head {
 		border: 0;
 	}
-
 	.work-area__table {
 		margin: 0 -10px;
 		overflow-x: scroll;
 	}
-
 	.table-area__list {
 		min-width: 700px;
 	}
-
 	.group-select .work-area__item,
 .group-calendar .work-area__item {
 		width: 100%;
@@ -6440,33 +6452,26 @@ input[type=number]:focus {
 		    -ms-flex: 1 1 100%;
 		        flex: 1 1 100%;
 	}
-
 	.group-calendar__button {
 		width: 100%;
 	}
-
 	.group-select {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
-
 	.work-area__item:not(:last-child) {
 		margin: 0 0px 20px 0;
 	}
-
 	.group-calendar .work-area__item:not(:last-child) {
 		margin: 0 0px 20px 0;
 	}
-
 	.work-area__graph {
 		padding: 32px 0 29px 0;
 	}
-
 	.group-calendar {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
-
 	.menu__text {
 		white-space: nowrap;
 	}
@@ -6476,15 +6481,12 @@ input[type=number]:focus {
 	.footer__support {
 		display: block;
 	}
-
 	.support-footer__label {
 		margin: 0 0 10px;
 	}
-
 	.work-area__graph {
 		display: block;
 	}
-
 	.work-area__graph .graph__item:not(:last-child) {
 		margin: 0 0 20px 0;
 	}
