@@ -1013,25 +1013,6 @@
 	}
 }
 
-.choice-search__box .form__input {
-	background: transparent;
-	width: 100%;
-	min-height: 48px;
-	padding: 11px 16px;
-	border: 1px solid var(--gray-color-light);
-	border-radius: 8px;
-	font-size: 16px;
-	line-height: 150%;
-	color: var(--main-color);
-	display: flex;
-	align-items: flex-start;
-	&::placeholder {
-		font-size: 16px;
-		line-height: 150%;
-		color: var(--gray-color-dbl);
-	}
-}
-
 // .form__button {
 // 	padding: 12px 24px;
 // 	letter-spacing: 0.5px;
@@ -1070,13 +1051,13 @@
 [data-table-list]::-webkit-scrollbar {
 	height: 10px;
 	width: 8px;
-	background: var(--scrollbar-color);
+	background: transparent;
 }
 
 [data-table-list]::-webkit-scrollbar-thumb {
 	width: 8px;
 	border-radius: 20px;
-	background: var(--scrollbar-thumb-color);
+	background: transparent;
 	cursor: pointer;
 }
 
