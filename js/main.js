@@ -512,3 +512,12 @@ for (let i = 0; i < checkboxList.length; i++) {
 		}
 	})
 }
+
+// Synth
+$("[data-gender]").click(function () {
+	$("[data-gender]").removeClass("active");
+	$(this).addClass("active");
+	$(".option-synth__overlay").css({
+		left: $(this).prevAll().length * 50.5 + "%"
+	});
+});

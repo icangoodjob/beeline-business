@@ -1,22 +1,22 @@
 /* RANGE SLIDER */
 .noUi-connect {
-  background: #FED305;
-  box-shadow: inset 0px 4px 4px rgba(221, 178, 0, 0.25);
-  border-radius: 20px;
+  background: #fed305;
+  // box-shadow: inset 0px 4px 4px rgba(221, 178, 0, 0.25);
+  // border-radius: 20px;
 }
 .noUi-connects {
   position: relative;
 }
-.noUi-handle{
+.noUi-handle {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background: var(--white-color);
-  border: 1px solid #7C7C7C;
+  border: 1px solid #7c7c7c;
   box-shadow: 10px 10px 15px rgba(182, 182, 182, 0.15);
   cursor: pointer;
   &::before,
-  &::after{
+  &::after {
     content: none;
   }
 }
@@ -25,33 +25,30 @@
   height: 24px;
   top: -4px;
 }
-.noUi-target{
+.noUi-target {
   margin: 0 11px 0 11px;
-  background: rgba(#DBDBDB, 0.4);
+  background: rgba(#dbdbdb, 0.4);
   border: none;
   box-shadow: none;
   border-radius: 0;
   position: relative;
 }
-.noUi-target::before, 
+.noUi-target::before,
 .noUi-target::after {
   content: "";
-  background: rgba(#DBDBDB, 0.4);
+  background: rgba(#dbdbdb, 0.4);
   width: 10px;
-  height: 16px;
+  height: 18px;
   position: absolute;
-  top: 1px;
+  top: 0px;
 }
-.noUi-target::before{
+.noUi-target::before {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background: #FED305;
+  background: #fed305;
   left: -7px;
-  height: 18px;
-  width: 15px;
-  top: 0;
 }
-.noUi-target::after{
+.noUi-target::after {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   right: -10px;

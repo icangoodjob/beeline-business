@@ -111,12 +111,27 @@ body {
 	display: flex;
 	flex-direction: column;
 	transition: all 0.5s linear 0s;
-	padding-left: calc(var(--aside-width) + 24px);
 	overflow: hidden;
-
 	&.active {
-		padding-left: calc(var(--aside-width) + 264px);
+		& .main {
+			padding-left: calc(var(--aside-width) + 264px);
+		}
+		& .header {
+			padding-left: calc(var(--aside-width) + 264px);
+		}
+		& .footer {
+			padding-left: calc(var(--aside-width) + 240px);
+		}
 	}
+}
+.header,
+.main {
+	padding-left: calc(var(--aside-width) + 24px);
+	transition: all 0.5s linear 0s;
+}
+.footer {
+	padding-left: calc(var(--aside-width) + 0px);
+	transition: all 0.5s linear 0s;
 }
 
 .main {
